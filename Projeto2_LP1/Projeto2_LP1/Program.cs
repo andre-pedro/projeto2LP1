@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Projeto2_LP1
 {
@@ -14,6 +10,11 @@ namespace Projeto2_LP1
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+            Renderer rend = new Renderer(720, 640);
+
+
+            //        Renderer.Render(grid);
+
         }
     }
 }

@@ -10,5 +10,10 @@ namespace Projeto2_LP1
     {
         private State [,] grid;
 
+        public Grid() {
+
+           grid = new State[8, 8];
+        }
+
     }
 }
