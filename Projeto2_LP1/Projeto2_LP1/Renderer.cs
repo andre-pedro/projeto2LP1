@@ -1,5 +1,8 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Projeto2_LP1
 {
@@ -17,9 +20,9 @@ namespace Projeto2_LP1
         public void Render(State array)
         {
             State[,] teste = new State[8, 8];
-            foreach (State t in teste)
+            foreach (State i in teste)
             {
-                Console.WriteLine("-");
+                Console.WriteLine("{0}", i);
             }
         }
     }
