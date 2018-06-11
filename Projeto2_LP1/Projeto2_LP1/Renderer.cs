@@ -14,19 +14,27 @@ namespace Projeto2_LP1
           this.Height = height;
         }*/
 
+          
+
         public static void Render(Grid grid)
         {
             State[,] array = new State[8, 8];
+
+            foreach(State s in array)
+            {
+
+            }
 
             int linhafinal = array.GetLength(0);
             int colinafinal = array.GetLength(1);
 
             for (int linha = 0; linha < 8; linha++)
             {
-                Console.WriteLine($"{array[0,linha]}");
+          
+                Console.WriteLine($"{array[linha,0]}");
                 for (int coluna = 0; coluna < 8; coluna++)
                 {
-                    
+       
                 }
                 
             }
