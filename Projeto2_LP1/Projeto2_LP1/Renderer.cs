@@ -1,28 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Projeto2_LP1
 {
     class Renderer
     {
-        private readonly int Width;
-        private readonly int Height;
+     // private readonly int Width;
+      //private readonly int Height;
 
-        public Renderer(int width, int height)
+      /*public Renderer(int width, int height)
         {
-            this.Width = width;
-            this.Height = height;
-        }
+          this.Width = width;
+          this.Height = height;
+        }*/
 
-        public void Render(State array)
+        public static void Render(Grid grid)
         {
-            State[,] teste = new State[8, 8];
-            foreach (State i in teste)
+            State[,] array = new State[8, 8];
+
+            int linhafinal = array.GetLength(0);
+            int colinafinal = array.GetLength(1);
+
+            for (int linha = 0; linha < 8; linha++)
             {
-                Console.WriteLine("{0}", i);
+                for (int coluna = 0; coluna < 8; coluna++)
+                {
+                    Console.WriteLine(String.Format("{0}", array[linha, coluna]));
+                }
             }
         }
     }

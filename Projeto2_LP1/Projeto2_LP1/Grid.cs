@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Projeto2_LP1
 {
@@ -15,5 +11,9 @@ namespace Projeto2_LP1
            grid = new State[8, 8];
         }
 
+        public State GetState(Position position)
+        {
+            return grid[position.Linha, position.Coluna];
+        }
     }
 }
