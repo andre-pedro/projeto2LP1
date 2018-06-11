@@ -23,11 +23,14 @@ namespace Projeto2_LP1
 
             for (int linha = 0; linha < 8; linha++)
             {
+                Console.WriteLine($"{array[0,linha]}");
                 for (int coluna = 0; coluna < 8; coluna++)
                 {
-                    Console.WriteLine(String.Format("{0}", array[linha, coluna]));
+                    
                 }
+                
             }
+            
         }
     }
 }

@@ -15,11 +15,6 @@ namespace Projeto2_LP1
             State[,] teste = new State[8, 8];
 
             Renderer.Render(grid);
-
-         //   string[,] row = new string[8, 8];
-
-
         }
-
     }
 }
