@@ -29,11 +29,15 @@ namespace Projeto2_LP1
             int colinafinal = array.GetLength(1);
 
             for (int linha = 0; linha < 8; linha++)
-                for (int coluna = 0; coluna < 8; coluna++)
-                  //  array[linha,coluna] = 
-                    Console.WriteLine($"{array[linha,0]}");
+               Console.Write("----  ");
+            
+            Console.WriteLine();
 
-
+            for (int coluna = 0; coluna < 8; coluna++)
+            //    array[linha, coluna] = State.o;
+                //   Console.WriteLine($"{array[linha,coluna]}");
+               Console.Write("----  ");
+          //   Console.Write($"{array[linha,coluna]}");
             /*Malta esta parte esta correcta. mas tou com duvidas agora na parte seguinte:
 
 
