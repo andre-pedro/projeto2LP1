@@ -19,12 +19,14 @@ namespace Projeto2_LP1
         {
             // State<>[,] array = new State[8, 8];
 
-            String[,] simbolos = new string[8, 8];
-           //     String[,][] simbolos = new string[8, 8][];
+           // String[,] simbolos = new string[8, 8];
+               String[,][] simbolos = new string[8, 8][];
 
             for (int linha = 0; linha < 8; linha++)
                 for (int coluna = 0; coluna < 8 ; coluna++)
-                    simbolos[linha, coluna] = "----";
+                    for(int i = 0; i < 8; i++)
+                        simbolos[linha, coluna][0] = "----";
+        
 
 
 
@@ -32,7 +34,7 @@ namespace Projeto2_LP1
             for (int linha = 0; linha < 8/2; linha++)
                 for (int coluna = 0; coluna < 8; coluna++)
                 {
-                    Console.WriteLine(simbolos[linha, coluna]);
+                    Console.WriteLine(simbolos[linha, coluna] );
 
                 }
 
