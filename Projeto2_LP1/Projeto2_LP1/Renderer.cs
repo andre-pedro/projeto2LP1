@@ -18,21 +18,33 @@ namespace Projeto2_LP1
 
         public static void Render(Grid grid)
         {
-            State[,] array = new State[8, 8];
+           // State<>[,] array = new State[8, 8];
 
-            int linhafinal = array.GetLength(0);
-            int colinafinal = array.GetLength(1);
+            String [,] simbolos = new string[8,8];
 
-            for (int linha = 0; linha < 8; linha++)
-               Console.Write("----  ");
+
+            //int linhafinal = array.GetLength(0);
+            //   int colinafinal = array.GetLength(1);
+
+            for (int linha = 0; linha < 8/2 ; linha++)
+                for (int coluna = 0; coluna < 8; coluna++)
+                    simbolos[linha, coluna] = "----";
+            //     Console.Write("-");
+
+
+            for (int linha = 0; linha < 8 / 2; linha++)
+                for (int coluna = 0; coluna < 8; coluna++)
+                    Console.WriteLine(simbolos[linha,coluna]);
+
             
-            Console.WriteLine();
-
-            for (int coluna = 0; coluna < 8; coluna++)
             //    array[linha, coluna] = State.o;
                 //   Console.WriteLine($"{array[linha,coluna]}");
-               Console.Write("----  ");
+          //     Console.Write("-");
           //   Console.Write($"{array[linha,coluna]}");
+
+
+
+
             /*Malta esta parte esta correcta. mas tou com duvidas agora na parte seguinte:
 
 
