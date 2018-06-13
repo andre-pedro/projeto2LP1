@@ -20,11 +20,6 @@ namespace Projeto2_LP1
         {
             State[,] array = new State[8, 8];
 
-            foreach(State s in array)
-            {
-
-            }
-
             int linhafinal = array.GetLength(0);
             int colinafinal = array.GetLength(1);
 
