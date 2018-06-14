@@ -41,7 +41,7 @@ namespace Projeto2_LP1
                     break;
             }
 
-            // Returns direction
+            // Retorna direcao
             return direction;
         }
     }
