@@ -16,12 +16,11 @@ namespace Projeto2_LP1
             // Variavel que guarda posicao
             char position = ' ';
 
-            // Escolher diracao a partir de random (entre 1 e 5)
+            // Escolher posicao na grid a partir de random (entre 1 e 65)
             switch (rand.Next(1, 65))
             {
                 // Caso random seja 1
                 case 1:
-                    // Norte
                     position = ' ';
                     break;
             }
