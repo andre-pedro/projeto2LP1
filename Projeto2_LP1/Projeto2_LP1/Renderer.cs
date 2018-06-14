@@ -10,7 +10,7 @@ namespace Projeto2_LP1
         {
             Grid grid = new Grid();
 
-            //    String[,] simbolos = new string[8, 8];
+            //  String[,] simbolos = new string[8, 8];
             //  String[,][] simbolos = new string[8, 8][];
             // List<T>[,];
 
