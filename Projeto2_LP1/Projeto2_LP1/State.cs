@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Projeto2_LP1
+﻿namespace Projeto2_LP1
 {
     /// <summary>
     /// Class criada a partir de lista para

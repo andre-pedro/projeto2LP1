@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Projeto2_LP1
 {
@@ -16,7 +12,8 @@ namespace Projeto2_LP1
             char direction = ' ';
 
             // Pedir input de direcao
-            Console.Write("In which direction are you heading?" + "\t" + "- ");
+            Console.WriteLine("In which direction are you heading?");
+            Console.Write("Direction: ");
             // Guardar input de direcao
             input = Console.ReadLine();
 
