@@ -7,5 +7,4 @@ using System.Threading.Tasks;
 namespace Projeto2_LP1
 {
     interface IObject { }
-
 }

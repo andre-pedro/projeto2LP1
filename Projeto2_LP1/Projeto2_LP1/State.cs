@@ -20,7 +20,7 @@
         }
 
         /// <summary>
-        /// Método do qual permite aumentar o
+        /// Método o qual permite aumentar o
         /// nosso array.
         /// </summary>
         /// <param name="newItem"></param>

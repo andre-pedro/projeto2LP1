@@ -43,8 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character.cs" />
+    <Compile Include="Exit.cs" />
     <Compile Include="Grid.cs" />
     <Compile Include="NPC.cs" />
+    <Compile Include="Obj.cs" />
     <Compile Include="Object.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Position.cs" />
