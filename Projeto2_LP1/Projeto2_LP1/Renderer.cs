@@ -4,8 +4,6 @@ namespace Projeto2_LP1
 {
     class Renderer
     {
-
-
         public static void Render()
         {
             Grid grid = new Grid();
