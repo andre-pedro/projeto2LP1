@@ -10,11 +10,11 @@ namespace Projeto2_LP1
         static void Main(string[] args)
         {
             Renderer rend = new Renderer();
-            Grid grid = new Grid();
+            
 
            // State[,] teste = new State[8, 8];
-
-            Renderer.Render(grid);
+           
+            Renderer.Render();
         }
     }
 }
