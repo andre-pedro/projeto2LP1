@@ -4,6 +4,9 @@ namespace Projeto2_LP1
 {
     public class Player : Character
     {
+
+        public float Hp { get; set; }
+
         public override char Move()
         {
             // Variavel que guarda input

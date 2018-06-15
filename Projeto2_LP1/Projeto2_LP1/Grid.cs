@@ -5,6 +5,7 @@ namespace Projeto2_LP1
 {
     class Grid
     {
+        public static string sim;
 
         public Grid()
         {
@@ -21,6 +22,12 @@ namespace Projeto2_LP1
                 }
             }
 
+        }
+
+        public static string C
+        {
+            get { return sim; }
+            set { sim = "c";  }
         }
     }
 }

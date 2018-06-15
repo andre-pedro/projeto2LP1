@@ -7,6 +7,7 @@ namespace Projeto2_LP1
         public static void Render()
         {
             Grid grid = new Grid();
+            Tiles simbol = new Tiles();
 
             //  String[,] simbolos = new string[8, 8];
             //  String[,][] simbolos = new string[8, 8][];
@@ -18,7 +19,8 @@ namespace Projeto2_LP1
                 {
                     for (int k = 0; k < 5; k++)
                     {
-                        Console.Write(".");
+                       // Console.Write(".");
+                        Console.Write(simbol.Adiciona());
                     }
                     Console.Write("\t");
 
