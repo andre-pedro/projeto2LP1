@@ -19,7 +19,6 @@ namespace Projeto2_LP1
                     for (int k = 0; k < 5; k++)
                     {
                         Console.Write(".");
-
                     }
                     Console.Write("\t");
 
