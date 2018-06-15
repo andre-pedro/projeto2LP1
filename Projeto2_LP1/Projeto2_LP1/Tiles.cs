@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto2_LP1
 {
-    class Titles
+    class Tiles
     {
 
         // for (if list space has nothing, add .)

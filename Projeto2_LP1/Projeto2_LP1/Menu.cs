@@ -44,6 +44,9 @@ namespace Projeto2_LP1
                     // Testar metodos das classes PLayer e NPC
                     Console.WriteLine("Player Direction: " + player.Move());
                     Console.WriteLine("NPC Direction: " + npc.Move());
+
+                    // Wait
+                    Console.ReadKey();
                 }
                 else if (selected == "High Scores")
                 {
@@ -130,10 +133,10 @@ namespace Projeto2_LP1
             Console.WriteLine("______________");
             Console.WriteLine();
             Console.Write("Action: ");
-            if (selectedLine == 0) Console.Write("Start the game...");
-            if (selectedLine == 1) Console.Write("View high scores...");
-            if (selectedLine == 2) Console.Write("Look at the credits...");
-            if (selectedLine == 3) Console.Write("Exit the game...");
+            if (selectedLine == 0) Console.Write("Start the game");
+            if (selectedLine == 1) Console.Write("View high scores");
+            if (selectedLine == 2) Console.Write("Look at the credits");
+            if (selectedLine == 3) Console.Write("Quit the game");
             Console.WriteLine();
 
             ConsoleKeyInfo input = Console.ReadKey();
