@@ -20,7 +20,7 @@ namespace Projeto2_LP1
                     for (int k = 0; k < 5; k++)
                     {
                        // Console.Write(".");
-                        Console.Write(simbol.Adiciona());
+                        Console.Write(simbol);
                     }
                     Console.Write("\t");
 

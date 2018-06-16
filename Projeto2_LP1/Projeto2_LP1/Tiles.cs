@@ -10,27 +10,28 @@ namespace Projeto2_LP1
     {
         List<string> simbolos = new List<string>();
 
-        public string Adiciona()
+        public void Adiciona()
         {
-            simbolos.Add("t");
             simbolos.Add(".");
             simbolos.Add("~");
+            simbolos.Add("~");
 
-            return simbolos[0];
+           // yield return simbolos[0];
+       //     yield return simbolos[1];
+         //   yield return simbolos[2];
         }
         // for (if list space has nothing, add .)
         // 
 
-      /*  private static  char Simbolos(Grid grid)
+        public override string ToString()
         {
-            switch (grid)
-            {
-                case Grid.sim:
-                    return 'R';
+            return $"{simbolos[0] }";
+        }
 
-                default:
-                    return '.';
-            }
-        }*/
+        //se o mapa for visivel 
+        //pecorre a lista e por cada elemento imprimi
+        //se for uma trap imprimi T
+        // se for x imprimi y...
+
     }
 }
