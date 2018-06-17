@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto2_LP1
 {
-    class Tiles
+    class Tiles : List<IObject>
     {
         List<string> simbolos = new List<string>();
 
