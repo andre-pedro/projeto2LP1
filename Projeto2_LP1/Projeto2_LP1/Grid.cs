@@ -11,5 +11,8 @@ namespace Projeto2_LP1
         static Random random = new Random();
 
         public TileMaker[,] array = new TileMaker[8, 8];
+
+        public int playerX = random.Next(0, 8);
+        public int playerY = 0;
     }
 }
