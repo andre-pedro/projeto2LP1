@@ -16,5 +16,10 @@ namespace Projeto2_LP1
             Name = "the exit";
             Symbol = "E X I T ! ";
         }
+
+        public override string ToString()
+        {
+            return Symbol;
+        }
     }
 }
