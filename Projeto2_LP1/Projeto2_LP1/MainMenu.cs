@@ -1,48 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 
 namespace Projeto2_LP1
 {
-    /// <summary>
-    /// Classe responsavél pelo o menu e sub-menus que são mostrados ao jogador.
-    /// </summary>
     class MainMenu
     {
         static Random random = new Random();
 
         Grid grid = new Grid();
         Renderer renderer = new Renderer();
+        Controls controls = new Controls();
 
         static int selectedLine = 0;
 
-        /// <summary>
-        /// 
-        /// </summary>
         public static void Display()
         {
             Renderer renderer = new Renderer();
             MainMenu start = new MainMenu();
+            Credits credits = new Credits();
+            HighScores highScores = new HighScores();
             Initializer init = new Initializer();
 
             List<string> menuLines = new List<string>() {
-                "New Game",
-                "High Scores",
-                "Credits",
-                "Quit"
+                "   New Game     ",
+                "   High Scores  ",
+                "   Credits      ",
+                "   Quit         "
             };
 
             bool chosingMenu = true;
 
-            Console.CursorVisible = false;
-
             while (chosingMenu)
             {
-                // Limpar Consola
                 Console.Clear();
 
                 string selected = DisplayMenu(menuLines);
-                if (selected == "New Game")
+                if (selected == "   New Game     ")
                 {
                     // Limpar Consola
                     Console.Clear();
@@ -52,100 +49,68 @@ namespace Projeto2_LP1
                     Console.Clear();
                     chosingMenu = false;
                 }
-                else if (selected == "High Scores")
+                else if (selected == "   High Scores  ")
                 {
                     // Limpar Consola
                     Console.Clear();
 
                     // Creditos
 
-                    Console.WriteLine("High Scores");
-                    Console.WriteLine();
-                    Console.WriteLine("High scores are not yet available...");
-                    Console.WriteLine("______________");
-                    Console.WriteLine();
-                    Console.WriteLine("Controls:");
-                    Console.WriteLine();
-                    Console.WriteLine("ENTER - Go Back");
-                    Console.ReadKey();
+                    highScores.Print();
+                    Console.Clear();
                 }
-                else if (selected == "Credits")
+                else if (selected == "   Credits      ")
                 {
                     // Limpar Consola
                     Console.Clear();
 
-                    // Creditos
-                    Console.WriteLine("Universidade Lusófona de Humanidades e Tecnologias");
-                    Console.WriteLine("__________________________________________________");
-                    Console.WriteLine();
-                    Console.WriteLine("Project made for LP1 by:");
-                    Console.WriteLine();
-                    Console.WriteLine("André Pedro");
-                    Console.WriteLine("André Santos");
-                    Console.WriteLine("Tiago Alves");
-                    Console.WriteLine("______________");
-                    Console.WriteLine();
-                    Console.WriteLine("The teacher:");
-                    Console.WriteLine();
-                    Console.WriteLine("Nuno Fachada");
-                    Console.WriteLine("______________");
-                    Console.WriteLine();
-                    Console.WriteLine("Controls:");
-                    Console.WriteLine();
-                    Console.WriteLine("ENTER - Go Back");
-                    Console.ReadKey();
+                    credits.Print();
+                    Console.Clear();
                 }
-                else if (selected == "Quit")
+                else if (selected == "   Quit         ")
                 {
                     Environment.Exit(0);
                 }
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="lines"></param>
-        /// <returns></returns>
         private static string DisplayMenu(List<string> lines)
         {
-            Console.WriteLine("ROGUELIKE GAME");
-            Console.WriteLine("______________");
-            Console.WriteLine();
-
             for (int i = 0; i < lines.Count; i++)
             {
                 if (i == selectedLine)
                 {
-                    Console.BackgroundColor = ConsoleColor.Gray;
-                    Console.ForegroundColor = ConsoleColor.Black;
-
-                    Console.Write("=>   ");
-                    Console.Write(lines[i]);
+                    Console.WriteLine();
+                    Console.SetCursorPosition(55, 12 + 3 * i);
+                    Console.WriteLine(lines[i]);
                     Console.WriteLine();
                 }
                 else
                 {
+                    Console.WriteLine();
+                    Console.SetCursorPosition(55, 12 + 3 * i);
                     Console.WriteLine(lines[i]);
+                    Console.WriteLine();
                 }
-                Console.ResetColor();
             }
 
-            Console.WriteLine("______________");
-            Console.WriteLine();
-            Console.WriteLine("Controls:");
-            Console.WriteLine();
-            Console.WriteLine("W, A, S, D - Movement");
-            Console.WriteLine();
-            Console.WriteLine("ENTER - Selection");
-            Console.WriteLine();
-            Console.WriteLine("______________");
-            Console.WriteLine();
-            Console.Write("Action: ");
-            if (selectedLine == 0) Console.Write("Start the game");
-            if (selectedLine == 1) Console.Write("View high scores");
-            if (selectedLine == 2) Console.Write("Look at the credits");
-            if (selectedLine == 3) Console.Write("Quit the game");
+            Console.SetCursorPosition(1, 23);
+            if (selectedLine == 0)
+            {
+                Console.WriteLine(" Start the game");
+            }
+            if (selectedLine == 1)
+            {
+                Console.WriteLine(" View high scores");
+            }
+            if (selectedLine == 2)
+            {
+                Console.WriteLine(" Look at the credits");
+            }
+            if (selectedLine == 3)
+            {
+                Console.WriteLine(" Quit the game");
+            }
             Console.WriteLine();
 
             ConsoleKeyInfo input = Console.ReadKey();
@@ -184,10 +149,6 @@ namespace Projeto2_LP1
 
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="init"></param>
         public void NewGame(Initializer init)
         {
             Console.Clear();
@@ -195,7 +156,33 @@ namespace Projeto2_LP1
             while (init.player.Hp > 0)
             {
                 renderer.Render(init, grid);
+                controls.CheckInputs(init, grid);
                 init.player.Hp--;
+                if (init.player.Hp > 100)
+                {
+                    init.player.Hp = 100;
+                }
+                // Verificacao trap1
+                if (grid.array[grid.playerX, grid.playerY].Contains(init.trap1))
+                {
+                    init.player.Hp -= init.trap1.Damage;
+                }
+                // Verificacao trap2
+                if (grid.array[grid.playerX, grid.playerY].Contains(init.trap2))
+                {
+                    init.player.Hp -= init.trap2.Damage;
+                }
+                // Verificacao trap3
+                if (grid.array[grid.playerX, grid.playerY].Contains(init.trap3))
+                {
+                    init.player.Hp -= init.trap3.Damage;
+                }
+                // Verificacao food
+                if (grid.array[grid.playerX, grid.playerY].Contains(init.food))
+                {
+                    init.player.Hp += init.food.Heal;
+                    grid.array[grid.playerX, grid.playerY].Remove(init.food);
+                }
                 Console.Clear();
             }
         }

@@ -25,11 +25,11 @@ namespace Projeto2_LP1
         /// mesma no nosso código</param>
         /// <param name="damage">Dano que o jogador irá receber caso "se encontre"
         /// com uma armadilha</param>
-        public Trap(string name, int damage)
+        public Trap()
         {
-            Name = name;
+            Name = "Recurso ";
             Symbol = "\u25B2 ";
-            Damage = damage;
+            Damage = 25;
         }
 
         /// <summary>

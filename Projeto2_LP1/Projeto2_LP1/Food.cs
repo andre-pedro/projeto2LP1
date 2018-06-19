@@ -27,11 +27,11 @@
         /// recuperável diferente.</param>
         /// <param name="heal">A vida que o jogador irá recuperar caso 
         /// apanhe com um certo tipo de comida.</param>
-        public Food(string name, int heal)
+        public Food()
         {
-            Name = name;
+            Name = "Food ";
             Symbol = "\u2665 ";
-            Heal = heal;
+            Heal = 25;
         }
 
 
