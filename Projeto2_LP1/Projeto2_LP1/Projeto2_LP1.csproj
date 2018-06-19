@@ -42,9 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Character.cs" />
     <Compile Include="Gameloop.cs" />
     <Compile Include="Grid.cs" />
+    <Compile Include="IGameObject.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="NPC.cs" />
     <Compile Include="Object.cs" />
