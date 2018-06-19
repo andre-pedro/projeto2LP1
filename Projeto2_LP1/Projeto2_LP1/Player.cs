@@ -12,5 +12,13 @@ namespace Projeto2_LP1
         public string Symbol { get; set; }
         public float Hp { get; set; }
         public float Ap { get; set; }
+
+        public Player()
+        {
+            Name = "Player";
+            Symbol = "\u2302 ";
+            Hp = 100;
+            Ap = 10;
+        }
     }
 }
