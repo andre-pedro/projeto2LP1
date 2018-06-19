@@ -18,7 +18,13 @@ namespace Projeto2_LP1
         public int exitX = random.Next(0, 8);
         public int exitY = 7;
 
-        public int trapX = random.Next(0, 8);
-        public int trapY = random.Next(1, 7);
+        public int trap1X = random.Next(0, 8);
+        public int trap1Y = random.Next(1, 7);
+
+        public int trap2X = random.Next(0, 8);
+        public int trap2Y = random.Next(1, 7);
+
+        public int trap3X = random.Next(0, 8);
+        public int trap3Y = random.Next(1, 7);
     }
 }
