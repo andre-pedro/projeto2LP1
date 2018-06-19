@@ -15,5 +15,12 @@ namespace Projeto2_LP1
         public Trap trap3 = new Trap();
         public Food food = new Food();
         public NPC npc = new NPC();
+
+        public int level = 1;
+
+        public void Init()
+        {
+
+        }
     }
 }
