@@ -42,19 +42,101 @@ namespace Projeto2_LP1
                             {
                                 Console.Write("~ ~ ~ ~ ~ ");
                             }
+
+
+                        if (thing == init.trap1)
+                        {
+                            if (grid.array[grid.playerX, grid.playerY].Contains(init.trap1))
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.Write(thing.ToString());
+                                Console.ResetColor();
+                            }
+                            else
+                            {
+                                Console.Write("~ ");
+                            }
+                        }
+                        if (thing == init.trap2)
+                        {
+                            if (grid.array[grid.playerX, grid.playerY].Contains(init.trap2))
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.Write(thing.ToString());
+                                Console.ResetColor();
+                            }
+                            else
+                            {
+                                Console.Write("~ ");
+                            }
+                        }
+                        if (thing == init.trap3)
+                        {
+                            if (grid.array[grid.playerX, grid.playerY].Contains(init.trap3))
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.Write(thing.ToString());
+                                Console.ResetColor();
+                            }
+                            else
+                            {
+                                Console.Write("~ ");
+                            }
+                        }
+                        if (thing == init.npc)
+                        {
+                            if (grid.array[grid.playerX, grid.playerY].Contains(init.npc))
+                            {
+                                Console.ForegroundColor = ConsoleColor.Yellow;
+                                Console.Write(thing.ToString());
+                                Console.ResetColor();
+                            }
+                            else
+                            {
+                                Console.Write("~ ");
+                            }
+                        }
+                        if (thing == init.food1)
+                        {
+                            if (grid.array[grid.playerX, grid.playerY].Contains(init.food1))
+                            {
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.Write(thing.ToString());
+                                Console.ResetColor();
+                            }
+                            else
+                            {
+                                Console.Write("~ ");
+                            }
+                        }
+                        if (thing == init.food2)
+                        {
+                            if (grid.array[grid.playerX, grid.playerY].Contains(init.food2))
+                            {
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.Write(thing.ToString());
+                                Console.ResetColor();
+                            }
+                            else
+                            {
+                                Console.Write("~ ");
+                            }
+                        }
+                        if (thing == init.food3)
+                        {
+                            if (grid.array[grid.playerX, grid.playerY].Contains(init.food3))
+                            {
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.Write(thing.ToString());
+                                Console.ResetColor();
+                            }
+                            else
+                            {
+                                Console.Write("~ ");
+                            }
+                        }
                     }
                 }
-                //not working
-                /*    if (column < 7)
-                    {
-                        Console.Write("\t");
-                    }
-                }
-            }
-            Console.SetCursorPosition(55, 35);
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(" [Messages]");
-            Console.ResetColor();*/
             }
         }
     }
