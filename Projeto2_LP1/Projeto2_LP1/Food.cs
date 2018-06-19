@@ -17,6 +17,7 @@ namespace Projeto2_LP1
             Name = "Cat food";
             Symbol = "\u2665 ";
             Heal = 25;
+        }
         public override string ToString()
         {
             return Symbol;
