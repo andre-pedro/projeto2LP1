@@ -8,7 +8,6 @@ namespace Projeto2_LP1
 {
     class Renderer
     {
-
         public void Render(Initializer init, Grid grid)
         {
             Console.Clear();

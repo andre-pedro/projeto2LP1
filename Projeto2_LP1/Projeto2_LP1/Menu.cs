@@ -8,10 +8,18 @@ namespace Projeto2_LP1
 {
     class Menu
     {
+        static Random random = new Random();
+
+        Grid grid = new Grid();
+        Renderer renderer = new Renderer();
+
         static int selectedLine = 0;
 
         public static void Display()
         {
+            Renderer renderer = new Renderer();
+            Initializer init = new Initializer();
+
             List<string> menuLines = new List<string>() {
                 "New Game",
                 "High Scores",
@@ -32,21 +40,10 @@ namespace Projeto2_LP1
                     // Limpar Consola
                     Console.Clear();
 
-                    // Render
-                    Renderer render = new Renderer();
-                    Renderer.Render();
-
-                    // Instanciar Player
-                    Player player = new Player();
-                    // Instanciar NPC
-                    NPC npc = new NPC();
-
-                    // Testar metodos das classes PLayer e NPC
-                    Console.WriteLine("Player Direction: " + player.Move());
-                    Console.WriteLine("NPC Direction: " + npc.Move());
-
-                    // Wait
-                    Console.ReadKey();
+                    init.Init();
+                    start.NewGame(init);
+                    Console.Clear();
+                    chosingMenu = false;
                 }
                 else if (selected == "High Scores")
                 {
