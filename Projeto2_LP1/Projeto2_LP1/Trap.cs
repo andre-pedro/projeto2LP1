@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Projeto2_LP1
 {
     class Trap : IGameObject
@@ -12,11 +7,11 @@ namespace Projeto2_LP1
         public string Symbol { get; set; }
         public float Damage { get; set; }
 
-        public Trap()
+        public Trap(string name, int damage)
         {
-            Name = "Recurso";
+            Name = name;
             Symbol = "\u25B2 ";
-            Damage = 78;
+            Damage = damage;
         }
 
         public override string ToString()
