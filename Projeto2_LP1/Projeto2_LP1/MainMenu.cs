@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Projeto2_LP1
 {
+    /// <summary>
+    /// Classe responsavél pelo o menu e sub-menus que são mostrados ao jogador.
+    /// </summary>
     class MainMenu
     {
         static Random random = new Random();
@@ -15,6 +18,9 @@ namespace Projeto2_LP1
 
         static int selectedLine = 0;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static void Display()
         {
             Renderer renderer = new Renderer();
@@ -98,6 +104,11 @@ namespace Projeto2_LP1
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="lines"></param>
+        /// <returns></returns>
         private static string DisplayMenu(List<string> lines)
         {
             Console.WriteLine("ROGUELIKE GAME");
@@ -175,6 +186,10 @@ namespace Projeto2_LP1
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="init"></param>
         public void NewGame(Initializer init)
         {
             Console.Clear();

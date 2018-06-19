@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Projeto2_LP1
 {
@@ -36,6 +34,9 @@ namespace Projeto2_LP1
                         if (grid.array[row, column].Contains(init.exit))
                         {
                             // Não imprime (para não sobrepor exit)
+                            Console.ForegroundColor = ConsoleColor.White;
+                           // Console.Write(thing.ToString());
+                            Console.ResetColor();
                         }
                         else
                         {
