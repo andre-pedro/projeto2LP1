@@ -13,5 +13,7 @@ namespace Projeto2_LP1
         public Trap trap1 = new Trap();
         public Trap trap2 = new Trap();
         public Trap trap3 = new Trap();
+        public Food food = new Food();
+        public NPC npc = new NPC();
     }
 }
