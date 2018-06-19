@@ -32,5 +32,23 @@ namespace Projeto2_LP1
 
         public int npcX = random.Next(0, 8);
         public int npcY = random.Next(1, 7);
+
+        public void CreateGrid(Initializer init)
+        {
+            for (int row = 0; row < 8; row++)
+            {
+                for (int column = 0; column < 8; column++)
+                {
+                    array[row, column] = new TileMaker();
+                }
+            }
+            array[playerX, playerY].Add(init.player);
+            array[exitX, exitY].Add(init.exit);
+            array[trap1X, trap1Y].Add(init.trap1);
+            array[trap2X, trap2Y].Add(init.trap2);
+            array[trap3X, trap3Y].Add(init.trap3);
+            array[foodX, foodY].Add(init.food);
+            array[npcX, npcY].Add(init.npc);
+        }
     }
 }
