@@ -148,17 +148,97 @@ namespace Projeto2_LP1
                         }
                     }
 
+                    if (column < 7)
+                    {
+                        Console.Write("\t");
+                    }
+
+                    if (column == 7)
+                    {
+                        if (row == 0)
+                        {
+                            Console.Write($"          [Status]        " +
+                                $"                [Info]              ");
+                        }
+                        if (row == 1)
+                        {
+                            Console.Write($"    Current Level:     ");
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.Write($"{init.level:000}              ");
+                            Console.ResetColor();
+                            Console.Write($"Player - ");
+                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            Console.Write($"\u2302              ");
+                            Console.ResetColor();
+                        }
+                        if (row == 2)
+                        {
+                            Console.Write($"    Player HP:         ");
+                            if (init.player.Hp > 50)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Green;
+                            }
+                            else if (init.player.Hp <= 50 && init.player.Hp > 20)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Yellow;
+                            }
+                            else if (init.player.Hp <= 20 && init.player.Hp > 5)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                            }
+                            else if (init.player.Hp <= 5)
+                            {
+                                Console.ForegroundColor = ConsoleColor.DarkRed;
+                            }
+                            Console.Write($"{init.player.Hp:000}             ");
+                            Console.ResetColor();
+                            Console.Write($"  Empty - ." +
+                                $"               ");
+                        }
+                        if (row == 3)
+                        {
+                            Console.Write($"                    ");
+                            Console.Write($"                      Exit - ");
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.Write($"E X I T !              ");
+                            Console.ResetColor();
+                        }
+                        if (row == 4)
+                        {
+                            Console.Write($"                             ");
+                            Console.Write($"             Trap - ");
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.Write($"\u25B2   ");
+                            Console.ResetColor();
+                        }
+                        if (row == 5)
+                        {
+                            Console.Write($"                             ");
+                            Console.Write($"             Food - ");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.Write($"\u2665   ");
+                            Console.ResetColor();
+                        }
+                        if (row == 6)
+                        {
+                            Console.Write($"                             ");
+                            Console.Write($"      Neutral NPC - ");
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.Write($"\u25CA              ");
+                            Console.ResetColor();
+                        }
+                        if (row == 7)
+                        {
+                            Console.Write($"                             ");
+                            Console.Write($"      Hostile NPC - ");
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.Write($"\u2666              ");
+                            Console.ResetColor();
+                        }
+                        Console.Write("\n");
+                    }
                 }
             }
-            Console.SetCursorPosition(16, 26);
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(" [Surroundings]");
-            Console.ResetColor();
-
-            Console.SetCursorPosition(55, 35);
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(" [Messages]");
-            Console.ResetColor();
         }
     }
 }
