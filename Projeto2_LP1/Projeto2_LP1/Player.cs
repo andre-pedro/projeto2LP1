@@ -20,5 +20,10 @@ namespace Projeto2_LP1
             Hp = 100;
             Ap = 10;
         }
+
+        public override string ToString()
+        {
+            return Symbol;
+        }
     }
 }
