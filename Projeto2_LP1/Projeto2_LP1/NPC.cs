@@ -13,7 +13,26 @@ namespace Projeto2_LP1
         public float Ap { get; set; }
         public bool Neutral { get; set; }
 
+        public NPC()
+        {
+            Random random = new Random();
 
+            int value = random.Next(0, 2);
+            if (value == 0)
+            {
+                Name = "Neutral NPC";
+                Symbol = "\u25CA ";
+                Neutral = true;
+            }
+            else
+            {
+                Name = "Hostile NPC";
+                Symbol = "\u2666 ";
+                Neutral = false;
+            }
+            Hp = 20;
+            Ap = 3;
+        }
     }
 }
 }
