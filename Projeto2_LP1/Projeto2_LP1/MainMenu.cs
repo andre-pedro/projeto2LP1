@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto2_LP1
 {
-    class Menu
+    class MainMenu
     {
         static Random random = new Random();
 
@@ -18,6 +18,7 @@ namespace Projeto2_LP1
         public static void Display()
         {
             Renderer renderer = new Renderer();
+            MainMenu start = new MainMenu();
             Initializer init = new Initializer();
 
             List<string> menuLines = new List<string>() {
@@ -27,9 +28,11 @@ namespace Projeto2_LP1
                 "Quit"
             };
 
+            bool chosingMenu = true;
+
             Console.CursorVisible = false;
 
-            while (true)
+            while (chosingMenu)
             {
                 // Limpar Consola
                 Console.Clear();
@@ -170,6 +173,18 @@ namespace Projeto2_LP1
             }
             return null;
 
+        }
+
+        public void NewGame(Initializer init)
+        {
+            Console.Clear();
+            grid.CreateGrid(init);
+            while (init.player.Hp > 0)
+            {
+                renderer.Render(init, grid);
+                init.player.Hp--;
+                Console.Clear();
+            }
         }
     }
 }

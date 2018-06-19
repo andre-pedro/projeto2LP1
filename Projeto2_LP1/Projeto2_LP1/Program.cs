@@ -10,8 +10,8 @@ namespace Projeto2_LP1
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            Menu menu = new Menu();
-            Menu.Display();
+            MainMenu menu = new MainMenu();
+            MainMenu.Display();
         }
     }
 }
