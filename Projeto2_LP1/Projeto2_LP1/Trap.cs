@@ -19,4 +19,8 @@ namespace Projeto2_LP1
         Symbol = "\u25B2 ";
         Damage = 78;
     }
+    public override string ToString()
+    {
+        return Symbol;
+    }
 }
