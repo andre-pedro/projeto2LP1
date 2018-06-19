@@ -5,6 +5,7 @@ namespace Projeto2_LP1
     /// <summary>
     /// Esta classe herda da interface IgameObject. É composta por três 
     /// propriedades, todas elas de com a possibilidade de escrita e leitura. 
+    /// Possui também um constructor e um método override "ToString()".
     /// </summary>
     class Food : IGameObject
     {
@@ -18,15 +19,18 @@ namespace Projeto2_LP1
         public string Symbol { get; set; }
         public float Heal { get; set; }
 
+
         /// <summary>
         /// O Constructor Food indica o nome da comida, o símbolo que foi escolhido
-        /// em utf-8 e a quantidade de vida que o jogador pode recuperar.
+        /// em UTF-8 e a quantidade de vida que o jogador pode recuperar.
         /// </summary>
-        public Food()
+        /// <param name="name"></param>
+        /// <param name="heal"></param>
+        public Food(string name, int heal)
         {
-            Name = "Cat food";
+            Name = name;
             Symbol = "\u2665 ";
-            Heal = 25;
+            Heal = heal;
         }
 
 
