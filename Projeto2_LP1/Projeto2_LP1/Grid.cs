@@ -26,5 +26,8 @@ namespace Projeto2_LP1
 
         public int trap3X = random.Next(0, 8);
         public int trap3Y = random.Next(1, 7);
+
+        public int npcX = random.Next(0, 8);
+        public int npcY = random.Next(1, 7);
     }
 }
