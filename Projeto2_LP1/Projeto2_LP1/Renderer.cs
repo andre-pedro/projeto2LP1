@@ -19,10 +19,6 @@ namespace Projeto2_LP1
 
                 for (int column = 0; column < 8; column++)
                 {
-                    if (column == 0)
-                    {
-                        Console.Write(" ");
-                    }
                     foreach (IGameObject thing in grid.array[row, column])
                     {
                         Console.ResetColor();
