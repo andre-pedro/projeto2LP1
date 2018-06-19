@@ -7,6 +7,8 @@ namespace Projeto2_LP1
 
         public string Name { get; set; }
         public string Symbol { get; set; }
+        public float Hp { get; set; }
+        public float Ap { get; set; }
     }
 }
 }
