@@ -16,7 +16,7 @@ namespace Projeto2_LP1
         Surroundings scan = new Surroundings();
         Controls controls = new Controls();
         NextLevel hasLeveled = new NextLevel();
-        Dead hasDied = new Dead();
+        GameOver hasDied = new GameOver();
 
         static int selectedLine = 0;
 
@@ -224,11 +224,23 @@ namespace Projeto2_LP1
                 {
                     init.player.Hp -= init.trap3.Damage;
                 }
-                // Verificacao food
-                if (grid.array[grid.playerX, grid.playerY].Contains(init.food))
+                // Verificacao food1
+                if (grid.array[grid.playerX, grid.playerY].Contains(init.food1))
                 {
-                    init.player.Hp += init.food.Heal;
-                    grid.array[grid.playerX, grid.playerY].Remove(init.food);
+                    init.player.Hp += init.food1.Heal;
+                    grid.array[grid.playerX, grid.playerY].Remove(init.food1);
+                }
+                // Verificacao food2
+                if (grid.array[grid.playerX, grid.playerY].Contains(init.food1))
+                {
+                    init.player.Hp += init.food2.Heal;
+                    grid.array[grid.playerX, grid.playerY].Remove(init.food2);
+                }
+                // Verificacao food3
+                if (grid.array[grid.playerX, grid.playerY].Contains(init.food3))
+                {
+                    init.player.Hp += init.food3.Heal;
+                    grid.array[grid.playerX, grid.playerY].Remove(init.food3);
                 }
                 Console.Clear();
                 if (hasLeveled.HasLeveled(init, grid) == true)
@@ -238,7 +250,7 @@ namespace Projeto2_LP1
                     renderer.Render(init, grid);
                 }
             }
-            hasDied.YourDead(init);
+            hasDied.Die(init);
         }
     }
 }

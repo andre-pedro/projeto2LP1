@@ -42,7 +42,7 @@
         /// <returns></returns>
         public override string ToString()
         {
-             return Symbol;
+             return Symbol + Name;
 
         }
     }

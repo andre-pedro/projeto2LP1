@@ -39,7 +39,7 @@ namespace Projeto2_LP1
         /// <returns></returns>
         public override string ToString()
         {
-            return Symbol;
+            return Symbol + Name;
         }
     }
 }
