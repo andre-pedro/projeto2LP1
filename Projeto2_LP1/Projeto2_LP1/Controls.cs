@@ -37,6 +37,7 @@ namespace Projeto2_LP1
                             world.playerX -= 1;
                             world.array[world.playerX, world.playerY].Add(init.player);
                             playing = false;
+                            world.moved = "NORTH";
                         }
                         Console.SetCursorPosition(43, 37);
                         Console.WriteLine(" - I can't move on that direction!");
@@ -48,6 +49,7 @@ namespace Projeto2_LP1
                             world.playerX += 1;
                             world.array[world.playerX, world.playerY].Add(init.player);
                             playing = false;
+                            world.moved = "SOUTH";
                         }
                         Console.SetCursorPosition(43, 37);
                         Console.WriteLine(" - I can't move on that direction!");
@@ -59,6 +61,7 @@ namespace Projeto2_LP1
                             world.playerY -= 1;
                             world.array[world.playerX, world.playerY].Add(init.player);
                             playing = false;
+                            world.moved = "WEST";
                         }
                         Console.SetCursorPosition(43, 37);
                         Console.WriteLine(" - I can't move on that direction!");
@@ -70,6 +73,7 @@ namespace Projeto2_LP1
                             world.playerY += 1;
                             world.array[world.playerX, world.playerY].Add(init.player);
                             playing = false;
+                            world.moved = "EAST";
                         }
                         Console.SetCursorPosition(43, 37);
                         Console.WriteLine(" - I can't move on that direction!");
