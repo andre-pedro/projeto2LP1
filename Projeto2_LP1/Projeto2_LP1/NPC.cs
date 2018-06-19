@@ -33,6 +33,11 @@ namespace Projeto2_LP1
             Hp = 20;
             Ap = 3;
         }
+
+        public override string ToString()
+        {
+            return Symbol;
+        }
     }
 }
 }
