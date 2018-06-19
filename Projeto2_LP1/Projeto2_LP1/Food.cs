@@ -18,6 +18,7 @@ namespace Projeto2_LP1
             Symbol = "\u2665 ";
             Heal = 25;
         }
+
         public override string ToString()
         {
             return Symbol;
