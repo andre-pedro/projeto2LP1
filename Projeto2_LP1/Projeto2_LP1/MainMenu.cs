@@ -15,6 +15,8 @@ namespace Projeto2_LP1
         Renderer renderer = new Renderer();
         Surroundings scan = new Surroundings();
         Controls controls = new Controls();
+        NextLevel hasLeveled = new NextLevel();
+        GameOver hasDied = new GameOver();
 
         static int selectedLine = 0;
 
@@ -77,10 +79,18 @@ namespace Projeto2_LP1
 
         private static string DisplayMenu(List<string> lines)
         {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.SetCursorPosition(0, 1);
+            Console.WriteLine(" ╔═════════════════════════════════════════════════════" +
+                "════════════════════════════════════════════════════════════════════╗");
+
             for (int i = 0; i < lines.Count; i++)
             {
                 if (i == selectedLine)
                 {
+                    Console.BackgroundColor = ConsoleColor.White;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
                     Console.WriteLine();
                     Console.SetCursorPosition(55, 12 + 3 * i);
                     Console.WriteLine(lines[i]);
@@ -88,13 +98,21 @@ namespace Projeto2_LP1
                 }
                 else
                 {
+                    Console.BackgroundColor = ConsoleColor.DarkGray;
+                    Console.ForegroundColor = ConsoleColor.White;
+
                     Console.WriteLine();
                     Console.SetCursorPosition(55, 12 + 3 * i);
                     Console.WriteLine(lines[i]);
                     Console.WriteLine();
                 }
+                Console.ResetColor();
             }
 
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.SetCursorPosition(0, 25);
+            Console.WriteLine(" ╚═════════════════════════════════════════════════════" +
+                "════════════════════════════════════════════════════════════════════╝");
             Console.SetCursorPosition(1, 23);
             if (selectedLine == 0)
             {
@@ -112,6 +130,7 @@ namespace Projeto2_LP1
             {
                 Console.WriteLine(" Quit the game");
             }
+            Console.ResetColor();
             Console.WriteLine();
 
             ConsoleKeyInfo input = Console.ReadKey();
@@ -186,7 +205,14 @@ namespace Projeto2_LP1
                     grid.array[grid.playerX, grid.playerY].Remove(init.food);
                 }
                 Console.Clear();
+                if (hasLeveled.HasLeveled(init, grid) == true)
+                {
+                    grid = new Grid();
+                    grid.CreateGrid(init);
+                    renderer.Render(init, grid);
+                }
             }
+            hasDied.Die(init);
         }
     }
 }
