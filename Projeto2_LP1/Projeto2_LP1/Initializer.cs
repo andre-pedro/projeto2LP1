@@ -6,7 +6,7 @@ namespace Projeto2_LP1
     /// </summary>
     class Initializer
     {
-        static string orange, bread, banana, recurso, spike, hole;
+        private static string orange, bread, banana, recurso, spike, hole;
 
         public Player player = new Player();
         public Exit exit = new Exit();
