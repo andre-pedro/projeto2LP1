@@ -15,13 +15,21 @@ namespace Projeto2_LP1
             {
                 init.level++;
                 Console.Clear();
+                Console.SetCursorPosition(0, 1);
+                Console.WriteLine(" ╔═════════════════════════════════════════════════════" +
+                    "════════════════════════════════════════════════════════════════════╗");
                 Console.SetCursorPosition(55, 2);
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine(" [Next Level]");
                 Console.ResetColor();
                 Console.SetCursorPosition(37, 4);
                 Console.WriteLine($" You've reached the EXIT! You're now on level {init.level}!");
                 Console.SetCursorPosition(48, 6);
                 Console.WriteLine($" Press any Key to continue...");
+
+                Console.SetCursorPosition(0, 9);
+                Console.WriteLine(" ╚═════════════════════════════════════════════════════" +
+                    "════════════════════════════════════════════════════════════════════╝");
                 Console.ReadKey();
                 Console.Clear();
                 return true;
