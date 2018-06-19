@@ -205,10 +205,6 @@ namespace Projeto2_LP1
                 scan.Scan(init, grid);
                 controls.CheckInputs(init, grid);
                 init.player.Hp--;
-                if (init.player.Hp > 100)
-                {
-                    init.player.Hp = 100;
-                }
                 // Verificacao trap1
                 if (grid.array[grid.playerX, grid.playerY].Contains(init.trap1))
                 {
@@ -231,7 +227,7 @@ namespace Projeto2_LP1
                     grid.array[grid.playerX, grid.playerY].Remove(init.food1);
                 }
                 // Verificacao food2
-                if (grid.array[grid.playerX, grid.playerY].Contains(init.food1))
+                if (grid.array[grid.playerX, grid.playerY].Contains(init.food2))
                 {
                     init.player.Hp += init.food2.Heal;
                     grid.array[grid.playerX, grid.playerY].Remove(init.food2);
@@ -241,6 +237,10 @@ namespace Projeto2_LP1
                 {
                     init.player.Hp += init.food3.Heal;
                     grid.array[grid.playerX, grid.playerY].Remove(init.food3);
+                }
+                if (init.player.Hp > 100)
+                {
+                    init.player.Hp = 100;
                 }
                 Console.Clear();
                 if (hasLeveled.HasLeveled(init, grid) == true)
