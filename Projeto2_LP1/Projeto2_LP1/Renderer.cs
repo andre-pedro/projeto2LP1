@@ -22,32 +22,30 @@ namespace Projeto2_LP1
                     }
                     foreach (IGameObject thing in grid.array[row, column])
                     {
+                        Console.ResetColor();
                         if (thing == init.player)
                         {
                             Console.ForegroundColor = ConsoleColor.Cyan;
                             Console.Write(thing.ToString());
                             Console.ResetColor();
                         }
-                    }
-                    for (int i = 5 - grid.array[row, column].Count(); i > 0; i--)
-                    {
-                        if (grid.array[row, column].Contains(init.exit))
-                        {
-                            // Não imprime (para não sobrepor exit)
-                            Console.ForegroundColor = ConsoleColor.White;
-                           // Console.Write(thing.ToString());
-                            Console.ResetColor();
-                        }
-                        else
-                        {
-                            if (grid.array[row, column].Contains(init.player))
+                        if (thing == init.exit)
+                            if (grid.array[grid.playerX, grid.playerY].Contains(init.exit))
                             {
-                                Console.Write(". ");
-                            }
-                        }
-                    }
 
-                    if (column < 7)
+                                Console.ForegroundColor = ConsoleColor.White;
+                                Console.Write(thing.ToString());
+                                Console.ResetColor();
+                            }
+
+                            else
+                            {
+                                Console.Write("~ ~ ~ ~ ~ ");
+                            }
+                    }
+                }
+                //not working
+                /*    if (column < 7)
                     {
                         Console.Write("\t");
                     }
@@ -56,7 +54,8 @@ namespace Projeto2_LP1
             Console.SetCursorPosition(55, 35);
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(" [Messages]");
-            Console.ResetColor();
+            Console.ResetColor();*/
+            }
         }
     }
 }

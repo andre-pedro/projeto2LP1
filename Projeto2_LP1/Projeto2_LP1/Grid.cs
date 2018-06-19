@@ -17,14 +17,14 @@ namespace Projeto2_LP1
         public int trap1X, trap2X, trap3X = random.Next(0, 8);
         public int trap1Y, trap2Y, trap3Y = random.Next(1, 7);
 
-    //    public int trap2X = random.Next(0, 8);
-  //      public int trap2Y = random.Next(1, 7);
+        //public int trap2X = random.Next(0, 8);
+        //public int trap2Y = random.Next(1, 7);
 
-       // public int trap3X = random.Next(0, 8);
-    //    public int trap3Y = random.Next(1, 7);
+        // public int trap3X = random.Next(0, 8);
+        //public int trap3Y = random.Next(1, 7);
 
-        public int foodX = random.Next(0, 8);
-        public int foodY = random.Next(1, 7);
+        public int food1X, food2X, food3X = random.Next(0, 8);
+        public int food1Y, food2Y, food3Y = random.Next(1, 7);
 
         public int npcX = random.Next(0, 8);
         public int npcY = random.Next(1, 7);
@@ -43,7 +43,9 @@ namespace Projeto2_LP1
             array[trap1X, trap1Y].Add(init.trap1);
             array[trap2X, trap2Y].Add(init.trap2);
             array[trap3X, trap3Y].Add(init.trap3);
-            array[foodX, foodY].Add(init.food);
+            array[food1X, food1Y].Add(init.food1);
+            array[food2X, food2Y].Add(init.food2);
+            array[food3X, food3Y].Add(init.food3);
             array[npcX, npcY].Add(init.npc);
         }
     }

@@ -1,6 +1,4 @@
-﻿
-
-namespace Projeto2_LP1
+﻿namespace Projeto2_LP1
 {
     /// <summary>
     /// Esta classe herda da interface IgameObject. É composta por três 
