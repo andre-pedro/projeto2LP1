@@ -1,5 +1,4 @@
 ﻿
-
 namespace Projeto2_LP1
 {
     interface IGameObject
