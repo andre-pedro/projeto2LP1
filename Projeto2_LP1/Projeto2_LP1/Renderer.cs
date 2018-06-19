@@ -183,6 +183,42 @@ namespace Projeto2_LP1
                     }
                 }
             }
+            Console.SetCursorPosition(0, 25);
+            Console.WriteLine(" ╔═════════════════════════════════════════════════════" +
+                "════════════════════════════════════════════════════════════════════╗");
+            Console.SetCursorPosition(16, 26);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(" [Surroundings]");
+            Console.ResetColor();
+
+            Console.SetCursorPosition(0, 34);
+            Console.WriteLine(" ╚═════════════════════════════════════════════════════" +
+                "════════════════════════════════════════════════════════════════════╝");
+            Console.SetCursorPosition(55, 35);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(" [Messages]");
+            Console.ResetColor();
+
+            if (grid.moved != "NONE")
+            {
+                Console.SetCursorPosition(51, 37);
+                Console.WriteLine($" - I walked {grid.moved}.");
+            }
+
+            Console.SetCursorPosition(85, 26);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(" [Controls]");
+            Console.ResetColor();
+            Console.SetCursorPosition(82, 28);
+            Console.WriteLine("  W - Move North");
+            Console.SetCursorPosition(82, 29);
+            Console.WriteLine("  A - Move West");
+            Console.SetCursorPosition(82, 30);
+            Console.WriteLine("  D - Move East");
+            Console.SetCursorPosition(82, 31);
+            Console.WriteLine("  S - Move South");
+            Console.SetCursorPosition(82, 32);
+            Console.WriteLine("  Q - Quit Game");
         }
     }
 }
