@@ -15,7 +15,10 @@ namespace Projeto2_LP1
         public int playerX = random.Next(0, 8);
         public int playerY = 0;
 
-        public int npcX = random.Next(0, 8);
-        public int npcY = random.Next(1, 7);
+        public int exitX = random.Next(0, 8);
+        public int exitY = 7;
+
+        public int trapX = random.Next(0, 8);
+        public int trapY = random.Next(1, 7);
     }
 }
