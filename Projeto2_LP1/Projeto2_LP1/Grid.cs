@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Projeto2_LP1
 {
@@ -28,6 +32,8 @@ namespace Projeto2_LP1
 
         public int npcX = random.Next(0, 8);
         public int npcY = random.Next(1, 7);
+
+        public string moved = "NONE";
 
         public void CreateGrid(Initializer init)
         {

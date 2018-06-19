@@ -25,29 +25,90 @@ namespace Projeto2_LP1
                     }
                     foreach (IGameObject thing in grid.array[row, column])
                     {
+                        Console.ResetColor();
                         if (thing == init.player)
                         {
+                            Console.ForegroundColor = ConsoleColor.Cyan;
                             Console.Write(thing.ToString());
+                            Console.ResetColor();
                         }
                         if (thing == init.exit)
                         {
-                            Console.Write(thing.ToString());
+                            if (grid.array[grid.playerX, grid.playerY].Contains(init.exit))
+                            {
+                                Console.ForegroundColor = ConsoleColor.White;
+                                Console.Write(thing.ToString());
+                                Console.ResetColor();
+                            }
+                            else
+                            {
+                                Console.Write("~ ~ ~ ~ ~ ");
+                            }
                         }
                         if (thing == init.trap1)
                         {
-                            Console.Write(thing.ToString());
+                            if (grid.array[grid.playerX, grid.playerY].Contains(init.trap1))
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.Write(thing.ToString());
+                                Console.ResetColor();
+                            }
+                            else
+                            {
+                                Console.Write("~ ");
+                            }
                         }
                         if (thing == init.trap2)
                         {
-                            Console.Write(thing.ToString());
+                            if (grid.array[grid.playerX, grid.playerY].Contains(init.trap2))
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.Write(thing.ToString());
+                                Console.ResetColor();
+                            }
+                            else
+                            {
+                                Console.Write("~ ");
+                            }
                         }
                         if (thing == init.trap3)
                         {
-                            Console.Write(thing.ToString());
+                            if (grid.array[grid.playerX, grid.playerY].Contains(init.trap3))
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.Write(thing.ToString());
+                                Console.ResetColor();
+                            }
+                            else
+                            {
+                                Console.Write("~ ");
+                            }
                         }
                         if (thing == init.npc)
                         {
-                            Console.Write(thing.ToString());
+                            if (grid.array[grid.playerX, grid.playerY].Contains(init.npc))
+                            {
+                                Console.ForegroundColor = ConsoleColor.Yellow;
+                                Console.Write(thing.ToString());
+                                Console.ResetColor();
+                            }
+                            else
+                            {
+                                Console.Write("~ ");
+                            }
+                        }
+                        if (thing == init.food)
+                        {
+                            if (grid.array[grid.playerX, grid.playerY].Contains(init.food))
+                            {
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.Write(thing.ToString());
+                                Console.ResetColor();
+                            }
+                            else
+                            {
+                                Console.Write("~ ");
+                            }
                         }
                     }
                     for (int i = 5 - grid.array[row, column].Count(); i > 0; i--)
@@ -62,30 +123,6 @@ namespace Projeto2_LP1
                             {
                                 Console.Write(". ");
                             }
-                        }
-                    }
-
-                    if (column < 7)
-                    {
-                        Console.Write("\t");
-                    }
-                    for (int i = 5 - grid.array[row, column].Count(); i > 0; i--)
-                    {
-                        if (grid.array[row, column].Contains(init.exit))
-                        {
-                            // Não imprime (para não sobrepor exit)
-                        }
-                        else
-                        {
-                            if (grid.array[row, column].Contains(init.player)) /*&&
-                                (grid.array[grid.playerX - 1, grid.playerY].Count() > 0) &&
-                                (grid.array[grid.playerX + 1, grid.playerY].Count() > 0) &&
-                                (grid.array[grid.playerX, grid.playerY - 1].Count() > 0) &&
-                                (grid.array[grid.playerX, grid.playerY + 1].Count() > 0))*/
-
-                            {
-                                Console.Write(". ");
-                            }
                             else
                             {
                                 Console.Write("~ ");
@@ -97,6 +134,7 @@ namespace Projeto2_LP1
                     {
                         Console.Write("\t");
                     }
+
                     if (column == 7)
                     {
                         if (row == 0)

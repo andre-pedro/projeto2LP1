@@ -57,6 +57,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Renderer.cs" />
+    <Compile Include="Surroundings.cs" />
     <Compile Include="TileMaker.cs" />
     <Compile Include="Trap.cs" />
   </ItemGroup>

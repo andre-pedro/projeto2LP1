@@ -13,6 +13,7 @@ namespace Projeto2_LP1
 
         Grid grid = new Grid();
         Renderer renderer = new Renderer();
+        Surroundings scan = new Surroundings();
         Controls controls = new Controls();
 
         static int selectedLine = 0;
@@ -156,6 +157,7 @@ namespace Projeto2_LP1
             while (init.player.Hp > 0)
             {
                 renderer.Render(init, grid);
+                scan.Scan(init, grid);
                 controls.CheckInputs(init, grid);
                 init.player.Hp--;
                 if (init.player.Hp > 100)
