@@ -1,16 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Projeto2_LP1
 {
     class Program
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="args"></param>
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            MainMenu menu = new MainMenu();
+            Console.WindowHeight = Console.LargestWindowHeight;
+            Console.WindowWidth = Console.LargestWindowWidth;
+            Console.OutputEncoding = Encoding.UTF8;
+
+            Console.CursorVisible = false;
+
             MainMenu.Display();
         }
     }
