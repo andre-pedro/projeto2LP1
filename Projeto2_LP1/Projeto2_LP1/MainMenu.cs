@@ -77,6 +77,37 @@ namespace Projeto2_LP1
 
         private static string DisplayMenu(List<string> lines)
         {
+
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.SetCursorPosition(0, 1);
+            Console.WriteLine(" ╔═════════════════════════════════════════════════════" +
+                "════════════════════════════════════════════════════════════════════╗");
+            Console.SetCursorPosition(35, 2);
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.WriteLine(" _____                             _      _  _          ");
+            Console.SetCursorPosition(35, 3);
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("|  __ \\                           | |    (_)| |         ");
+            Console.SetCursorPosition(35, 4);
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("| |_/ /  ___    __ _  _   _   ___ | |     _ | | __  ___ ");
+            Console.SetCursorPosition(35, 5);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("|    /  / _ \\  / _` || | | | / _ \\| |    | || |/ / / _ \\");
+            Console.SetCursorPosition(35, 6);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("| |\\ \\ | (_) || (_| || |_| ||  __/| |____| ||   < |  __/");
+            Console.SetCursorPosition(35, 7);
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("\\_| \\_| \\___/  \\__, | \\__,_| \\___|\\_____/|_||_|\\_\\ \\___|");
+            Console.SetCursorPosition(35, 8);
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("               ___/ /                                   ");
+            Console.SetCursorPosition(35, 9);
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.WriteLine("              |____/                                    ");
+            Console.ResetColor();
+
             for (int i = 0; i < lines.Count; i++)
             {
                 if (i == selectedLine)
