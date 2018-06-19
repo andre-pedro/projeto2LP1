@@ -11,16 +11,17 @@ namespace Projeto2_LP1
         public string Name { get; set; }
         public string Symbol { get; set; }
         public float Damage { get; set; }
-    }
 
-    public Trap()
-    {
-        Name = "Recurso";
-        Symbol = "\u25B2 ";
-        Damage = 78;
-    }
-    public override string ToString()
-    {
-        return Symbol;
+
+        public Trap()
+        {
+            Name = "Recurso";
+            Symbol = "\u25B2 ";
+            Damage = 78;
+        }
+        public override string ToString()
+        {
+            return Symbol;
+        }
     }
 }
