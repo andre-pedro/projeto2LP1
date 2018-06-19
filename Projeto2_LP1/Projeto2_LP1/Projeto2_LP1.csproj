@@ -46,6 +46,7 @@
     <Compile Include="Credits.cs" />
     <Compile Include="Exit.cs" />
     <Compile Include="Food.cs" />
+    <Compile Include="GameOver.cs" />
     <Compile Include="Grid.cs" />
     <Compile Include="HighScores.cs" />
     <Compile Include="IGameObject.cs" />

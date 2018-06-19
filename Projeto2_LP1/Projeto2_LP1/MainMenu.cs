@@ -15,6 +15,8 @@ namespace Projeto2_LP1
         Renderer renderer = new Renderer();
         Surroundings scan = new Surroundings();
         Controls controls = new Controls();
+        NextLevel hasLeveled = new NextLevel();
+        GameOver hasDied = new GameOver();
 
         static int selectedLine = 0;
 
@@ -82,6 +84,7 @@ namespace Projeto2_LP1
             Console.SetCursorPosition(0, 1);
             Console.WriteLine(" ╔═════════════════════════════════════════════════════" +
                 "════════════════════════════════════════════════════════════════════╗");
+
             Console.SetCursorPosition(35, 2);
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine(" _____                             _      _  _          ");
@@ -112,6 +115,9 @@ namespace Projeto2_LP1
             {
                 if (i == selectedLine)
                 {
+                    Console.BackgroundColor = ConsoleColor.White;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
                     Console.WriteLine();
                     Console.SetCursorPosition(55, 12 + 3 * i);
                     Console.WriteLine(lines[i]);
@@ -119,13 +125,21 @@ namespace Projeto2_LP1
                 }
                 else
                 {
+                    Console.BackgroundColor = ConsoleColor.DarkGray;
+                    Console.ForegroundColor = ConsoleColor.White;
+
                     Console.WriteLine();
                     Console.SetCursorPosition(55, 12 + 3 * i);
                     Console.WriteLine(lines[i]);
                     Console.WriteLine();
                 }
+                Console.ResetColor();
             }
 
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.SetCursorPosition(0, 25);
+            Console.WriteLine(" ╚═════════════════════════════════════════════════════" +
+                "════════════════════════════════════════════════════════════════════╝");
             Console.SetCursorPosition(1, 23);
             if (selectedLine == 0)
             {
@@ -143,6 +157,7 @@ namespace Projeto2_LP1
             {
                 Console.WriteLine(" Quit the game");
             }
+            Console.ResetColor();
             Console.WriteLine();
 
             ConsoleKeyInfo input = Console.ReadKey();
@@ -210,14 +225,33 @@ namespace Projeto2_LP1
                 {
                     init.player.Hp -= init.trap3.Damage;
                 }
-                // Verificacao food
-                if (grid.array[grid.playerX, grid.playerY].Contains(init.food))
+                // Verificacao food1
+                if (grid.array[grid.playerX, grid.playerY].Contains(init.food1))
                 {
-                    init.player.Hp += init.food.Heal;
-                    grid.array[grid.playerX, grid.playerY].Remove(init.food);
+                    init.player.Hp += init.food1.Heal;
+                    grid.array[grid.playerX, grid.playerY].Remove(init.food1);
+                }
+                // Verificacao food2
+                if (grid.array[grid.playerX, grid.playerY].Contains(init.food1))
+                {
+                    init.player.Hp += init.food1.Heal;
+                    grid.array[grid.playerX, grid.playerY].Remove(init.food1);
+                }
+                // Verificacao food3
+                if (grid.array[grid.playerX, grid.playerY].Contains(init.food1))
+                {
+                    init.player.Hp += init.food1.Heal;
+                    grid.array[grid.playerX, grid.playerY].Remove(init.food1);
                 }
                 Console.Clear();
+                if (hasLeveled.HasLeveled(init, grid) == true)
+                {
+                    grid = new Grid();
+                    grid.CreateGrid(init);
+                    renderer.Render(init, grid);
+                }
             }
+            hasDied.Die(init);
         }
     }
 }

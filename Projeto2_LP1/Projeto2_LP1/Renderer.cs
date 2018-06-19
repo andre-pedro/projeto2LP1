@@ -97,9 +97,35 @@ namespace Projeto2_LP1
                                 Console.Write("~ ");
                             }
                         }
-                        if (thing == init.food)
+                        if (thing == init.food1)
                         {
-                            if (grid.array[grid.playerX, grid.playerY].Contains(init.food))
+                            if (grid.array[grid.playerX, grid.playerY].Contains(init.food1))
+                            {
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.Write(thing.ToString());
+                                Console.ResetColor();
+                            }
+                            else
+                            {
+                                Console.Write("~ ");
+                            }
+                        }
+                        if (thing == init.food2)
+                        {
+                            if (grid.array[grid.playerX, grid.playerY].Contains(init.food2))
+                            {
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.Write(thing.ToString());
+                                Console.ResetColor();
+                            }
+                            else
+                            {
+                                Console.Write("~ ");
+                            }
+                        }
+                        if (thing == init.food3)
+                        {
+                            if (grid.array[grid.playerX, grid.playerY].Contains(init.food3))
                             {
                                 Console.ForegroundColor = ConsoleColor.Green;
                                 Console.Write(thing.ToString());
