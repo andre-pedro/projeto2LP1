@@ -103,6 +103,8 @@ namespace Projeto2_LP1
                                     break;
                                 case ConsoleKey.N:
                                     quitConfirm = false;
+                                    Console.SetCursorPosition(50, 39);
+                                    Console.WriteLine("Quiting aborted!");
                                     break;
                             }
                         }

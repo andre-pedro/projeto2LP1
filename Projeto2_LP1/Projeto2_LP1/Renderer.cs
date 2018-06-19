@@ -244,19 +244,19 @@ namespace Projeto2_LP1
                 }
             }
             Console.SetCursorPosition(0, 25);
-            Console.WriteLine(" ╔═════════════════════════════════════════════════════" +
-                "════════════════════════════════════════════════════════════════════╗");
+            Console.WriteLine("╔═════════════════════════════════════════════════════" +
+                "══════════════════════════════════════════════════════════════════╗");
             Console.SetCursorPosition(16, 26);
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(" [Surroundings]");
+            Console.WriteLine("[Surroundings]");
             Console.ResetColor();
 
             Console.SetCursorPosition(0, 34);
-            Console.WriteLine(" ╚═════════════════════════════════════════════════════" +
-                "════════════════════════════════════════════════════════════════════╝");
+            Console.WriteLine("╚═════════════════════════════════════════════════════" +
+                "══════════════════════════════════════════════════════════════════╝");
             Console.SetCursorPosition(55, 35);
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(" [Messages]");
+            Console.WriteLine("[Messages]");
             Console.ResetColor();
 
             if (grid.moved != "NONE")
@@ -267,7 +267,7 @@ namespace Projeto2_LP1
 
             Console.SetCursorPosition(85, 26);
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(" [Controls]");
+            Console.WriteLine("[Controls]");
             Console.ResetColor();
             Console.SetCursorPosition(82, 28);
             Console.WriteLine("  W - Move North");

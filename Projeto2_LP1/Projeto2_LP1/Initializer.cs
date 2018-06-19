@@ -8,12 +8,12 @@ namespace Projeto2_LP1
     {
         public Player player = new Player();
         public Exit exit = new Exit();
-        public Trap trap1 = new Trap("recurso", 50);
-        public Trap trap2 = new Trap("spike", 10);
-        public Trap trap3 = new Trap("hole", 15);
-        public Food food1 = new Food("orange", 10);
-        public Food food2 = new Food("bread", 25);
-        public Food food3 = new Food("banana", 15);
+        public Trap trap1 = new Trap("a recurso (-78 HP)", 78);
+        public Trap trap2 = new Trap("a spike (-22 HP)", 22);
+        public Trap trap3 = new Trap("a hole (-10 HP)", 10);
+        public Food food1 = new Food("an orange (+18 HP)", 18);
+        public Food food2 = new Food("a loaf of bread (+35 HP)", 35);
+        public Food food3 = new Food("a banana (+22 HP)", 22);
         public NPC npc = new NPC();
 
         public int level = 1;

@@ -199,7 +199,8 @@ namespace Projeto2_LP1
             Console.OutputEncoding = Encoding.UTF8;
             Console.Clear();
             grid.CreateGrid(init);
-            while (init.player.Hp > 0)
+            bool gameOver = false;
+            while (gameOver == false)
             {
                 renderer.Render(init, grid);
                 scan.Scan(init, grid);
@@ -241,6 +242,10 @@ namespace Projeto2_LP1
                 if (init.player.Hp > 100)
                 {
                     init.player.Hp = 100;
+                }
+                if (init.player.Hp <= 0)
+                {
+                    gameOver = true;
                 }
                 Console.Clear();
                 if (hasLeveled.HasLeveled(init, grid) == true)
