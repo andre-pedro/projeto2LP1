@@ -10,5 +10,13 @@ namespace Projeto2_LP1
     {
         public string Name { get; set; }
         public string Symbol { get; set; }
+        public float Heal { get; set; }
+
+        public Food()
+        {
+            Name = "Cat food";
+            Symbol = "\u2665 ";
+            Heal = 25;
+        }
     }
 }
