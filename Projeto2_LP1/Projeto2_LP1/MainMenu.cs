@@ -16,7 +16,7 @@ namespace Projeto2_LP1
         Surroundings scan = new Surroundings();
         Controls controls = new Controls();
         NextLevel hasLeveled = new NextLevel();
-        GameOver hasDied = new GameOver();
+        Dead hasDied = new Dead();
 
         static int selectedLine = 0;
 
@@ -79,12 +79,10 @@ namespace Projeto2_LP1
 
         private static string DisplayMenu(List<string> lines)
         {
-
             Console.ForegroundColor = ConsoleColor.White;
             Console.SetCursorPosition(0, 1);
             Console.WriteLine(" ╔═════════════════════════════════════════════════════" +
                 "════════════════════════════════════════════════════════════════════╗");
-
             Console.SetCursorPosition(35, 2);
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine(" _____                             _      _  _          ");
@@ -198,6 +196,7 @@ namespace Projeto2_LP1
 
         public void NewGame(Initializer init)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             Console.Clear();
             grid.CreateGrid(init);
             while (init.player.Hp > 0)
@@ -225,23 +224,11 @@ namespace Projeto2_LP1
                 {
                     init.player.Hp -= init.trap3.Damage;
                 }
-                // Verificacao food1
-                if (grid.array[grid.playerX, grid.playerY].Contains(init.food1))
+                // Verificacao food
+                if (grid.array[grid.playerX, grid.playerY].Contains(init.food))
                 {
-                    init.player.Hp += init.food1.Heal;
-                    grid.array[grid.playerX, grid.playerY].Remove(init.food1);
-                }
-                // Verificacao food2
-                if (grid.array[grid.playerX, grid.playerY].Contains(init.food1))
-                {
-                    init.player.Hp += init.food1.Heal;
-                    grid.array[grid.playerX, grid.playerY].Remove(init.food1);
-                }
-                // Verificacao food3
-                if (grid.array[grid.playerX, grid.playerY].Contains(init.food1))
-                {
-                    init.player.Hp += init.food1.Heal;
-                    grid.array[grid.playerX, grid.playerY].Remove(init.food1);
+                    init.player.Hp += init.food.Heal;
+                    grid.array[grid.playerX, grid.playerY].Remove(init.food);
                 }
                 Console.Clear();
                 if (hasLeveled.HasLeveled(init, grid) == true)
@@ -251,7 +238,7 @@ namespace Projeto2_LP1
                     renderer.Render(init, grid);
                 }
             }
-            hasDied.Die(init);
+            hasDied.YourDead(init);
         }
     }
 }
