@@ -32,6 +32,11 @@ namespace Projeto2_LP1
             Damage = damage;
         }
 
+        /// <summary>
+        /// Através do override é possivel modificar o método ToString para 
+        /// devolver o símbolo escolhido para a grid de visualização.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return Symbol;

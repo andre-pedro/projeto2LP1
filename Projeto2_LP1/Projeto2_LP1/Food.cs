@@ -24,8 +24,11 @@ namespace Projeto2_LP1
         /// O Constructor Food indica o nome da comida, o símbolo que foi escolhido
         /// em UTF-8 e a quantidade de vida que o jogador pode recuperar.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="heal"></param>
+        /// <param name="name">O nome dado a cada tipo de comida na criação da 
+        /// mesma, pois cada tipo de comida irá fornecer ao jogador um hp 
+        /// recuperável diferente.</param>
+        /// <param name="heal">A vida que o jogador irá recuperar caso 
+        /// apanhe com um certo tipo de comida.</param>
         public Food(string name, int heal)
         {
             Name = name;

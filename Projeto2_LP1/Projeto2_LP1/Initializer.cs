@@ -7,7 +7,7 @@ namespace Projeto2_LP1
     class Initializer
     {
         /// <summary>
-        /// Variável de string que indica o nome das traps.
+        /// Variável de string que indica o nome das armadilhas e comida.
         /// </summary>
         static string porta_fachada, recurso, ice, bread, banana, orange;
 
