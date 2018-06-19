@@ -12,4 +12,11 @@ namespace Projeto2_LP1
         public string Symbol { get; set; }
         public float Damage { get; set; }
     }
+
+    public Trap()
+    {
+        Name = "Recurso";
+        Symbol = "\u25B2 ";
+        Damage = 78;
+    }
 }
