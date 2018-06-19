@@ -124,6 +124,30 @@ namespace Projeto2_LP1
                         }
                         Console.Write("\n");
                     }
+                    for (int i = 5 - grid.array[row, column].Count(); i > 0; i--)
+                    {
+                        if (grid.array[row, column].Contains(init.exit))
+                        {
+                            // Não imprime (para não sobrepor exit)
+                        }
+                        else
+                        {
+                            if (grid.array[row, column].Contains(init.player)) /*&&
+                                (grid.array[grid.playerX - 1, grid.playerY].Count() > 0) &&
+                                (grid.array[grid.playerX + 1, grid.playerY].Count() > 0) &&
+                                (grid.array[grid.playerX, grid.playerY - 1].Count() > 0) &&
+                                (grid.array[grid.playerX, grid.playerY + 1].Count() > 0))*/
+
+                            {
+                                Console.Write(". ");
+                            }
+                            else
+                            {
+                                Console.Write("~ ");
+                            }
+                        }
+                    }
+
                 }
             }
             Console.SetCursorPosition(16, 26);
