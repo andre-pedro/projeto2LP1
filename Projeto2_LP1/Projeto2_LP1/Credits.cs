@@ -11,8 +11,13 @@ namespace Projeto2_LP1
         public void Print()
         {
             Console.Clear();
+            Console.SetCursorPosition(0, 1);
+            Console.WriteLine(" ╔═════════════════════════════════════════════════════" +
+                "════════════════════════════════════════════════════════════════════╗");
             Console.SetCursorPosition(56, 2);
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(" [Credits]");
+            Console.ResetColor();
             Console.SetCursorPosition(34, 4);
             Console.WriteLine($" - Universidade Lusófona de Humanidades e Tecnologias - ");
             Console.SetCursorPosition(27, 6);
@@ -20,6 +25,10 @@ namespace Projeto2_LP1
                 $" André Santos and Tiago Alves.");
             Console.SetCursorPosition(48, 8);
             Console.WriteLine($" Press any Key to continue...");
+
+            Console.SetCursorPosition(0, 10);
+            Console.WriteLine(" ╚═════════════════════════════════════════════════════" +
+                "════════════════════════════════════════════════════════════════════╝");
             Console.ReadKey();
         }
     }
