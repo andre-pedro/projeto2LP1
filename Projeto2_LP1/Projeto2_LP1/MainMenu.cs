@@ -65,7 +65,7 @@ namespace Projeto2_LP1
         private static string DisplayMenu(List<string> lines)
         {
             Console.ForegroundColor = ConsoleColor.White;
-            Console.SetCursorPosition(1, 1);
+            Console.SetCursorPosition(0, 1);
             Console.WriteLine("╔═════════════════════════════════════════════════════" +
                 "════════════════════════════════════════════════════════════════════╗");
             Console.SetCursorPosition(35, 2);
@@ -120,7 +120,7 @@ namespace Projeto2_LP1
             }
 
             Console.ForegroundColor = ConsoleColor.White;
-            Console.SetCursorPosition(1, 25);
+            Console.SetCursorPosition(0, 25);
             Console.WriteLine("╚═════════════════════════════════════════════════════" +
                 "════════════════════════════════════════════════════════════════════╝");
             Console.SetCursorPosition(2, 23);
