@@ -1,25 +1,70 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Projeto2_LP1
 {
+
+    /// <summary>
+    /// Classe responsável por efectuar  o ciclo do jogo.
+    /// </summary>
     class GameLoop
     {
+
+        /// <summary>
+        /// É criada uma instânica desta classe para que seja possível efectuar
+        /// constantes verificações a alterações na grid.
+        /// </summary>
         Grid grid = new Grid();
+
+        /// <summary>
+        /// É criada uma instância desta classe para poder ser visualizado toda 
+        /// a informação durante o decorrer do jogo. Grid, movimentos, informação
+        /// do jogador, legendas, etc..
+        /// </summary>
         Renderer renderer = new Renderer();
+
+        /// <summary>
+        /// É criada uma instância da classe Surroundings, pois é necessário efectuar
+        /// uma constante verificação em cadaturno do que o jogador consegue 
+        /// visualizar a sua volta.
+        /// /// </summary>
         Surroundings scan = new Surroundings();
+        
+        /// <summary>
+        /// É criada uma instânica da classe Controls para permitir ao jogador 
+        /// selecionar o input desejado. 
+        /// </summary>
         Controls controls = new Controls();
+
+        /// <summary>
+        /// É criada uma instância da classe NextLevel para efecutar uma verificação
+        /// e passar de nível caso seja efectuada com sucesso.
+        /// </summary>
         NextLevel hasLeveled = new NextLevel();
+
+        /// <summary>
+        /// É criada uma instância da classe GameOver para efectuar uma verificação
+        /// constante se o jogador morreu. Caso seja afirmativa mostra o ecrã 
+        /// de Game Over.
+        /// </summary>
         GameOver hasDied = new GameOver();
 
+
+        /// <summary>
+        /// Método que inicia um novo jogo, ao premir "New Game" no ecrã Main menu.
+        /// </summary>
+        /// <param name="init"></param>
         public void NewGame(Initializer init)
         {
+
+            ///Permite a utilização de caracteres UTF8 na consola.
             Console.OutputEncoding = Encoding.UTF8;
             Console.Clear();
             grid.CreateGrid(init);
+
+            ///Ciclo de jogo que irá ser efectuado, enquanto a vida do jogador 
+            ///seja superior a 0.
             while (init.player.Hp > 0)
             {
                 // Verificacao trap1
