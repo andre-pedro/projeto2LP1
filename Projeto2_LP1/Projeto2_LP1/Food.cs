@@ -1,7 +1,7 @@
 ﻿namespace Projeto2_LP1
 {
     /// <summary>
-    /// Esta classe herda da interface IgameObject. É composta por três 
+    /// Esta classe implementa da interface IgameObject. É composta por quatro 
     /// propriedades, todas elas de com a possibilidade de escrita e leitura. 
     /// Possui também um constructor e um método override "ToString()".
     /// </summary>
@@ -43,7 +43,7 @@
         /// Através do override é possivel modificar o método ToString para 
         /// devolver o símbolo escolhido para a grid de visualização.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Símbolo em UTF-8</returns>
         public override string ToString()
         {
              return Symbol;

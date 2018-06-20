@@ -3,6 +3,9 @@ using System.Linq;
 
 namespace Projeto2_LP1
 {
+    /// <summary>
+    /// Classe que verificar o que se encontra a volta do jogador.
+    /// </summary>
     class Surroundings
     {
         public void Scan(Initializer init, Grid grid)

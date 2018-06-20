@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Projeto2_LP1
 {
+
+    /// <summary>
+    /// Classe de visualização do projecto.
+    /// </summary>
     class Renderer
     {
         public void Render(Initializer init, Grid grid)
