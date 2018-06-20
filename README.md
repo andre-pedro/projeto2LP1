@@ -23,16 +23,13 @@ Este projeto é composto por várias fases. Cada fase, para ser considerada, req
 
 No início do projeto pensamos em fazer o projeto de forma fragmentada, indo implementando tudo o que podiamos. Algum tempo depois optamos por fazer o projeto fase a fase.
  
-### Arquitetura da Solução:
-	* Breve explicação de como o programa foi organizado e indicação das estruturas de dados usadas
-	(para o inventário e para a grelha de jogo, por exemplo), bem como os algoritmos implementados
-	(para desenhar o mapa e para geração procedimental, por exemplo).
+* Arquitetura da Solução:
 	
-### Fluxograma do _gameloop_:
+* Fluxograma do _gameloop_:
 
 	![fluxograma](https://user-images.githubusercontent.com/33433474/41686130-db5c7910-74da-11e8-9d0a-b99e98f860b9.png)
  
-### Diagrama UML:
+* Diagrama UML:
 
 	![uml](https://user-images.githubusercontent.com/33433474/41686040-8a3ee112-74da-11e8-85b8-99e6e53980f0.png)
 
