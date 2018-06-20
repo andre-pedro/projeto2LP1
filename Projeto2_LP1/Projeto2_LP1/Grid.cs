@@ -33,7 +33,6 @@ namespace Projeto2_LP1
         public int playerX = random.Next(0, 8);
         public int playerY = 0;
 
-
         /// <summary>
         /// Criação do X e Y da saída. O X é posicionado na última coluna mas 
         /// numa linha aleatória dessa coluna.
