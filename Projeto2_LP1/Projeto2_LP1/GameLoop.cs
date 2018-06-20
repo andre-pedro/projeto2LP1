@@ -67,36 +67,67 @@ namespace Projeto2_LP1
             ///seja superior a 0.
             while (init.player.Hp > 0)
             {
-                // Verificacao trap1
+                ///Efectuada uma verificação na tile em que o jogador se encontra
+                ///para poder obter os objectos do tipo Trap e agir em conformidade.
+
+
+                ///Verificação de objectos do tipo Trap1
                 if (grid.array[grid.playerX, grid.playerY].Contains(init.trap1) &&
                     init.trap1.FallenInto == false)
                 {
+
+                    ///O jogador perde vida igual ao dano que a armadilha possui.
                     init.player.Hp -= init.trap1.Damage;
+
+                    ///O booleano passa a true, o jogador já não poderá levar 
+                    ///dano da mesma armadilha caso passe ou permaneça no mesmo
+                    ///tile em turnos diferentes.
                     init.trap1.FallenInto = true;
                 }
-                // Verificacao trap2
+
+                ///Verificação de objectos do tipo Trap2
                 if (grid.array[grid.playerX, grid.playerY].Contains(init.trap2) &&
                     init.trap2.FallenInto == false)
                 {
+
+                    ///O jogador perde vida igual ao dano que a armadilha possui.
                     init.player.Hp -= init.trap2.Damage;
+
+                    ///O booleano passa a true, o jogador já não poderá levar 
+                    ///dano da mesma armadilha caso passe ou permaneça no mesmo
+                    ///tile em turnos diferentes.
                     init.trap2.FallenInto = true;
                 }
-                // Verificacao trap3
+
+                ///Verificação de objectos do tipo Trap3
                 if (grid.array[grid.playerX, grid.playerY].Contains(init.trap3) &&
                     init.trap3.FallenInto == false)
                 {
+
+                    ///O jogador perde vida igual ao dano que a armadilha possui.
                     init.player.Hp -= init.trap3.Damage;
+
+                    ///O booleano passa a true, o jogador já não poderá levar 
+                    ///dano da mesma armadilha caso passe ou permaneça no mesmo
+                    ///tile em turnos diferentes.
                     init.trap3.FallenInto = true;
                 }
                 renderer.Render(init, grid);
                 scan.Scan(init, grid);
                 controls.CheckInputs(init, grid);
                 init.player.Hp--;
+
+                ///É efectuada uma verificação para que caso a vida do jogador 
+                ///esteja a 100, este não pode ultrapassar este número, mesmo que 
+                ///utiliza uma comida.
                 if (init.player.Hp > 100)
                 {
                     init.player.Hp = 100;
                 }
                 Console.Clear();
+
+                ///Verifica se houve passagem de nível, caso seja positivo gera
+                ///um novo nível de forma procedimental.
                 if (hasLeveled.HasLeveled(init, grid) == true)
                 {
                     grid = new Grid();
@@ -104,6 +135,9 @@ namespace Projeto2_LP1
                     renderer.Render(init, grid);
                 }
             }
+
+            ///Jogador tem vida inferior a 0, logo é mostrado o ecrã de Game
+            ///Over.
             hasDied.Die(init);
         }
     }
