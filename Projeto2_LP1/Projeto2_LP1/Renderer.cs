@@ -270,45 +270,47 @@ namespace Projeto2_LP1
 
             if (grid.moved != "NONE")
             {
-                Console.SetCursorPosition(50, 39);
-                Console.WriteLine($" - I walked {grid.moved}.");
+                Console.SetCursorPosition(51, 39);
+                Console.WriteLine($"- I walked {grid.moved}.");
             }
 
             // Verificacao trap1
             if (grid.array[grid.playerX, grid.playerY].Contains(init.trap1))
             {
-                Console.SetCursorPosition(46, 39);
-                Console.WriteLine($" - I've paid a recurso.");
+                Console.SetCursorPosition(47, 39);
+                Console.WriteLine($"- I've paid a recurso.");
             }
             // Verificacao trap2
             if (grid.array[grid.playerX, grid.playerY].Contains(init.trap2))
             {
-                Console.SetCursorPosition(44, 39);
-                Console.WriteLine($" - I've stepped on a spike.");
+                Console.SetCursorPosition(45, 39);
+                Console.WriteLine($"- I've stepped on a spike.");
             }
             // Verificacao trap3
             if (grid.array[grid.playerX, grid.playerY].Contains(init.trap3))
             {
-                Console.SetCursorPosition(44, 39);
-                Console.WriteLine($" - I've fallen into a hole.");
+                Console.SetCursorPosition(45, 39);
+                Console.WriteLine("- I've fallen into a hole.");
             }
 
             Console.SetCursorPosition(85, 27);
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("[Controls]");
             Console.ResetColor();
-            Console.SetCursorPosition(82, 29);
-            Console.WriteLine("  W - Move North");
-            Console.SetCursorPosition(82, 30);
-            Console.WriteLine("  A - Move West");
-            Console.SetCursorPosition(82, 31);
-            Console.WriteLine("  D - Move East");
-            Console.SetCursorPosition(82, 32);
-            Console.WriteLine("  S - Move South");
-            Console.SetCursorPosition(82, 33);
-            Console.WriteLine("  E - Pick Up and Use");
-            Console.SetCursorPosition(82, 34);
-            Console.WriteLine("  Q - Quit Game");
+            Console.SetCursorPosition(72, 29);
+            Console.WriteLine("W - Move North");
+            Console.SetCursorPosition(72, 30);
+            Console.WriteLine("A - Move West");
+            Console.SetCursorPosition(72, 31);
+            Console.WriteLine("D - Move East");
+            Console.SetCursorPosition(72, 32);
+            Console.WriteLine("S - Move South");
+            Console.SetCursorPosition(94, 29);
+            Console.WriteLine("E - Pick Up / Use");
+            Console.SetCursorPosition(94, 30);
+            Console.WriteLine("I - More Info");
+            Console.SetCursorPosition(94, 31);
+            Console.WriteLine("Q - Quit Game");
 
             Console.SetCursorPosition(127, 1);
             Console.WriteLine("╔════════════════════════" +
