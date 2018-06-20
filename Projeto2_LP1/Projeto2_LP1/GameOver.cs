@@ -8,6 +8,8 @@ namespace Projeto2_LP1
     class GameOver
     {
 
+        HighScoresManager hsm = new HighScoresManager();
+
         /// <summary>
         /// O método Die(); imprimi na consola ecrã de fim de jogo com o auxilio 
         /// de métodos que a classe Console fornece, posicionando a informação e
@@ -37,15 +39,17 @@ namespace Projeto2_LP1
             Console.ResetColor();
             Console.SetCursorPosition(42, 4);
             Console.WriteLine($" You've died! You made it till level {init.level}!");
-            Console.SetCursorPosition(48, 6);
-            Console.WriteLine($" Press any Key to continue...");
-
             Console.SetCursorPosition(0, 9);
             Console.WriteLine(" ╚═════════════════════════════════════════════════════" +
                 "════════════════════════════════════════════════════════════════════╝");
-            Console.ReadKey();
             Console.SetCursorPosition(48, 6);
-            Environment.Exit(0);
+            Console.Write("Insert your name here: ");
+            string name = Console.ReadLine();
+            // Add score and name
+            hsm.AddScore(name, init.level);
+            // Save to file
+            hsm.Save();
+            MainMenu.Display();
         }
     }
 }

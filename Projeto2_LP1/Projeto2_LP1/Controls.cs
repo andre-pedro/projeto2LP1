@@ -8,6 +8,7 @@ namespace Projeto2_LP1
         Renderer renderer = new Renderer();
         Surroundings scan = new Surroundings();
         Initializer init = new Initializer();
+        HighScoresManager hsm = new HighScoresManager();
 
         public void CheckInputs(Initializer init, Grid grid)
         {
@@ -234,6 +235,12 @@ namespace Projeto2_LP1
                             {
                                 case ConsoleKey.Y:
                                     Console.SetCursorPosition(42, 41);
+                                    Console.Write("Insert your name here: ");
+                                    string name = Console.ReadLine();
+                                    // Add score and name
+                                    hsm.AddScore(name, init.level);
+                                    // Save to file
+                                    hsm.Save();
                                     MainMenu.Display();
                                     break;
                                 case ConsoleKey.N:

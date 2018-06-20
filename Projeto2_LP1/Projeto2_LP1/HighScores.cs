@@ -4,6 +4,8 @@ namespace Projeto2_LP1
 {
     class HighScores
     {
+        HighScoresManager hsm = new HighScoresManager();
+
         public void Print()
         {
             Console.Clear();
@@ -14,14 +16,23 @@ namespace Projeto2_LP1
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("[High Scores]");
             Console.ResetColor();
-            Console.SetCursorPosition(53, 4);
-            Console.WriteLine("- Comming Soon - ");
-            Console.SetCursorPosition(48, 6);
+
+            int row = 4;
+
+            foreach (Tuple<string, float> highscore in hsm.GetScores())
+            {
+                row++;
+                Console.SetCursorPosition(45, row);
+                Console.WriteLine($"Name: {highscore.Item1, -18}" + $"Score: {highscore.Item2}");
+            }
+
+            Console.SetCursorPosition(48, 20);
             Console.WriteLine("Press any Key to continue...");
 
-            Console.SetCursorPosition(0, 8);
+            Console.SetCursorPosition(0, 21);
             Console.WriteLine("╚═════════════════════════════════════════════════════" +
                 "════════════════════════════════════════════════════════════════════╝");
+
             Console.ReadKey();
         }
     }
