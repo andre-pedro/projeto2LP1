@@ -33,8 +33,8 @@ namespace Projeto2_LP1
         /// tirar ao jogador.
         /// </summary>
         public Trap trap1 = new Trap("a recurso", random.Next(0, 78));
-        public Trap trap2 = new Trap("a spike", random.Next(0, 22));
-        public Trap trap3 = new Trap("a hole", random.Next(0, 10));
+        public Trap trap2 = new Trap("a spike", random.Next(0, 60));
+        public Trap trap3 = new Trap("a hole", random.Next(0, 50));
 
         /// <summary>
         /// Inicializa uma nova instânica da class Food. É efectuado a criação
@@ -42,9 +42,9 @@ namespace Projeto2_LP1
         /// permite indicar que tipo de comida é e quanto hp o jogador irá 
         /// regenerar ao utilizar cada tipo de comida.
         /// </summary>
-        public Food food1 = new Food("an orange", 18);
-        public Food food2 = new Food("a loaf of bread", 35);
-        public Food food3 = new Food("a banana", 22);
+        public Food food1 = new Food("an orange", 8);
+        public Food food2 = new Food("a loaf of bread", 12);
+        public Food food3 = new Food("a banana", 10);
         public NPC npc = new NPC();
         public Map map = new Map();
 

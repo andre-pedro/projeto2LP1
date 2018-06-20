@@ -20,8 +20,7 @@ namespace Projeto2_LP1
             Console.OutputEncoding = Encoding.UTF8;
             Console.Clear();
             grid.CreateGrid(init);
-            bool gameOver = false;
-            while (gameOver == false)
+            while (init.player.Hp > 0)
             {
                 // Verificacao trap1
                 if (grid.array[grid.playerX, grid.playerY].Contains(init.trap1) &&
@@ -51,10 +50,6 @@ namespace Projeto2_LP1
                 if (init.player.Hp > 100)
                 {
                     init.player.Hp = 100;
-                }
-                if (init.player.Hp <= 0)
-                {
-                    gameOver = true;
                 }
                 Console.Clear();
                 if (hasLeveled.HasLeveled(init, grid) == true)
