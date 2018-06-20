@@ -23,10 +23,6 @@ namespace Projeto2_LP1
             bool gameOver = false;
             while (gameOver == false)
             {
-                renderer.Render(init, grid);
-                scan.Scan(init, grid);
-                controls.CheckInputs(init, grid);
-                init.player.Hp--;
                 // Verificacao trap1
                 if (grid.array[grid.playerX, grid.playerY].Contains(init.trap1))
                 {
@@ -42,6 +38,10 @@ namespace Projeto2_LP1
                 {
                     init.player.Hp -= init.trap3.Damage;
                 }
+                renderer.Render(init, grid);
+                scan.Scan(init, grid);
+                controls.CheckInputs(init, grid);
+                init.player.Hp--;
                 if (init.player.Hp > 100)
                 {
                     init.player.Hp = 100;

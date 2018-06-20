@@ -114,7 +114,7 @@ namespace Projeto2_LP1
                     if (thing != init.player)
                     {
                         Console.SetCursorPosition(6, 32);
-                        Console.WriteLine($" - I see a {thing.Name}!");
+                        Console.WriteLine($" - I see {thing.Name}!");
                     }
                 }
             }

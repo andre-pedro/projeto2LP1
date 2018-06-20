@@ -17,10 +17,11 @@ namespace Projeto2_LP1
                 init.trap1.Explored = false;
                 init.trap2.Explored = false;
                 init.trap3.Explored = false;
-                init.npc.Explored = false;
                 init.food1.Explored = false;
                 init.food2.Explored = false;
                 init.food3.Explored = false;
+                init.npc.Explored = false;
+                init.map.Explored = false;
                 init.level++;
                 Console.Clear();
                 Console.SetCursorPosition(0, 1);

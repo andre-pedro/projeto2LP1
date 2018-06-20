@@ -15,6 +15,7 @@ namespace Projeto2_LP1
         public Food food2 = new Food("a loaf of bread (+35 HP)", 35);
         public Food food3 = new Food("a banana (+22 HP)", 22);
         public NPC npc = new NPC();
+        public Map map = new Map();
 
         public int level = 1;
 

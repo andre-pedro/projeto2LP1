@@ -8,8 +8,6 @@ namespace Projeto2_LP1
 {
     class Renderer
     {
-        public bool explored = false;
-
         public void Render(Initializer init, Grid grid)
         {
             Console.Clear();
@@ -122,27 +120,6 @@ namespace Projeto2_LP1
                                 Console.Write("~ ");
                             }
                         }
-                        if (thing == init.npc)
-                        {
-                            if ((row > 0 && grid.array[row - 1, column].Contains(init.player)) ||
-                               (row < 7 && grid.array[row + 1, column].Contains(init.player)) ||
-                               (column > 0 && grid.array[row, column - 1].Contains(init.player)) ||
-                               (column < 7 && grid.array[row, column + 1].Contains(init.player)) ||
-                               grid.array[row, column].Contains(init.player))
-                            {
-                                init.npc.Explored = true;
-                            }
-                            if (init.npc.Explored)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Yellow;
-                                Console.Write(thing.ToString());
-                                Console.ResetColor();
-                            }
-                            else
-                            {
-                                Console.Write("~ ");
-                            }
-                        }
                         if (thing == init.food1)
                         {
                             if ((row > 0 && grid.array[row - 1, column].Contains(init.player)) ||
@@ -198,6 +175,48 @@ namespace Projeto2_LP1
                             if (init.food3.Explored)
                             {
                                 Console.ForegroundColor = ConsoleColor.Green;
+                                Console.Write(thing.ToString());
+                                Console.ResetColor();
+                            }
+                            else
+                            {
+                                Console.Write("~ ");
+                            }
+                        }
+                        if (thing == init.npc)
+                        {
+                            if ((row > 0 && grid.array[row - 1, column].Contains(init.player)) ||
+                               (row < 7 && grid.array[row + 1, column].Contains(init.player)) ||
+                               (column > 0 && grid.array[row, column - 1].Contains(init.player)) ||
+                               (column < 7 && grid.array[row, column + 1].Contains(init.player)) ||
+                               grid.array[row, column].Contains(init.player))
+                            {
+                                init.npc.Explored = true;
+                            }
+                            if (init.npc.Explored)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Yellow;
+                                Console.Write(thing.ToString());
+                                Console.ResetColor();
+                            }
+                            else
+                            {
+                                Console.Write("~ ");
+                            }
+                        }
+                        if (thing == init.map)
+                        {
+                            if ((row > 0 && grid.array[row - 1, column].Contains(init.player)) ||
+                               (row < 7 && grid.array[row + 1, column].Contains(init.player)) ||
+                               (column > 0 && grid.array[row, column - 1].Contains(init.player)) ||
+                               (column < 7 && grid.array[row, column + 1].Contains(init.player)) ||
+                               grid.array[row, column].Contains(init.player))
+                            {
+                                init.map.Explored = true;
+                            }
+                            if (init.map.Explored)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Magenta;
                                 Console.Write(thing.ToString());
                                 Console.ResetColor();
                             }
@@ -371,7 +390,7 @@ namespace Projeto2_LP1
             Console.SetCursorPosition(82, 31);
             Console.WriteLine("  S - Move South");
             Console.SetCursorPosition(82, 32);
-            Console.WriteLine("  E - Eat Food");
+            Console.WriteLine("  E - Pick Up and Use");
             Console.SetCursorPosition(82, 33);
             Console.WriteLine("  Q - Quit Game");
         }

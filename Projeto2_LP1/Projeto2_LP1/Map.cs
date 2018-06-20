@@ -11,10 +11,11 @@ namespace Projeto2_LP1
         public string Name { get; set; }
         public string Symbol { get; set; }
         public bool Explored { get; set; }
-        public Map(string name, int damage)
+
+        public Map()
         {
-            Name = name;
-            Symbol = "T";
+            Name = "Map";
+            Symbol = "M ";
             Explored = false;
         }
 

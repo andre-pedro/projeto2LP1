@@ -89,6 +89,26 @@ namespace Projeto2_LP1
                             grid.array[grid.playerX, grid.playerY].Remove(init.food3);
                             playing = false;
                         }
+                        if (grid.array[grid.playerX, grid.playerY].Contains(init.map))
+                        {
+                            for (int row = 0; row < 8; row++)
+                            {
+                                for (int column = 0; column < 8; column++)
+                                {
+                                    grid.array[row, column].Explored = true;
+                                    init.exit.Explored = true;
+                                    init.trap1.Explored = true;
+                                    init.trap2.Explored = true;
+                                    init.trap3.Explored = true;
+                                    init.food1.Explored = true;
+                                    init.food2.Explored = true;
+                                    init.food3.Explored = true;
+                                    init.npc.Explored = true;
+                                }
+                            }
+                            grid.array[grid.playerX, grid.playerY].Remove(init.map);
+                            playing = false;
+                        }
                         break;
                     case ConsoleKey.Q:
                         Console.SetCursorPosition(42, 37);
