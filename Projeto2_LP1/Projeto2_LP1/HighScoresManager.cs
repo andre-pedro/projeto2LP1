@@ -1,22 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace Projeto2_LP1
 {
+
+    /// <summary>
+    /// Classe responsavél por salvar o nome e respectivos pontos que o jogador
+    /// consegui obter durante o jogo. Esta classe ainda seleciona o top 10 dos 
+    /// pontos, ou seja, permite seleciona o top 10, descartando os jogadores que
+    /// obtiveram pior pontuação e substituindo por novos jogadores com uma pontuação
+    /// mais elevada.
+    /// </summary>
     public class HighScoresManager
     {
-        // Create a List to hold highscores
+        /// <summary>
+        /// Cria uma Lista que irá guardar o nome e pontuação do jogador.
+        /// </summary>
         private List<Tuple<string, float>> highscores;
 
-        // Create variable to hold the filename
+        /// <summary>
+        /// Cria uma variável que guarda o nome do ficheiro.
+        /// </summary>
         private string filename = "";
 
-        // Constructor to initialise List
+        /// <summary>
+        /// Constructor necessário para inicializar instâncias desta classe.
+        /// </summary>
+        /// <param name="filename">Nome dado ao ficheiro .txt que têm os 
+        /// highscores do jogo.</param>
         public HighScoresManager(string filename = "HighScores.txt")
         {
-            // Initialise filename with filename given
+            ///Inicializa o ficheiro com o nome do ficheiro fornecido no 
+            ///constructor.
             this.filename = filename;
 
             // If File does not exist, initialise empty list

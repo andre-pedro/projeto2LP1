@@ -9,9 +9,10 @@ namespace Projeto2_LP1
     class Credits
     {
         /// <summary>
-        /// Através da utilização de métodos que a classe Console fornece o método
-        /// Print(); posiciona a informação e o tipo da mesma num sítio específico.
-        /// Os métodos utilizados da classe Console são:
+        /// Através da utilização de métodos que a classe Console fornece ao método
+        /// Print(); a possibilidade de posicionar de forma correcta a informação 
+        /// e o tipo da mesma num sítio específico. Os métodos utilizados da 
+        /// classe Console são:
         /// - Clear(); - permite limpar a consola.
         /// - SetCursorPosition(); - indica aonde irá ser colocado a informação 
         /// desejada.
