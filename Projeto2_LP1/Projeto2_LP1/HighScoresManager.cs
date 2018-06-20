@@ -35,23 +35,28 @@ namespace Projeto2_LP1
             ///constructor.
             this.filename = filename;
 
-            // If File does not exist, initialise empty list
+            ///Se o ficheiro escolhido não existir, cria uma nova lista que contêm
+            ///o nome e a pontuação do jogador.
             if (!File.Exists(filename))
             {
                 highscores = new List<Tuple<string, float>>(10);
             }
-            // If file exists
+            
+            ///Se o ficherio existe irá efectuar o seguinte código.
             else
             {
-                // Initialise List
+                
+                ///inicializa a lista.
                 highscores = new List<Tuple<string, float>>(10);
-                // Read All Lines from file
+                
+                ///Lê todas as linhas do ficheiro obtido.
                 string[] text = File.ReadAllLines(filename);
 
-                // Cycle through all the lines
+                ///Pecorre todas as linhas do ficheiro.
                 for (int i = 1; i < text.Length; i++)
                 {
-                    // Separate lines according to accepted format
+                    
+                    ///Separa as linhas de acordo com o formato indicado.
                     string[] subStrings = text[i].Split(':');
 
                     // If format is incorrect or the second subString cannot be
