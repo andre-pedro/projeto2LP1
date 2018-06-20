@@ -18,8 +18,8 @@ namespace Projeto2_LP1
         {
             Random random = new Random();
 
-            int value = random.Next(0, 2);
-            if (value == 0)
+            int chosenNpc = random.Next(0, 2);
+            if (chosenNpc == 0)
             {
                 Name = "Neutral NPC";
                 Symbol = "\u25CA ";
@@ -31,7 +31,7 @@ namespace Projeto2_LP1
                 Symbol = "\u2666 ";
                 Neutral = false;
             }
-            Hp = 20;
+            Hp = 100;
             Ap = 3;
             Explored = false;
         }
