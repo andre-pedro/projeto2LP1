@@ -238,7 +238,7 @@ namespace Projeto2_LP1
                             {
                                 case ConsoleKey.Y:
                                     Console.SetCursorPosition(42, 41);
-                                    Environment.Exit(0);
+                                    MainMenu.Display();
                                     break;
                                 case ConsoleKey.N:
                                     quitConfirm = false;
