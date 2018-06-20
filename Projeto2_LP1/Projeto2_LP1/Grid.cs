@@ -40,8 +40,8 @@ namespace Projeto2_LP1
 
         /// <summary>
         /// Criação de X e Y para as armadilhas, visto que se pode encontrar 
-        /// armadilhas em qualquer espaço do mapa, foi efectuado uma posição
-        /// aleatória tanto no X como no Y das armadilhas. 
+        /// armadilhas em qualquer parte do mapa, foi efectuado uma posição X e
+        /// Y de forma aleatória.
         /// </summary>
         public int trap1X = random.Next(0, 8);
         public int trap1Y = random.Next(0, 8);
@@ -53,9 +53,8 @@ namespace Projeto2_LP1
         public int trap3Y = random.Next(0, 8);
 
         /// <summary>
-        /// Criação de X e Y para a comida, visto que se pode encontrar em 
-        /// qualquer lado do mapa, foi efectuado a posição de cada uma com X e 
-        /// Y aleatórios.
+        /// Criação de X e Y para a comida. Foi criado a posição X e Y 
+        /// aleatórios para se poder encontrar em qualquer parte do mapa. 
         /// </summary>
         public int food1X = random.Next(0, 8);
         public int food1Y = random.Next(0, 8);
@@ -66,20 +65,42 @@ namespace Projeto2_LP1
         public int food3X = random.Next(0, 8);
         public int food3Y = random.Next(0, 8);
 
+        /// <summary>
+        /// Criação de X e Y para os npcs. Foi criado a posição X e Y 
+        /// aleatórios para se poder encontrar em qualquer parte do mapa. 
+        /// </summary>
         public int npcX = random.Next(0, 8);
         public int npcY = random.Next(0, 8);
 
+        /// <summary>
+        /// Criação de X e Y para o mapa que revela todo o nível. Foi criado 
+        /// a posição X e Y  aleatórios para se poder encontrar em qualquer 
+        /// parte .
+        /// </summary>
         public int mapX = random.Next(0, 8);
         public int mapY = random.Next(0, 8);
 
+        /// <summary>
+        /// Criação de uma variável que indica se existe movimento, foi criada 
+        /// nesta class devido a class Grid ser a base em termos de estrutura 
+        /// para todo o projecto.
+        /// </summary>
         public string moved = "NONE";
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="init"></param>
         public void CreateGrid(Initializer init)
         {
+            ///pecorre cada linha da nossa grid.
             for (int row = 0; row < 8; row++)
             {
+                ///pecorre cada coluna da nossa grid.
                 for (int column = 0; column < 8; column++)
                 {
+                    ///adiciona ano nosso array multidimensional na posição X e
+                    ///Y um TileMarker.
                     array[row, column] = new TileMaker();
                 }
             }
