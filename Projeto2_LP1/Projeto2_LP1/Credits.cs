@@ -1,13 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Projeto2_LP1
 {
+    /// <summary>
+    /// Esta classe utiliza um método para imprimir no ecrã os créditos do jogo.
+    /// </summary>
     class Credits
     {
+        /// <summary>
+        /// Através da utilização de métodos que a classe Console fornece 
+        /// posicionamos a informação e o tipo da mesma num sítio específico.
+        /// Os métodos utilizados da classe Console são:
+        /// - Clear(); - permite limpar a consola.
+        /// - SetCursorPosition(); - indica aonde irá ser colocado a informação 
+        /// desejada.
+        /// - WriteLine(); - escreve no ecrã o que pretendemos e dá um enter 
+        /// automático.
+        /// - ForegroundColor(); - Permite a utilização de cores com os nossos 
+        /// writelines();/writes();.
+        /// - Resetcolor(); - limpa a cor anteriormente escolhida.
+        /// - Readkey(); - Lê o input do utilizador para poder retroceder ao 
+        /// Mainmenu.
+        /// </summary>
         public void Print()
         {
             Console.Clear();
