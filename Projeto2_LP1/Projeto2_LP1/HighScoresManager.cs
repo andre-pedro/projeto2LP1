@@ -126,26 +126,32 @@ namespace Projeto2_LP1
             File.WriteAllText(filename, text);
         }
 
-        // Method that returns all highscores from list
+        /// <summary>
+        /// Método que ira retornar todas as pontuações da lista.
+        /// </summary>
+        /// <returns>Como o método possui um "yield" permite retornar todas as 
+        /// pontuações que se encontram na lista.</returns>
         public IEnumerable<Tuple<string, float>> GetScores()
         {
-            // For each highscore in list
+            ///Pecorre todas as pontuações na lista.
             foreach (Tuple<string, float> highscore in highscores)
             {
-                // Return the current highscore
+                ///Retorna todas as pontuações que encontrar na lista.
                 yield return highscore;
             }
         }
 
-        // Method to sort the list
+        /// <summary>
+        /// Método que é utilizado para ordenar a lista das pontuações.
+        /// </summary>
         private void SortList()
         {
-            // Sort the elements of the list in a descending order
+            ///Ordena os elementos da lista de forma descendente
             for (int i = 0; i <= highscores.Count - 1; i++)
             {
                 for (int j = 0; j < highscores.Count - 1; j++)
                 {
-                    // Use Bubble Sort to sort the list
+                    ///Utiliza o algoritmo Bubble Sort para ordenar a lista.
                     if (highscores[j].Item2 < highscores[i].Item2)
                     {
                         Tuple<string, float> temp = highscores[i];
