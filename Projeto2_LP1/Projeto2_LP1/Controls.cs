@@ -8,7 +8,10 @@ namespace Projeto2_LP1
 {
     class Controls
     {
-        public void CheckInputs(Initializer init, Grid world)
+        Grid grid = new Grid();
+        Initializer init = new Initializer();
+
+        public void CheckInputs(Initializer init, Grid grid)
         {
             bool playing = true;
             bool quitConfirm = true;
@@ -16,67 +19,76 @@ namespace Projeto2_LP1
             while (playing == true)
             {
                 ConsoleKeyInfo selectedKey = Console.ReadKey();
-                if (selectedKey.Key != ConsoleKey.W || selectedKey.Key != ConsoleKey.S ||
-                    selectedKey.Key != ConsoleKey.A || selectedKey.Key != ConsoleKey.D ||
-                    selectedKey.Key != ConsoleKey.Q)
-                {
-                    Console.SetCursorPosition(42, 37);
-                    Console.WriteLine(" - Hummm... That doesn't seem right...");
-                }
-                else
-                {
-                    break;
-                }
 
                 switch (selectedKey.Key)
                 {
                     case ConsoleKey.W:
-                        if (world.playerX > 0)
+                        if (grid.playerX > 0)
                         {
-                            world.array[world.playerX, world.playerY].Remove(init.player);
-                            world.playerX -= 1;
-                            world.array[world.playerX, world.playerY].Add(init.player);
+                            grid.array[grid.playerX, grid.playerY].Remove(init.player);
+                            grid.playerX -= 1;
+                            grid.array[grid.playerX, grid.playerY].Add(init.player);
                             playing = false;
-                            world.moved = "NORTH";
+                            grid.moved = "NORTH";
                         }
                         Console.SetCursorPosition(43, 37);
                         Console.WriteLine(" - I can't move on that direction!");
                         break;
                     case ConsoleKey.S:
-                        if (world.playerX < 7)
+                        if (grid.playerX < 7)
                         {
-                            world.array[world.playerX, world.playerY].Remove(init.player);
-                            world.playerX += 1;
-                            world.array[world.playerX, world.playerY].Add(init.player);
+                            grid.array[grid.playerX, grid.playerY].Remove(init.player);
+                            grid.playerX += 1;
+                            grid.array[grid.playerX, grid.playerY].Add(init.player);
                             playing = false;
-                            world.moved = "SOUTH";
+                            grid.moved = "SOUTH";
                         }
                         Console.SetCursorPosition(43, 37);
                         Console.WriteLine(" - I can't move on that direction!");
                         break;
                     case ConsoleKey.A:
-                        if (world.playerY > 0)
+                        if (grid.playerY > 0)
                         {
-                            world.array[world.playerX, world.playerY].Remove(init.player);
-                            world.playerY -= 1;
-                            world.array[world.playerX, world.playerY].Add(init.player);
+                            grid.array[grid.playerX, grid.playerY].Remove(init.player);
+                            grid.playerY -= 1;
+                            grid.array[grid.playerX, grid.playerY].Add(init.player);
                             playing = false;
-                            world.moved = "WEST";
+                            grid.moved = "WEST";
                         }
                         Console.SetCursorPosition(43, 37);
                         Console.WriteLine(" - I can't move on that direction!");
                         break;
                     case ConsoleKey.D:
-                        if (world.playerY < 7)
+                        if (grid.playerY < 7)
                         {
-                            world.array[world.playerX, world.playerY].Remove(init.player);
-                            world.playerY += 1;
-                            world.array[world.playerX, world.playerY].Add(init.player);
+                            grid.array[grid.playerX, grid.playerY].Remove(init.player);
+                            grid.playerY += 1;
+                            grid.array[grid.playerX, grid.playerY].Add(init.player);
                             playing = false;
-                            world.moved = "EAST";
+                            grid.moved = "EAST";
                         }
                         Console.SetCursorPosition(43, 37);
                         Console.WriteLine(" - I can't move on that direction!");
+                        break;
+                    case ConsoleKey.E:
+                        if (grid.array[grid.playerX, grid.playerY].Contains(init.food1))
+                        {
+                            init.player.Hp += init.food1.Heal;
+                            grid.array[grid.playerX, grid.playerY].Remove(init.food1);
+                            playing = false;
+                        }
+                        if (grid.array[grid.playerX, grid.playerY].Contains(init.food2))
+                        {
+                            init.player.Hp += init.food2.Heal;
+                            grid.array[grid.playerX, grid.playerY].Remove(init.food2);
+                            playing = false;
+                        }
+                        if (grid.array[grid.playerX, grid.playerY].Contains(init.food3))
+                        {
+                            init.player.Hp += init.food3.Heal;
+                            grid.array[grid.playerX, grid.playerY].Remove(init.food3);
+                            playing = false;
+                        }
                         break;
                     case ConsoleKey.Q:
                         Console.SetCursorPosition(42, 37);

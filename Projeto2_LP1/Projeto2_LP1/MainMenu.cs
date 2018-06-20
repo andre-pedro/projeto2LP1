@@ -221,24 +221,6 @@ namespace Projeto2_LP1
                 {
                     init.player.Hp -= init.trap3.Damage;
                 }
-                // Verificacao food1
-                if (grid.array[grid.playerX, grid.playerY].Contains(init.food1))
-                {
-                    init.player.Hp += init.food1.Heal;
-                    grid.array[grid.playerX, grid.playerY].Remove(init.food1);
-                }
-                // Verificacao food2
-                if (grid.array[grid.playerX, grid.playerY].Contains(init.food2))
-                {
-                    init.player.Hp += init.food2.Heal;
-                    grid.array[grid.playerX, grid.playerY].Remove(init.food2);
-                }
-                // Verificacao food3
-                if (grid.array[grid.playerX, grid.playerY].Contains(init.food3))
-                {
-                    init.player.Hp += init.food3.Heal;
-                    grid.array[grid.playerX, grid.playerY].Remove(init.food3);
-                }
                 if (init.player.Hp > 100)
                 {
                     init.player.Hp = 100;

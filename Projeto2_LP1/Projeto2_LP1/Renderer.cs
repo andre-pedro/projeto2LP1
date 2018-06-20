@@ -251,7 +251,7 @@ namespace Projeto2_LP1
             Console.WriteLine("[Surroundings]");
             Console.ResetColor();
 
-            Console.SetCursorPosition(0, 34);
+            Console.SetCursorPosition(0, 35);
             Console.WriteLine("╚═════════════════════════════════════════════════════" +
                 "══════════════════════════════════════════════════════════════════╝");
             Console.SetCursorPosition(55, 35);
@@ -263,6 +263,25 @@ namespace Projeto2_LP1
             {
                 Console.SetCursorPosition(51, 37);
                 Console.WriteLine($" - I walked {grid.moved}.");
+            }
+
+            // Verificacao trap1
+            if (grid.array[grid.playerX, grid.playerY].Contains(init.trap1))
+            {
+                Console.SetCursorPosition(44, 37);
+                Console.WriteLine($" - I've paid a recurso (-78 HP).");
+            }
+            // Verificacao trap2
+            if (grid.array[grid.playerX, grid.playerY].Contains(init.trap2))
+            {
+                Console.SetCursorPosition(42, 37);
+                Console.WriteLine($" - I've stepped on a spike (-22 HP).");
+            }
+            // Verificacao trap3
+            if (grid.array[grid.playerX, grid.playerY].Contains(init.trap3))
+            {
+                Console.SetCursorPosition(42, 37);
+                Console.WriteLine($" - I've fallen into a hole (-10 HP).");
             }
 
             Console.SetCursorPosition(85, 26);
@@ -278,6 +297,8 @@ namespace Projeto2_LP1
             Console.SetCursorPosition(82, 31);
             Console.WriteLine("  S - Move South");
             Console.SetCursorPosition(82, 32);
+            Console.WriteLine("  E - Eat Food");
+            Console.SetCursorPosition(82, 33);
             Console.WriteLine("  Q - Quit Game");
         }
     }
