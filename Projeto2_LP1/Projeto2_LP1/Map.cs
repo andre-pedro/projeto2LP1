@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Projeto2_LP1
 {
-    class Trap : IGameObject
+    class Map : IGameObject
     {
         public string Name { get; set; }
         public string Symbol { get; set; }
         public bool Explored { get; set; }
-        public Trap(string name, int damage)
+        public Map(string name, int damage)
         {
             Name = name;
             Symbol = "T";
