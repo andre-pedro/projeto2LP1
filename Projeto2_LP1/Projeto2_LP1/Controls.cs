@@ -48,20 +48,41 @@ namespace Projeto2_LP1
         /// Este método irá verificar o input do jogador e efectuar
         /// a/s opção/ões que  correspondente a cada tecla.
         /// </summary>
-        /// <param name="init"></param>
+        /// <param name="init">Parâmetro necessário para "desenhar" as movimentações
+        /// do jogador.</param>
         /// <param name="grid">O método recebe a grid de jogo para o jogador 
         /// se poder movimentar.</param>
         public void CheckInputs(Initializer init, Grid grid)
         {
+
+            ///Booleanos que indica se jogador se encontra a jogar.
             bool playing = true;
+
+            ///Booleano que confirma se o jogador pretende sair do jogo.
             bool quitConfirm = true;
 
+            ///Enquanto o booleano playing for verdadeiro irá sempre pedir input
+            ///ao utilizador do que pretende fazer.
             while (playing == true)
             {
+
+                ///Variável constante que permite usar o Console.ReadKey();
                 ConsoleKeyInfo selectedKey = Console.ReadKey();
 
+                ///Switch que irá altera consoante o input do utilizador.
+                ///Caso o jogador prima a tecla W, irá mover-se para Norte.
+                ///Caso o jogador prima a tecla S, irá mover-se para Sul.
+                ///Caso o jogador prima a tecla A, irá mover-se para Oeste.
+                ///Caso o jogador prima a tecla D, irá mover-se para Este.
+                ///Caso o jogador prima a tecla E, irá utilizar o item.
+                ///Caso o jogador prima a tecla I, irá mostrar o ecrã informativo.
+                ///Caso o jogador pirma a tecla Q, irá questionar se pretende 
+                ///abadonar o jogo e sair caso a resposta seja afirmativa.
                 switch (selectedKey.Key)
                 {
+
+                    ///É efectuada uma verificação na grid para obter se a jogada
+                    ///que o jogador pretende é valida ou não
                     case ConsoleKey.W:
                         if (grid.playerX > 0)
                         {
@@ -71,9 +92,15 @@ namespace Projeto2_LP1
                             playing = false;
                             grid.moved = "NORTH";
                         }
+
+                        ///Caso a verificação falhe, alerta ao jogador que não 
+                        ///se pode movimentar para o local pretendido
                         Console.SetCursorPosition(42, 39);
                         Console.WriteLine(" - I can't move on that direction!");
                         break;
+
+                    ///É efectuada uma verificação na grid para obter se a jogada
+                    ///que o jogador pretende é valida ou não
                     case ConsoleKey.S:
                         if (grid.playerX < 7)
                         {
@@ -83,9 +110,15 @@ namespace Projeto2_LP1
                             playing = false;
                             grid.moved = "SOUTH";
                         }
+
+                        ///Caso a verificação falhe, alerta ao jogador que não 
+                        ///se pode movimentar para o local pretendido
                         Console.SetCursorPosition(42, 39);
                         Console.WriteLine(" - I can't move on that direction!");
                         break;
+
+                    ///É efectuada uma verificação na grid para obter se a jogada
+                    ///que o jogador pretende é valida ou não
                     case ConsoleKey.A:
                         if (grid.playerY > 0)
                         {
@@ -95,9 +128,15 @@ namespace Projeto2_LP1
                             playing = false;
                             grid.moved = "WEST";
                         }
+
+                        ///Caso a verificação falhe, alerta ao jogador que não 
+                        ///se pode movimentar para o local pretendido
                         Console.SetCursorPosition(42, 39);
                         Console.WriteLine(" - I can't move on that direction!");
                         break;
+
+                    ///É efectuada uma verificação na grid para obter se a jogada
+                    ///que o jogador pretende é valida ou não
                     case ConsoleKey.D:
                         if (grid.playerY < 7)
                         {
@@ -107,9 +146,14 @@ namespace Projeto2_LP1
                             playing = false;
                             grid.moved = "EAST";
                         }
+
+                        ///Caso a verificação falhe, alerta ao jogador que não 
+                        ///se pode movimentar para o local pretendido
                         Console.SetCursorPosition(42, 39);
                         Console.WriteLine(" - I can't move on that direction!");
                         break;
+
+
                     case ConsoleKey.E:
                         if (grid.array[grid.playerX, grid.playerY].Contains(init.food1))
                         {
