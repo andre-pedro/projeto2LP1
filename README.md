@@ -26,7 +26,7 @@ O projeto foi elaborado de forma a distribuir uniformemente as tarefas por todos
 	
  * Fluxograma do _gameloop_:
 
-	![Alt text](insertfluxograma.svg?sanitize=true "Fluxograma do Projeto")
+	![fluxograma](https://user-images.githubusercontent.com/33433474/41686130-db5c7910-74da-11e8-9d0a-b99e98f860b9.png)
 - 
  
 * Diagrama UML:
