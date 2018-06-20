@@ -15,6 +15,7 @@ namespace Projeto2_LP1
         public string Name { get; set; }
         public string Symbol { get; set; }
         public float Damage { get; set; }
+        public bool Explored { get; set; }
 
         /// <summary>
         /// O Constructor Trap indica o nome da armadilha, o símbolo que foi 
@@ -30,6 +31,7 @@ namespace Projeto2_LP1
             Name = name;
             Symbol = "\u25B2 ";
             Damage = damage;
+            Explored = false;
         }
 
         /// <summary>

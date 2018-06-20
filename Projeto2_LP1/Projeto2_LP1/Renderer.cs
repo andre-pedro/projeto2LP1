@@ -20,6 +20,14 @@ namespace Projeto2_LP1
 
                 for (int column = 0; column < 8; column++)
                 {
+                    if ((row > 0 && grid.array[row - 1, column].Contains(init.player)) ||
+                       (row < 7 && grid.array[row + 1, column].Contains(init.player)) ||
+                       (column > 0 && grid.array[row, column - 1].Contains(init.player)) ||
+                       (column < 7 && grid.array[row, column + 1].Contains(init.player)) ||
+                        grid.array[row, column].Contains(init.player))
+                    {
+                        grid.array[row, column].Explored = true;
+                    }
                     foreach (IGameObject thing in grid.array[row, column])
                     {
                         Console.ResetColor();
@@ -29,9 +37,18 @@ namespace Projeto2_LP1
                             Console.Write(thing.ToString());
                             Console.ResetColor();
                         }
+
                         if (thing == init.exit)
                         {
-                            if (grid.array[grid.playerX, grid.playerY].Contains(init.exit))
+                            if ((row > 0 && grid.array[row - 1, column].Contains(init.player)) ||
+                               (row < 7 && grid.array[row + 1, column].Contains(init.player)) ||
+                               (column > 0 && grid.array[row, column - 1].Contains(init.player)) ||
+                               (column < 7 && grid.array[row, column + 1].Contains(init.player)) ||
+                               grid.array[row, column].Contains(init.player))
+                            {
+                                init.exit.Explored = true;
+                            }
+                            if (init.exit.Explored)
                             {
                                 Console.ForegroundColor = ConsoleColor.White;
                                 Console.Write(thing.ToString());
@@ -44,7 +61,15 @@ namespace Projeto2_LP1
                         }
                         if (thing == init.trap1)
                         {
-                            if (grid.array[grid.playerX, grid.playerY].Contains(init.trap1))
+                            if ((row > 0 && grid.array[row - 1, column].Contains(init.player)) ||
+                               (row < 7 && grid.array[row + 1, column].Contains(init.player)) ||
+                               (column > 0 && grid.array[row, column - 1].Contains(init.player)) ||
+                               (column < 7 && grid.array[row, column + 1].Contains(init.player)) ||
+                               grid.array[row, column].Contains(init.player))
+                            {
+                                init.trap1.Explored = true;
+                            }
+                            if (init.trap1.Explored)
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.Write(thing.ToString());
@@ -57,7 +82,15 @@ namespace Projeto2_LP1
                         }
                         if (thing == init.trap2)
                         {
-                            if (grid.array[grid.playerX, grid.playerY].Contains(init.trap2))
+                            if ((row > 0 && grid.array[row - 1, column].Contains(init.player)) ||
+                               (row < 7 && grid.array[row + 1, column].Contains(init.player)) ||
+                               (column > 0 && grid.array[row, column - 1].Contains(init.player)) ||
+                               (column < 7 && grid.array[row, column + 1].Contains(init.player)) ||
+                               grid.array[row, column].Contains(init.player))
+                            {
+                                init.trap2.Explored = true;
+                            }
+                            if (init.trap2.Explored)
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.Write(thing.ToString());
@@ -70,7 +103,15 @@ namespace Projeto2_LP1
                         }
                         if (thing == init.trap3)
                         {
-                            if (grid.array[grid.playerX, grid.playerY].Contains(init.trap3))
+                            if ((row > 0 && grid.array[row - 1, column].Contains(init.player)) ||
+                               (row < 7 && grid.array[row + 1, column].Contains(init.player)) ||
+                               (column > 0 && grid.array[row, column - 1].Contains(init.player)) ||
+                               (column < 7 && grid.array[row, column + 1].Contains(init.player)) ||
+                               grid.array[row, column].Contains(init.player))
+                            {
+                                init.trap3.Explored = true;
+                            }
+                            if (init.trap3.Explored)
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.Write(thing.ToString());
@@ -83,7 +124,15 @@ namespace Projeto2_LP1
                         }
                         if (thing == init.npc)
                         {
-                            if (grid.array[grid.playerX, grid.playerY].Contains(init.npc))
+                            if ((row > 0 && grid.array[row - 1, column].Contains(init.player)) ||
+                               (row < 7 && grid.array[row + 1, column].Contains(init.player)) ||
+                               (column > 0 && grid.array[row, column - 1].Contains(init.player)) ||
+                               (column < 7 && grid.array[row, column + 1].Contains(init.player)) ||
+                               grid.array[row, column].Contains(init.player))
+                            {
+                                init.npc.Explored = true;
+                            }
+                            if (init.npc.Explored)
                             {
                                 Console.ForegroundColor = ConsoleColor.Yellow;
                                 Console.Write(thing.ToString());
@@ -96,7 +145,15 @@ namespace Projeto2_LP1
                         }
                         if (thing == init.food1)
                         {
-                            if (grid.array[grid.playerX, grid.playerY].Contains(init.food1))
+                            if ((row > 0 && grid.array[row - 1, column].Contains(init.player)) ||
+                               (row < 7 && grid.array[row + 1, column].Contains(init.player)) ||
+                               (column > 0 && grid.array[row, column - 1].Contains(init.player)) ||
+                               (column < 7 && grid.array[row, column + 1].Contains(init.player)) ||
+                               grid.array[row, column].Contains(init.player))
+                            {
+                                init.food1.Explored = true;
+                            }
+                            if (init.food1.Explored)
                             {
                                 Console.ForegroundColor = ConsoleColor.Green;
                                 Console.Write(thing.ToString());
@@ -109,7 +166,15 @@ namespace Projeto2_LP1
                         }
                         if (thing == init.food2)
                         {
-                            if (grid.array[grid.playerX, grid.playerY].Contains(init.food2))
+                            if ((row > 0 && grid.array[row - 1, column].Contains(init.player)) ||
+                               (row < 7 && grid.array[row + 1, column].Contains(init.player)) ||
+                               (column > 0 && grid.array[row, column - 1].Contains(init.player)) ||
+                               (column < 7 && grid.array[row, column + 1].Contains(init.player)) ||
+                               grid.array[row, column].Contains(init.player))
+                            {
+                                init.food2.Explored = true;
+                            }
+                            if (init.food2.Explored)
                             {
                                 Console.ForegroundColor = ConsoleColor.Green;
                                 Console.Write(thing.ToString());
@@ -122,7 +187,15 @@ namespace Projeto2_LP1
                         }
                         if (thing == init.food3)
                         {
-                            if (grid.array[grid.playerX, grid.playerY].Contains(init.food3))
+                            if ((row > 0 && grid.array[row - 1, column].Contains(init.player)) ||
+                               (row < 7 && grid.array[row + 1, column].Contains(init.player)) ||
+                               (column > 0 && grid.array[row, column - 1].Contains(init.player)) ||
+                               (column < 7 && grid.array[row, column + 1].Contains(init.player)) ||
+                               grid.array[row, column].Contains(init.player))
+                            {
+                                init.food3.Explored = true;
+                            }
+                            if (init.food3.Explored)
                             {
                                 Console.ForegroundColor = ConsoleColor.Green;
                                 Console.Write(thing.ToString());
@@ -142,7 +215,7 @@ namespace Projeto2_LP1
                         }
                         else
                         {
-                            if (grid.array[row, column].Contains(init.player))
+                            if (grid.array[row, column].Explored)
                             {
                                 Console.Write(". ");
                             }

@@ -13,6 +13,14 @@ namespace Projeto2_LP1
             if (grid.array[grid.playerX, grid.playerY].Contains(init.player) &&
                 grid.array[grid.playerX, grid.playerY].Contains(init.exit) && init.player.Hp > 0)
             {
+                init.exit.Explored = false;
+                init.trap1.Explored = false;
+                init.trap2.Explored = false;
+                init.trap3.Explored = false;
+                init.npc.Explored = false;
+                init.food1.Explored = false;
+                init.food2.Explored = false;
+                init.food3.Explored = false;
                 init.level++;
                 Console.Clear();
                 Console.SetCursorPosition(0, 1);

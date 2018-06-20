@@ -12,6 +12,7 @@ namespace Projeto2_LP1
         public float Hp { get; set; }
         public float Ap { get; set; }
         public bool Neutral { get; set; }
+        public bool Explored { get; set; }
 
         public NPC()
         {
@@ -32,6 +33,7 @@ namespace Projeto2_LP1
             }
             Hp = 20;
             Ap = 3;
+            Explored = false;
         }
 
         public override string ToString()

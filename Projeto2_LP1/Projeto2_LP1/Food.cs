@@ -16,6 +16,7 @@
         public string Name { get; set; }
         public string Symbol { get; set; }
         public float Heal { get; set; }
+        public bool Explored { get; set; }
 
 
         /// <summary>
@@ -32,6 +33,7 @@
             Name = name;
             Symbol = "\u2665 ";
             Heal = heal;
+            Explored = false;
         }
 
 
