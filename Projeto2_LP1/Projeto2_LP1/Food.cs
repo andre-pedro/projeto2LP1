@@ -9,9 +9,10 @@
     {
 
         /// <summary>
-        /// Nestas três propriedades auto-implementadas conseguimos indicar e 
+        /// Nestas quatro propriedades auto-implementadas conseguimos indicar e 
         /// obter o nome, o simbolo e a quantidade de HP que o jogador consegue
-        /// recuperar
+        /// recuperar. Existe ainda uma classe booleana que permite indicar se 
+        /// o objecto do tipo food se encontra visível pelo jogador.
         /// </summary>
         public string Name { get; set; }
         public string Symbol { get; set; }
@@ -21,7 +22,8 @@
 
         /// <summary>
         /// O Constructor Food indica o nome da comida, o símbolo que foi escolhido
-        /// em UTF-8 e a quantidade de vida que o jogador pode recuperar.
+        /// em UTF-8, a quantidade de vida que o jogador pode recuperar e se já
+        /// se encontra visível por parte do jogador..
         /// </summary>
         /// <param name="name">O nome dado a cada tipo de comida na criação da 
         /// mesma, pois cada tipo de comida irá fornecer ao jogador um hp 
