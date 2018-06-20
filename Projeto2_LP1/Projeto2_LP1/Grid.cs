@@ -33,6 +33,7 @@ namespace Projeto2_LP1
         public int playerX = random.Next(0, 8);
         public int playerY = 0;
 
+
         /// <summary>
         /// Criação do X e Y da saída. O X é posicionado na última coluna mas 
         /// numa linha aleatória dessa coluna.
@@ -126,7 +127,7 @@ namespace Projeto2_LP1
                 int trap2Y = random.Next(0, 8);
                 int trap3Y = random.Next(0, 8);
 
-                array[trap1X, trap1Y].Add(init.trap1);
+                array[trap1X, trap1Y].Add(new Trap("a recurso", random.Next(0, 78)));
                 array[trap2X, trap2Y].Add(init.trap2);
                 array[trap3X, trap3Y].Add(init.trap3);
             }
