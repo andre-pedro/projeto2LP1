@@ -1,5 +1,4 @@
-﻿
-namespace Projeto2_LP1
+﻿namespace Projeto2_LP1
 {
 
     /// <summary>
