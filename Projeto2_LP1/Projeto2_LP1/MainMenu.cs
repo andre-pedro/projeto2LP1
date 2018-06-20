@@ -3,15 +3,32 @@ using System.Collections.Generic;
 
 namespace Projeto2_LP1
 {
+
+    /// <summary>
+    /// Classe que irá mostra ao jogador o Main Menu, é a primeira classe visível 
+    /// pela a parte do jogador.
+    /// </summary>
     class MainMenu
     {
         static int selectedLine = 0;
 
+        /// <summary>
+        /// Método que irá desenhar na consola o menu com as várias opções ao 
+        /// jogador.
+        /// </summary>
         public static void Display()
         {
             Initializer init = new Initializer();
+
+            ///Instância de classe que permite iniciar o ciclo do jogo assim que
+            ///o jogador escolher esta opção.
             GameLoop gameLoop = new GameLoop();
+
+            ///Instância de classe que permite mostrar os créditos do jogo.
             Credits credits = new Credits();
+
+            ///Instância de classe que permite mostrar ao jogador o top 10 de 
+            ///pontuações do jogo.
             HighScores highScores = new HighScores();
 
             List<string> menuLines = new List<string>() {
@@ -21,8 +38,11 @@ namespace Projeto2_LP1
                 "   Quit         "
             };
 
+            ///boolenado de verificação se jogador já escolhe alguma opção do 
+            ///menu.
             bool chosingMenu = true;
 
+            ///Enquanto o jogador estiver no Menu
             while (chosingMenu)
             {
                 Console.Clear();
@@ -30,7 +50,7 @@ namespace Projeto2_LP1
                 string selected = DisplayMenu(menuLines);
                 if (selected == "   New Game     ")
                 {
-                    // Limpar Consola
+                    ///Permite limpar a visualização da consola
                     Console.Clear();
                     init.Init();
                     gameLoop.NewGame(init);
@@ -39,7 +59,7 @@ namespace Projeto2_LP1
                 }
                 else if (selected == "   High Scores  ")
                 {
-                    // Limpar Consola
+                    ///Permite limpar a visualização da consola
                     Console.Clear();
 
                     // Creditos
@@ -49,7 +69,7 @@ namespace Projeto2_LP1
                 }
                 else if (selected == "   Credits      ")
                 {
-                    // Limpar Consola
+                    ///Permite limpar a visualização da consola
                     Console.Clear();
 
                     credits.Print();
@@ -62,8 +82,16 @@ namespace Projeto2_LP1
             }
         }
 
+        /// <summary>
+        /// Método que irá desenhar na consola o menu visível ao jogador, os 
+        /// botões e o titulo do jogo.
+        /// </summary>
+        /// <param name="lines">As linhas dos botões do menu.</param>
+        /// <returns>Este método nao retorna nada.</returns>
         private static string DisplayMenu(List<string> lines)
         {
+
+            ///Desenha o titulo do jogo "RogueLike".
             Console.ForegroundColor = ConsoleColor.White;
             Console.SetCursorPosition(0, 1);
             Console.WriteLine("╔═════════════════════════════════════════════════════" +
@@ -94,6 +122,8 @@ namespace Projeto2_LP1
             Console.WriteLine("              |____/                                    ");
             Console.ResetColor();
 
+            ///Permite alterar as cores do titulo enter branco, preto, e cizento
+            ///escuro.
             for (int i = 0; i < lines.Count; i++)
             {
                 if (i == selectedLine)
@@ -119,6 +149,7 @@ namespace Projeto2_LP1
                 Console.ResetColor();
             }
 
+            ///Visualização dos botões e respecitvas opções.
             Console.ForegroundColor = ConsoleColor.White;
             Console.SetCursorPosition(0, 25);
             Console.WriteLine("╚═════════════════════════════════════════════════════" +
@@ -151,7 +182,7 @@ namespace Projeto2_LP1
             {
                 if (selectedLine == lines.Count - 1)
                 {
-                    // Mantem a mesma selecao
+                    ///Mantêm a mesma selecão.
                 }
                 else
                 {
@@ -162,7 +193,7 @@ namespace Projeto2_LP1
             {
                 if (selectedLine <= 0)
                 {
-                    // Mantem a mesma selecao
+                    /// Mantêm a mesma selecão
                 }
                 else
                 {
