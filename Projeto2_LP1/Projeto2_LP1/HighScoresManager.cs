@@ -59,29 +59,36 @@ namespace Projeto2_LP1
                     ///Separa as linhas de acordo com o formato indicado.
                     string[] subStrings = text[i].Split(':');
 
-                    // If format is incorrect or the second subString cannot be
-                    // converted to float
+                    ///Se o formato pedido estiver incorrecto ou a substring não
+                    ///for possível converter em float.
                     if (subStrings.Length != 2 ||
                         !Single.TryParse(subStrings[1], out float score))
                     {
-                        // Send Error message
+                       
+                        ///Envia uma mensagem de erro ao utilizador.
                         throw new InvalidOperationException($"The format of " +
                             $"the file '{filename}' is not correct.");
                     }
 
-                    // Save name from the first subString
+                    ///Salva o nome da primeira substring.
                     string name = subStrings[0];
 
-                    // Add highscore to list
+                    ///Adiciona a nova melhor pontuação a lista
                     highscores.Add(new Tuple<string, float>(name, score));
                 }
 
-                // Sort the elements of the list in descending order
+                ///Ordena a lista de forma descendente. 
                 SortList();
             }
         }
 
-        // Method that Adds a new Highscore
+        /// <summary>
+        /// Este metódo têm como objectivo adicionar uma nova pontuação ao ficheiro
+        /// .txt sempre que alguem obteve uma pontuação sufecientemente elevada 
+        /// para se encontrar no top10 da lista.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="score"></param>
         public void AddScore(string name, float score)
         {
             // Create and instantiate a new object to hold the new highscore
