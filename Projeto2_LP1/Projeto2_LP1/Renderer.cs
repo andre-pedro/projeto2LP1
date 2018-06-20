@@ -8,6 +8,7 @@ namespace Projeto2_LP1
 {
     class Renderer
     {
+        public bool explored = false;
 
         public void Render(Initializer init, Grid grid)
         {
