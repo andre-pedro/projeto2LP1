@@ -14,7 +14,7 @@ namespace Projeto2_LP1
 
             for (int row = 0; row < 8; row++)
             {
-                Console.WriteLine("\n");
+                Console.WriteLine("\n\n");
 
                 for (int column = 0; column < 8; column++)
                 {
@@ -249,150 +249,145 @@ namespace Projeto2_LP1
                     {
                         Console.Write("\t");
                     }
-
-                    if (column == 7)
-                    {
-                        if (row == 0)
-                        {
-                            Console.Write($"          [Status]        " +
-                                $"                [Info]              ");
-                        }
-                        if (row == 1)
-                        {
-                            Console.Write($"    Current Level:     ");
-                            Console.ForegroundColor = ConsoleColor.White;
-                            Console.Write($"{init.level:000}              ");
-                            Console.ResetColor();
-                            Console.Write($"Player - ");
-                            Console.ForegroundColor = ConsoleColor.Cyan;
-                            Console.Write($"\u2302              ");
-                            Console.ResetColor();
-                        }
-                        if (row == 2)
-                        {
-                            Console.Write($"    Player HP:         ");
-                            if (init.player.Hp > 50)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Green;
-                            }
-                            else if (init.player.Hp <= 50 && init.player.Hp > 20)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Yellow;
-                            }
-                            else if (init.player.Hp <= 20 && init.player.Hp > 5)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                            }
-                            else if (init.player.Hp <= 5)
-                            {
-                                Console.ForegroundColor = ConsoleColor.DarkRed;
-                            }
-                            Console.Write($"{init.player.Hp:000}             ");
-                            Console.ResetColor();
-                            Console.Write($"  Empty - ." +
-                                $"               ");
-                        }
-                        if (row == 3)
-                        {
-                            Console.Write($"                    ");
-                            Console.Write($"                      Exit - ");
-                            Console.ForegroundColor = ConsoleColor.White;
-                            Console.Write($"E X I T !              ");
-                            Console.ResetColor();
-                        }
-                        if (row == 4)
-                        {
-                            Console.Write($"                             ");
-                            Console.Write($"             Trap - ");
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.Write($"\u25B2   ");
-                            Console.ResetColor();
-                        }
-                        if (row == 5)
-                        {
-                            Console.Write($"                             ");
-                            Console.Write($"             Food - ");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            Console.Write($"\u2665   ");
-                            Console.ResetColor();
-                        }
-                        if (row == 6)
-                        {
-                            Console.Write($"                             ");
-                            Console.Write($"      Neutral NPC - ");
-                            Console.ForegroundColor = ConsoleColor.Yellow;
-                            Console.Write($"\u25CA              ");
-                            Console.ResetColor();
-                        }
-                        if (row == 7)
-                        {
-                            Console.Write($"                             ");
-                            Console.Write($"      Hostile NPC - ");
-                            Console.ForegroundColor = ConsoleColor.Yellow;
-                            Console.Write($"\u2666              ");
-                            Console.ResetColor();
-                        }
-                        Console.Write("\n");
-                    }
                 }
             }
-            Console.SetCursorPosition(0, 25);
+
+            Console.SetCursorPosition(0, 26);
             Console.WriteLine("╔═════════════════════════════════════════════════════" +
                 "══════════════════════════════════════════════════════════════════╗");
-            Console.SetCursorPosition(16, 26);
+            Console.SetCursorPosition(16, 27);
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("[Surroundings]");
             Console.ResetColor();
 
-            Console.SetCursorPosition(0, 35);
+            Console.SetCursorPosition(0, 36);
             Console.WriteLine("╚═════════════════════════════════════════════════════" +
                 "══════════════════════════════════════════════════════════════════╝");
-            Console.SetCursorPosition(55, 35);
+            Console.SetCursorPosition(54, 37);
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("[Messages]");
             Console.ResetColor();
 
             if (grid.moved != "NONE")
             {
-                Console.SetCursorPosition(51, 37);
+                Console.SetCursorPosition(50, 39);
                 Console.WriteLine($" - I walked {grid.moved}.");
             }
 
             // Verificacao trap1
             if (grid.array[grid.playerX, grid.playerY].Contains(init.trap1))
             {
-                Console.SetCursorPosition(44, 37);
-                Console.WriteLine($" - I've paid a recurso (-78 HP).");
+                Console.SetCursorPosition(46, 39);
+                Console.WriteLine($" - I've paid a recurso.");
             }
             // Verificacao trap2
             if (grid.array[grid.playerX, grid.playerY].Contains(init.trap2))
             {
-                Console.SetCursorPosition(42, 37);
-                Console.WriteLine($" - I've stepped on a spike (-22 HP).");
+                Console.SetCursorPosition(44, 39);
+                Console.WriteLine($" - I've stepped on a spike.");
             }
             // Verificacao trap3
             if (grid.array[grid.playerX, grid.playerY].Contains(init.trap3))
             {
-                Console.SetCursorPosition(42, 37);
-                Console.WriteLine($" - I've fallen into a hole (-10 HP).");
+                Console.SetCursorPosition(44, 39);
+                Console.WriteLine($" - I've fallen into a hole.");
             }
 
-            Console.SetCursorPosition(85, 26);
+            Console.SetCursorPosition(85, 27);
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("[Controls]");
             Console.ResetColor();
-            Console.SetCursorPosition(82, 28);
-            Console.WriteLine("  W - Move North");
             Console.SetCursorPosition(82, 29);
-            Console.WriteLine("  A - Move West");
+            Console.WriteLine("  W - Move North");
             Console.SetCursorPosition(82, 30);
-            Console.WriteLine("  D - Move East");
+            Console.WriteLine("  A - Move West");
             Console.SetCursorPosition(82, 31);
-            Console.WriteLine("  S - Move South");
+            Console.WriteLine("  D - Move East");
             Console.SetCursorPosition(82, 32);
-            Console.WriteLine("  E - Pick Up and Use");
+            Console.WriteLine("  S - Move South");
             Console.SetCursorPosition(82, 33);
+            Console.WriteLine("  E - Pick Up and Use");
+            Console.SetCursorPosition(82, 34);
             Console.WriteLine("  Q - Quit Game");
+
+            Console.SetCursorPosition(127, 1);
+            Console.WriteLine("╔════════════════════════" +
+                "══════════════════════════════════════╗");
+            // Status
+            Console.SetCursorPosition(140, 2);
+            Console.Write("[Status]");
+            Console.SetCursorPosition(135, 5);
+            Console.Write($"Current Level: ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write($"{init.level:000}");
+            Console.ResetColor();
+            Console.SetCursorPosition(135, 8);
+            Console.Write("Player HP: ");
+            if (init.player.Hp > 50)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+            }
+            else if (init.player.Hp <= 50 && init.player.Hp > 20)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+            }
+            else if (init.player.Hp <= 20 && init.player.Hp > 5)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+            }
+            else if (init.player.Hp <= 5)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+            }
+            Console.Write($"{init.player.Hp:000}");
+            Console.ResetColor();
+
+            // Info
+            Console.SetCursorPosition(172, 2);
+            Console.Write("[Info]");
+            Console.SetCursorPosition(168, 5);
+            Console.Write("Player - ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write("\u2302");
+            Console.ResetColor();
+            Console.SetCursorPosition(168, 8);
+            Console.Write("Explored - .");
+            Console.SetCursorPosition(168, 11);
+            Console.Write("Unexplored - ~");
+            Console.SetCursorPosition(168, 14);
+            Console.Write("Exit - ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("E X I T !");
+            Console.ResetColor();
+            Console.SetCursorPosition(168, 17);
+            Console.Write("Trap - ");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("\u25B2");
+            Console.ResetColor();
+            Console.SetCursorPosition(168, 20);
+            Console.Write("Food - ");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("\u2665");
+            Console.ResetColor();
+            Console.SetCursorPosition(168, 23);
+            Console.Write("Neutral NPC - ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("\u25CA");
+            Console.ResetColor();
+            Console.SetCursorPosition(168, 26);
+            Console.Write("Hostile NPC - ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("\u2666");
+            Console.ResetColor();
+            Console.SetCursorPosition(168, 29);
+            Console.Write("Map - ");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.Write("\u263C");
+            Console.ResetColor();
+
+            Console.SetCursorPosition(127, 36);
+            Console.WriteLine("╚════════════════════════" +
+                "══════════════════════════════════════╝");
         }
     }
 }

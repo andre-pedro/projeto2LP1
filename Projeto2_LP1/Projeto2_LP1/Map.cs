@@ -15,7 +15,7 @@ namespace Projeto2_LP1
         public Map()
         {
             Name = "Map";
-            Symbol = "M ";
+            Symbol = "\u263C ";
             Explored = false;
         }
 

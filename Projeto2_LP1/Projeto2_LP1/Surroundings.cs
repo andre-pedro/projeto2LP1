@@ -10,7 +10,7 @@ namespace Projeto2_LP1
     {
         public void Scan(Initializer init, Grid grid)
         {
-            Console.SetCursorPosition(6, 28);
+            Console.SetCursorPosition(6, 29);
             // Get List of Items at North
             Console.Write($" - North");
             if (grid.playerX > 0)
@@ -35,7 +35,7 @@ namespace Projeto2_LP1
                 Console.Write(" has a huge wall!");
             }
             // Get List of Items at South
-            Console.SetCursorPosition(6, 29);
+            Console.SetCursorPosition(6, 30);
             Console.Write($" - South");
             if (grid.playerX < 7)
             {
@@ -59,7 +59,7 @@ namespace Projeto2_LP1
                 Console.Write(" has a huge wall!");
             }
             // Get List of Items at West
-            Console.SetCursorPosition(6, 30);
+            Console.SetCursorPosition(6, 31);
             Console.Write($" - West");
             if (grid.playerY > 0)
             {
@@ -83,7 +83,7 @@ namespace Projeto2_LP1
                 Console.Write(" has a huge wall!");
             }
             // Get List of Items at East
-            Console.SetCursorPosition(6, 31);
+            Console.SetCursorPosition(6, 32);
             Console.Write($" - East");
             if (grid.playerY < 7)
             {
@@ -113,14 +113,14 @@ namespace Projeto2_LP1
                 {
                     if (thing != init.player)
                     {
-                        Console.SetCursorPosition(6, 32);
+                        Console.SetCursorPosition(6, 33);
                         Console.WriteLine($" - I see {thing.Name}!");
                     }
                 }
             }
             else
             {
-                Console.SetCursorPosition(6, 32);
+                Console.SetCursorPosition(6, 33);
                 Console.WriteLine(" - There's absolutely nothing here!");
             }
 

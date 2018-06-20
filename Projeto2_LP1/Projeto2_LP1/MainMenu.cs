@@ -36,7 +36,6 @@ namespace Projeto2_LP1
                 {
                     // Limpar Consola
                     Console.Clear();
-
                     init.Init();
                     gameLoop.NewGame(init);
                     Console.Clear();
