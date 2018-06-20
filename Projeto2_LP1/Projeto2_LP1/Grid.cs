@@ -48,8 +48,6 @@ namespace Projeto2_LP1
         public int trap1X = random.Next(0, 8);
         public int trap1Y = random.Next(0, 8);
 
-
-
         public int trap3X = random.Next(0, 8);
         public int trap3Y = random.Next(0, 8);
 
