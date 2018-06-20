@@ -49,6 +49,9 @@ namespace Projeto2_LP1
         public int trap1X = random.Next(0, 8);
         public int trap1Y = random.Next(0, 8);
 
+        public int trap2X = random.Next(0, 8);
+        public int trap2Y = random.Next(0, 8);
+
         public int trap3X = random.Next(0, 8);
         public int trap3Y = random.Next(0, 8);
 
@@ -109,6 +112,8 @@ namespace Projeto2_LP1
             array[playerX, playerY].Add(init.player);
             array[exitX, exitY].Add(init.exit);
 
+            /*
+
             ///Por cada nível que o jogador ultrapassa, a dificuldade aumenta 
             ///existindo mais armadilhas.
             for (int i = 0; i < init.level; i++)
@@ -119,18 +124,21 @@ namespace Projeto2_LP1
                 /// armadilhas em qualquer parte do mapa, foi efectuado uma posição X e
                 /// Y de forma aleatória.
                 /// </summary>
-
-                int trap1X = random.Next(0, 8);
                 int trap2X = random.Next(0, 8);
-                int trap3X = random.Next(0, 8);
-                int trap1Y = random.Next(0, 8);
                 int trap2Y = random.Next(0, 8);
+                int trap3X = random.Next(0, 8);
                 int trap3Y = random.Next(0, 8);
+                int trap1X = random.Next(0, 8);
+                int trap1Y = random.Next(0, 8);
 
                 array[trap1X, trap1Y].Add(new Trap("a recurso", random.Next(0, 78)));
                 array[trap2X, trap2Y].Add(init.trap2);
                 array[trap3X, trap3Y].Add(init.trap3);
             }
+            */
+            array[trap1X, trap1Y].Add(init.trap1);
+            array[trap2X, trap2Y].Add(init.trap2);
+            array[trap3X, trap3Y].Add(init.trap3);
             array[food1X, food1Y].Add(init.food1);
             array[food2X, food2Y].Add(init.food2);
             array[food3X, food3Y].Add(init.food3);
