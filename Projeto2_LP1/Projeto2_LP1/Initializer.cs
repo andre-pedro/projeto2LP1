@@ -8,6 +8,7 @@ namespace Projeto2_LP1
     class Initializer
     {
         static Random random = new Random();
+
         public Player player = new Player();
         public Exit exit = new Exit();
         public Trap trap1 = new Trap("a recurso", random.Next(0, 78));
