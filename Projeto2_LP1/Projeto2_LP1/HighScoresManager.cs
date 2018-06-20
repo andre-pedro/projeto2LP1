@@ -110,19 +110,22 @@ namespace Projeto2_LP1
             }
         }
 
-        // Method to save highscores to file
+        /// <summary>
+        /// Método que guarda as pontuações num ficheiro.
+        /// </summary>
         public void Save()
         {
-            // Create variable to hold all text from list
+            ///Cria uma variável para guardar o texto da lista
             string text = "Name:Score\n";
-            // For each element of the list
+            
+            ///Para cada elemento na lista
             foreach (Tuple<string, float> highscore in highscores)
             {
-                // Add text with Name and score
+                ///Adiciona o nome e pontuação
                 text += $"{highscore.Item1}:{highscore.Item2}\n";
             }
 
-            // Write all the highscores on the specified file
+            ///Escreve tudo o que obteve com o foreach no ficheiro indicado .txt.
             File.WriteAllText(filename, text);
         }
 
