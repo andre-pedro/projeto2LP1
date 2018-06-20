@@ -116,12 +116,13 @@ namespace Projeto2_LP1
                 /// armadilhas em qualquer parte do mapa, foi efectuado uma posição X e
                 /// Y de forma aleatória.
                 /// </summary>
-                int trap2X = random.Next(0, 8);
-                int trap2Y = random.Next(0, 8);
-                int trap3X = random.Next(0, 8);
-                int trap3Y = random.Next(0, 8);
+
                 int trap1X = random.Next(0, 8);
+                int trap2X = random.Next(0, 8);
+                int trap3X = random.Next(0, 8);
                 int trap1Y = random.Next(0, 8);
+                int trap2Y = random.Next(0, 8);
+                int trap3Y = random.Next(0, 8);
 
                 array[trap1X, trap1Y].Add(init.trap1);
                 array[trap2X, trap2Y].Add(init.trap2);

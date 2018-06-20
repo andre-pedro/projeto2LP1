@@ -20,6 +20,9 @@ namespace Projeto2_LP1
                 init.food1.Explored = false;
                 init.food2.Explored = false;
                 init.food3.Explored = false;
+                init.trap1.FallenInto = false;
+                init.trap2.FallenInto = false;
+                init.trap3.FallenInto = false;
                 init.npc.Explored = false;
                 init.map.Explored = false;
                 init.level++;
