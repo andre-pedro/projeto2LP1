@@ -13,17 +13,7 @@
 
 ## Repartição de Tarefas
 
-O nosso trabalho foi repartido irmamente e trabalhámos em todos os parâmetros de forma unânime através do nosso [repositório do GitHub][rp].
-Contudo, existiram certos aspectos em que cada um se focou mais.
- * André Santos
-	* aaaaaaaaaaaaa
-	* bbbbbbbbbbbbb
- * André Pedro
-	* ccccccccccccc
-	* ddddddddddddd
- * Tiago Alves
-	* eeeeeeeeeeeee
-	* fffffffffffff
+O projeto foi elaborado de forma a distribuir uniformemente as tarefas por todos e de modo a todos os elementos do grupo fazerem um pouco de tudo. Todas as tarefas estão documentadas sobre a forma de "commits" no nosso [repositório do GitHub][rp].
  
 ## Descrição da Solução
 
@@ -41,7 +31,7 @@ Contudo, existiram certos aspectos em que cada um se focou mais.
  
 * Diagrama UML:
 
-	![Alt text](insertUML.svg?sanitize=true "Diagrama UML do Projeto")
+	![uml](https://user-images.githubusercontent.com/33433474/41686040-8a3ee112-74da-11e8-85b8-99e6e53980f0.png)
 
 	
 ## Conclusões 
