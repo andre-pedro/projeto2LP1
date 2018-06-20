@@ -2,14 +2,55 @@
 
 namespace Projeto2_LP1
 {
+
+    /// <summary>
+    /// Classe que define os controlos bases para o jogador, o que irá permitir
+    /// ao jogador mover-se na grid de jogo, e ao mesmo tempo informar o jogador 
+    /// das teclas premidas e que direção se movimentou.  
+    /// </summary>
     class Controls
     {
+        /// <summary>
+        /// É criada uma instânica desta classe para os controlos escolhidos que
+        /// permitem a movimentação do jogador sejam impressas no ecrã.
+        /// </summary>
         Grid grid = new Grid();
+
+        /// <summary>
+        /// É criada uma instância desta classe pois o jogador irá visualizar 
+        /// informações do jogo, e mensagens dos controlos premidos e opções
+        /// escolhidas
+        /// </summary>
         Renderer renderer = new Renderer();
+
+        /// <summary>
+        /// É criada uma instância da classe Surroundings, pois quando o jogador
+        /// pede as informações do jogo é necessário efectuar novamente uma 
+        /// verificação da grid.
+        /// /// </summary>
         Surroundings scan = new Surroundings();
+
+        /// <summary>
+        /// É criada uma instância da classe Initializer que permite inicializar
+        /// os objectos que nelea contêm, neste caso informar ao jogador, o nome
+        /// e dano causado das armadilhas disponívels no jogo.
+        /// </summary>
         Initializer init = new Initializer();
+
+        /// <summary>
+        /// É criada uma instância da classe HighScoresManager que permite 
+        /// verificar quando o jogador sai do jogo se ficou no top10.
+        /// </summary>
         HighScoresManager hsm = new HighScoresManager();
 
+
+        /// <summary>
+        /// Este método irá verificar o input do jogador e efectuar
+        /// a/s opção/ões que  correspondente a cada tecla.
+        /// </summary>
+        /// <param name="init"></param>
+        /// <param name="grid">O método recebe a grid de jogo para o jogador 
+        /// se poder movimentar.</param>
         public void CheckInputs(Initializer init, Grid grid)
         {
             bool playing = true;
