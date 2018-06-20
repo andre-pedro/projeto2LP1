@@ -87,23 +87,25 @@ namespace Projeto2_LP1
         /// .txt sempre que alguem obteve uma pontuação sufecientemente elevada 
         /// para se encontrar no top10 da lista.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="score"></param>
+        /// <param name="name">O nome que o jogador irá escrever para aparecer
+        /// no ficheiro .txt.</param>
+        /// <param name="score">É passado a pontuação que o jogador obteve e que 
+        /// o permitiu "entrar" na tabela do top10.</param>
         public void AddScore(string name, float score)
         {
-            // Create and instantiate a new object to hold the new highscore
+            ///Cria e instância um novo objecto que guarda a nova pontuação.
             Tuple<string, float> newScore = new Tuple<string, float>(name, score);
 
-            // Add highscore to list
+            /// Adiciona o nova melhor pontuação a lista.
             highscores.Add(newScore);
 
-            // Sort the elements of the list in descending order
+            ///Ordena a lista de forma descendente.
             SortList();
 
-            // If list has more than 10 elements
+            ///Verifica se a lista possui mais que dez elementos
             if (highscores.Count > 10)
             {
-                // Remove last item on list
+                ///remove o ultimo elemento pois deixou de pertencer ao top10-
                 highscores.RemoveAt(highscores.Count - 1);
             }
         }
