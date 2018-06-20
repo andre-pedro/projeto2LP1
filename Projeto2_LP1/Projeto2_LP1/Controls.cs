@@ -154,31 +154,64 @@ namespace Projeto2_LP1
                         break;
 
 
+
+                        ///Ao premir a tecla E o jogador consome comida.
                     case ConsoleKey.E:
+
+                        ///Irá verificar se existe algum objecto que seja comida
+                        ///no tile qme que o jogador se encontra
                         if (grid.array[grid.playerX, grid.playerY].Contains(init.food1))
                         {
+                            ///O jogador recebe vida que a comida fornece
                             init.player.Hp += init.food1.Heal;
+
+                            ///Após consumir a comida, esta desaparece da grid.
                             grid.array[grid.playerX, grid.playerY].Remove(init.food1);
+
+                            ///É iniciado um turno novo.
                             playing = false;
                         }
                         if (grid.array[grid.playerX, grid.playerY].Contains(init.food2))
                         {
+
+                            ///O jogador recebe vida que a comida fornece
                             init.player.Hp += init.food2.Heal;
+
+                            ///Após consumir a comida, esta desaparece da grid
                             grid.array[grid.playerX, grid.playerY].Remove(init.food2);
+
+                            ///É iniciado um turno novo.
                             playing = false;
                         }
                         if (grid.array[grid.playerX, grid.playerY].Contains(init.food3))
                         {
+
+                            ///O jogador recebe vida que a comida fornece
                             init.player.Hp += init.food3.Heal;
+
+                            ///Após consumir a comida, esta desaparece da grid
                             grid.array[grid.playerX, grid.playerY].Remove(init.food3);
+
+                            ///É iniciado um turno novo.
                             playing = false;
                         }
+
+                        ///Ao utilizar a tecla E numa tile que tenha um  objecto 
+                        ///que seja um mapa, esta opção revela o nível todo ao
+                        ///jogador.
                         if (grid.array[grid.playerX, grid.playerY].Contains(init.map))
                         {
+
+                            ///Verificação das linhas da grid
                             for (int row = 0; row < 8; row++)
                             {
+
+                                ///Verificação das colunas da grid
                                 for (int column = 0; column < 8; column++)
                                 {
+
+                                    ///Tudo o que se encontra por revelar no mapa,
+                                    ///é revelado.
                                     grid.array[row, column].Explored = true;
                                     init.exit.Explored = true;
                                     init.trap1.Explored = true;
@@ -190,13 +223,26 @@ namespace Projeto2_LP1
                                     init.npc.Explored = true;
                                 }
                             }
+
+                            ///Após a utilização do mapa, este desaparece da grid.
                             grid.array[grid.playerX, grid.playerY].Remove(init.map);
+
+                            ///É iniciado um turno novo.
                             playing = false;
                         }
                         break;
+
+                        ///Ao premir a tecla I, irá ser mostrado a informação de
+                        ///todas as armadilhas que o jogo contêm (nome e dano), 
+                        ///esta visualização é efectuada "por cima" da grid de 
+                        ///jogo, sendo necessário recolher input do utilizador 
+                        ///para continuar a jogar.
                     case ConsoleKey.I:
                         if (grid.playerY < 7)
                         {
+
+                            ///limpa a consola para poder ser mostrado o ecrã
+                            ///informativo
                             Console.Clear();
                             Console.SetCursorPosition(0, 1);
                             Console.WriteLine("╔═════════════════════════════════════════════════════" +
@@ -218,7 +264,9 @@ namespace Projeto2_LP1
                             Console.SetCursorPosition(127, 1);
                             Console.WriteLine("╔════════════════════════" +
                                 "══════════════════════════════════════╗");
-                            // Status
+
+                            ///É mostrado a informação actual do jogador, e o 
+                            ///nível a que se encontra.
                             Console.SetCursorPosition(140, 2);
                             Console.Write("[Status]");
                             Console.SetCursorPosition(135, 5);
@@ -228,6 +276,10 @@ namespace Projeto2_LP1
                             Console.ResetColor();
                             Console.SetCursorPosition(135, 8);
                             Console.Write("Player HP: ");
+
+                            ///Irá verificar a vida que o jogador dispões e irá
+                            ///alterar a cor da vida consoante a vida que o jogador
+                            ///têm. As cores variam entre verde,amarelo e vermelho.
                             if (init.player.Hp > 50)
                             {
                                 Console.ForegroundColor = ConsoleColor.Green;
@@ -247,7 +299,8 @@ namespace Projeto2_LP1
                             Console.Write($"{init.player.Hp:000}");
                             Console.ResetColor();
 
-                            // Info
+                            ///É mostrado juntamente com a grid do jogo as legendas 
+                            ///da grid. 
                             Console.SetCursorPosition(172, 2);
                             Console.Write("[Info]");
                             Console.SetCursorPosition(168, 5);
@@ -299,6 +352,9 @@ namespace Projeto2_LP1
                             scan.Scan(init, grid);
                         }
                         break;
+
+                        ///Ao premir a tecla Q, irá questionar ao jogador se 
+                        ///pretende abandonar o jogo
                     case ConsoleKey.Q:
                         Console.SetCursorPosition(41, 39);
                         Console.WriteLine("Are you sure you want to quit? (Y/N)");
@@ -316,15 +372,22 @@ namespace Projeto2_LP1
                                 break;
                             }
 
+                            ///caso o jogador responda de forma válida que prende
+                            ///abadonar o jogo irá ser efecutada uma verificação
+                            ///se nesse instante consegui bater algum recorde 
+                            ///de pontuação na tabela de High Scores do jogo.
                             switch (quitKey.Key)
                             {
+
                                 case ConsoleKey.Y:
                                     Console.SetCursorPosition(42, 41);
                                     Console.Write("Insert your name here: ");
                                     string name = Console.ReadLine();
-                                    // Add score and name
+
+                                    ///Adiciona o nome e a pontuação actual 
                                     hsm.AddScore(name, init.level);
-                                    // Save to file
+
+                                    ///Salva o ficheiro .txt das pontuações
                                     hsm.Save();
                                     MainMenu.Display();
                                     break;
