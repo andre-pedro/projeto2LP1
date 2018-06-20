@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Projeto2_LP1
 {
@@ -13,6 +14,7 @@ namespace Projeto2_LP1
 
         public void NewGame(Initializer init)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             Console.Clear();
             grid.CreateGrid(init);
             bool gameOver = false;

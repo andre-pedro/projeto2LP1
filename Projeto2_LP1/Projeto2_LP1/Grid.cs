@@ -86,6 +86,8 @@ namespace Projeto2_LP1
         /// </summary>
         public string moved = "NONE";
 
+        public int maxTrapforthislevel = 2;
+
         /// <summary>
         /// 
         /// </summary>
