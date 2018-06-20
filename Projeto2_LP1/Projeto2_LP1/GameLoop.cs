@@ -24,19 +24,25 @@ namespace Projeto2_LP1
             while (gameOver == false)
             {
                 // Verificacao trap1
-                if (grid.array[grid.playerX, grid.playerY].Contains(init.trap1))
+                if (grid.array[grid.playerX, grid.playerY].Contains(init.trap1) &&
+                    init.trap1.FallenInto == false)
                 {
                     init.player.Hp -= init.trap1.Damage;
+                    init.trap1.FallenInto = true;
                 }
                 // Verificacao trap2
-                if (grid.array[grid.playerX, grid.playerY].Contains(init.trap2))
+                if (grid.array[grid.playerX, grid.playerY].Contains(init.trap2) &&
+                    init.trap2.FallenInto == false)
                 {
                     init.player.Hp -= init.trap2.Damage;
+                    init.trap2.FallenInto = true;
                 }
                 // Verificacao trap3
-                if (grid.array[grid.playerX, grid.playerY].Contains(init.trap3))
+                if (grid.array[grid.playerX, grid.playerY].Contains(init.trap3) &&
+                    init.trap3.FallenInto == false)
                 {
                     init.player.Hp -= init.trap3.Damage;
+                    init.trap3.FallenInto = true;
                 }
                 renderer.Render(init, grid);
                 scan.Scan(init, grid);
