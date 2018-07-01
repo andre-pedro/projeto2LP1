@@ -4,7 +4,9 @@ namespace Projeto2_LP1
 {
 
     /// <summary>
-    /// Classe que NPC que implementa a interface IgameObject e 
+    /// Esta classe implementa da interface IgameObject. É composta por três 
+    /// propriedades, todas elas de com a possibilidade de escrita e leitura. 
+    /// Possui também um constructor e um método override "ToString()"
     /// </summary>
     public class NPC : IGameObject
     {

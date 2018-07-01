@@ -1,0 +1,146 @@
+\hypertarget{class_projeto2___l_p1_1_1_high_scores_manager}{}\section{Projeto2\+\_\+\+L\+P1.\+High\+Scores\+Manager Class Reference}
+\label{class_projeto2___l_p1_1_1_high_scores_manager}\index{Projeto2\+\_\+\+L\+P1.\+High\+Scores\+Manager@{Projeto2\+\_\+\+L\+P1.\+High\+Scores\+Manager}}
+
+
+Classe responsavél por salvar o nome e respectivos pontos que o jogador consegui obter durante o jogo. Esta classe ainda seleciona o top 10 dos pontos, ou seja, permite seleciona o top 10, descartando os jogadores que obtiveram pior pontuação e substituindo por novos jogadores com uma pontuação mais elevada.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_projeto2___l_p1_1_1_high_scores_manager_a3fe673d1f5965bdb24a8a6b69cb5de60}{High\+Scores\+Manager}} (string filename=\char`\"{}High\+Scores.\+txt\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor necessário para inicializar instâncias desta classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projeto2___l_p1_1_1_high_scores_manager_a51b97739e840ce7c0c15605d40e90072}{Add\+Score}} (string name, float score)
+\begin{DoxyCompactList}\small\item\em Este metódo têm como objectivo adicionar uma nova pontuação ao ficheiro .txt sempre que alguem obteve uma pontuação sufecientemente elevada para se encontrar no top10 da lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projeto2___l_p1_1_1_high_scores_manager_a24db9e36a1e0430ad3e8cf57492c0d1b}{Save}} ()
+\begin{DoxyCompactList}\small\item\em Método que guarda as pontuações num ficheiro. \end{DoxyCompactList}\item 
+I\+Enumerable$<$ Tuple$<$ string, float $>$ $>$ \mbox{\hyperlink{class_projeto2___l_p1_1_1_high_scores_manager_ac794eb432e647a6daf21db6673a72fa3}{Get\+Scores}} ()
+\begin{DoxyCompactList}\small\item\em Método que ira retornar todas as pontuações da lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe responsavél por salvar o nome e respectivos pontos que o jogador consegui obter durante o jogo. Esta classe ainda seleciona o top 10 dos pontos, ou seja, permite seleciona o top 10, descartando os jogadores que obtiveram pior pontuação e substituindo por novos jogadores com uma pontuação mais elevada. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_high_scores_manager_a3fe673d1f5965bdb24a8a6b69cb5de60}\label{class_projeto2___l_p1_1_1_high_scores_manager_a3fe673d1f5965bdb24a8a6b69cb5de60}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+High\+Scores\+Manager@{Projeto2\+\_\+\+L\+P1\+::\+High\+Scores\+Manager}!High\+Scores\+Manager@{High\+Scores\+Manager}}
+\index{High\+Scores\+Manager@{High\+Scores\+Manager}!Projeto2\+\_\+\+L\+P1\+::\+High\+Scores\+Manager@{Projeto2\+\_\+\+L\+P1\+::\+High\+Scores\+Manager}}
+\subsubsection{\texorpdfstring{High\+Scores\+Manager()}{HighScoresManager()}}
+{\footnotesize\ttfamily Projeto2\+\_\+\+L\+P1.\+High\+Scores\+Manager.\+High\+Scores\+Manager (\begin{DoxyParamCaption}\item[{string}]{filename = {\ttfamily \char`\"{}HighScores.txt\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor necessário para inicializar instâncias desta classe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Nome dado ao ficheiro .txt que têm os highscores do jogo.\\
+\hline
+\end{DoxyParams}
+Inicializa o ficheiro com o nome do ficheiro fornecido no constructor. ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Se o ficheiro escolhido não existir, cria uma nova lista que contêm o nome e a pontuação do jogador. ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Se o ficherio existe irá efectuar o seguinte código.
+
+inicializa a lista.
+
+Lê todas as linhas do ficheiro obtido.
+
+Pecorre todas as linhas do ficheiro.
+
+Separa as linhas de acordo com o formato indicado.
+
+Se o formato pedido estiver incorrecto ou a substring não for possível converter em float. ~\newline
+~\newline
+~\newline
+~\newline
+ Envia uma mensagem de erro ao utilizador.
+
+Salva o nome da primeira substring.
+
+Adiciona a nova melhor pontuação a lista
+
+Ordena a lista de forma descendente. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_high_scores_manager_a51b97739e840ce7c0c15605d40e90072}\label{class_projeto2___l_p1_1_1_high_scores_manager_a51b97739e840ce7c0c15605d40e90072}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+High\+Scores\+Manager@{Projeto2\+\_\+\+L\+P1\+::\+High\+Scores\+Manager}!Add\+Score@{Add\+Score}}
+\index{Add\+Score@{Add\+Score}!Projeto2\+\_\+\+L\+P1\+::\+High\+Scores\+Manager@{Projeto2\+\_\+\+L\+P1\+::\+High\+Scores\+Manager}}
+\subsubsection{\texorpdfstring{Add\+Score()}{AddScore()}}
+{\footnotesize\ttfamily void Projeto2\+\_\+\+L\+P1.\+High\+Scores\+Manager.\+Add\+Score (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{float}]{score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Este metódo têm como objectivo adicionar uma nova pontuação ao ficheiro .txt sempre que alguem obteve uma pontuação sufecientemente elevada para se encontrar no top10 da lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & O nome que o jogador irá escrever para aparecer no ficheiro .txt.\\
+\hline
+{\em score} & É passado a pontuação que o jogador obteve e que o permitiu \char`\"{}entrar\char`\"{} na tabela do top10.\\
+\hline
+\end{DoxyParams}
+Cria e instância um novo objecto que guarda a nova pontuação.
+
+Adiciona o nova melhor pontuação a lista.
+
+Ordena a lista de forma descendente.
+
+Verifica se a lista possui mais que dez elementos
+
+remove o ultimo elemento pois deixou de pertencer ao top10-\/ \mbox{\Hypertarget{class_projeto2___l_p1_1_1_high_scores_manager_ac794eb432e647a6daf21db6673a72fa3}\label{class_projeto2___l_p1_1_1_high_scores_manager_ac794eb432e647a6daf21db6673a72fa3}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+High\+Scores\+Manager@{Projeto2\+\_\+\+L\+P1\+::\+High\+Scores\+Manager}!Get\+Scores@{Get\+Scores}}
+\index{Get\+Scores@{Get\+Scores}!Projeto2\+\_\+\+L\+P1\+::\+High\+Scores\+Manager@{Projeto2\+\_\+\+L\+P1\+::\+High\+Scores\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Scores()}{GetScores()}}
+{\footnotesize\ttfamily I\+Enumerable$<$Tuple$<$string, float$>$ $>$ Projeto2\+\_\+\+L\+P1.\+High\+Scores\+Manager.\+Get\+Scores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que ira retornar todas as pontuações da lista. 
+
+\begin{DoxyReturn}{Returns}
+Como o método possui um \char`\"{}yield\char`\"{} permite retornar todas as pontuações que se encontram na lista.
+\end{DoxyReturn}
+Pecorre todas as pontuações na lista.
+
+Retorna todas as pontuações que encontrar na lista. \mbox{\Hypertarget{class_projeto2___l_p1_1_1_high_scores_manager_a24db9e36a1e0430ad3e8cf57492c0d1b}\label{class_projeto2___l_p1_1_1_high_scores_manager_a24db9e36a1e0430ad3e8cf57492c0d1b}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+High\+Scores\+Manager@{Projeto2\+\_\+\+L\+P1\+::\+High\+Scores\+Manager}!Save@{Save}}
+\index{Save@{Save}!Projeto2\+\_\+\+L\+P1\+::\+High\+Scores\+Manager@{Projeto2\+\_\+\+L\+P1\+::\+High\+Scores\+Manager}}
+\subsubsection{\texorpdfstring{Save()}{Save()}}
+{\footnotesize\ttfamily void Projeto2\+\_\+\+L\+P1.\+High\+Scores\+Manager.\+Save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que guarda as pontuações num ficheiro. 
+
+Cria uma variável para guardar o texto da lista
+
+Para cada elemento na lista
+
+Adiciona o nome e pontuação
+
+Escreve tudo o que obteve com o foreach no ficheiro indicado .txt. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Projeto2\+\_\+\+L\+P1/High\+Scores\+Manager.\+cs\end{DoxyCompactItemize}

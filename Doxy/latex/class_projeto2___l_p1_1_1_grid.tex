@@ -1,0 +1,194 @@
+\hypertarget{class_projeto2___l_p1_1_1_grid}{}\section{Projeto2\+\_\+\+L\+P1.\+Grid Class Reference}
+\label{class_projeto2___l_p1_1_1_grid}\index{Projeto2\+\_\+\+L\+P1.\+Grid@{Projeto2\+\_\+\+L\+P1.\+Grid}}
+
+
+Esta classe é a estrutura de dados central e fundamental para o jogo como um todo. Contém um array de \mbox{\hyperlink{class_projeto2___l_p1_1_1_tile_maker}{Tile\+Maker}} multidimensional 8x8 que representa a grid onde o jogador joga.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_projeto2___l_p1_1_1_grid_a7f3a7e9c295766d38a08117449cf8d3c}{Create\+Grid}} (\mbox{\hyperlink{class_projeto2___l_p1_1_1_initializer}{Initializer}} init)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_projeto2___l_p1_1_1_tile_maker}{Tile\+Maker}} \mbox{[},\mbox{]} \mbox{\hyperlink{class_projeto2___l_p1_1_1_grid_a517769f1ab5634bb5cb20a3afde72083}{array}} = new \mbox{\hyperlink{class_projeto2___l_p1_1_1_tile_maker}{Tile\+Maker}}\mbox{[}8, 8\mbox{]}
+\begin{DoxyCompactList}\small\item\em Criação de um array do tipo \mbox{\hyperlink{class_projeto2___l_p1_1_1_tile_maker}{Tile\+Maker}} 8x8 para inserir os objectos que o jogador possa interagir, tal como comida, armadilhas, etc.. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_add1a97d645ca47b1fd91602b91a4a543}\label{class_projeto2___l_p1_1_1_grid_add1a97d645ca47b1fd91602b91a4a543}} 
+\mbox{\hyperlink{class_projeto2___l_p1_1_1_initializer}{Initializer}} {\bfseries level} = new \mbox{\hyperlink{class_projeto2___l_p1_1_1_initializer}{Initializer}}()
+\item 
+int \mbox{\hyperlink{class_projeto2___l_p1_1_1_grid_aa0bc3b49820e0d8282128d8fb269437e}{playerX}} = random.\+Next(0, 8)
+\begin{DoxyCompactList}\small\item\em Criação do X e Y do jogador. O X é posicionado aleatoriamente entre a linha 0 e 7 do array enquanto o Y do jogador é 0, devido ao jogo iniciar com o jogador na coluna 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_a310066b76b6d011e54298605a3114dd1}\label{class_projeto2___l_p1_1_1_grid_a310066b76b6d011e54298605a3114dd1}} 
+int {\bfseries playerY} = 0
+\item 
+int \mbox{\hyperlink{class_projeto2___l_p1_1_1_grid_a1fbb4462007865226251bc5c084e616e}{exitX}} = random.\+Next(0, 8)
+\begin{DoxyCompactList}\small\item\em Criação do X e Y da saída. O X é posicionado na última coluna mas numa linha aleatória dessa coluna. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_ac7c931fa4e5705e23741f64597124c3a}\label{class_projeto2___l_p1_1_1_grid_ac7c931fa4e5705e23741f64597124c3a}} 
+int {\bfseries exitY} = 7
+\item 
+int \mbox{\hyperlink{class_projeto2___l_p1_1_1_grid_a0734840445dd0b3453df5339e4f9bc4a}{trap1X}} = random.\+Next(0, 8)
+\begin{DoxyCompactList}\small\item\em Criação de X e Y para as armadilhas, visto que se pode encontrar armadilhas em qualquer parte do mapa, foi efectuado uma posição X e Y de forma aleatória. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_adadcab0ba8152b9339f776a308419dc4}\label{class_projeto2___l_p1_1_1_grid_adadcab0ba8152b9339f776a308419dc4}} 
+int {\bfseries trap1Y} = random.\+Next(0, 8)
+\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_a7e428b08d00b94c954bf3a58ba5997b3}\label{class_projeto2___l_p1_1_1_grid_a7e428b08d00b94c954bf3a58ba5997b3}} 
+int {\bfseries trap2X} = random.\+Next(0, 8)
+\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_ad50cbe31417edf011367dfd73ea083e0}\label{class_projeto2___l_p1_1_1_grid_ad50cbe31417edf011367dfd73ea083e0}} 
+int {\bfseries trap2Y} = random.\+Next(0, 8)
+\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_ae4f1ded723499be32e1241e44a712dd1}\label{class_projeto2___l_p1_1_1_grid_ae4f1ded723499be32e1241e44a712dd1}} 
+int {\bfseries trap3X} = random.\+Next(0, 8)
+\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_a306d418e3191db76ecd882d361b3e188}\label{class_projeto2___l_p1_1_1_grid_a306d418e3191db76ecd882d361b3e188}} 
+int {\bfseries trap3Y} = random.\+Next(0, 8)
+\item 
+int \mbox{\hyperlink{class_projeto2___l_p1_1_1_grid_aa058efe324b104363e8e062c670f2261}{food1X}} = random.\+Next(0, 8)
+\begin{DoxyCompactList}\small\item\em Criação de X e Y para a comida. Foi criado a posição X e Y aleatórios para se poder encontrar em qualquer parte do mapa. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_a5afe4eb412b3942c44eb344ae5ef21d1}\label{class_projeto2___l_p1_1_1_grid_a5afe4eb412b3942c44eb344ae5ef21d1}} 
+int {\bfseries food1Y} = random.\+Next(0, 8)
+\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_aef4bd423ad92491e986442674bbf3b08}\label{class_projeto2___l_p1_1_1_grid_aef4bd423ad92491e986442674bbf3b08}} 
+int {\bfseries food2X} = random.\+Next(0, 8)
+\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_aa6069ba956dc78e57099a7c2822702cb}\label{class_projeto2___l_p1_1_1_grid_aa6069ba956dc78e57099a7c2822702cb}} 
+int {\bfseries food2Y} = random.\+Next(0, 8)
+\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_ad3deb58a06f700ba8e2ddd0523087aba}\label{class_projeto2___l_p1_1_1_grid_ad3deb58a06f700ba8e2ddd0523087aba}} 
+int {\bfseries food3X} = random.\+Next(0, 8)
+\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_a9de1c9de8e0e9d4ba8908ca31dea6d79}\label{class_projeto2___l_p1_1_1_grid_a9de1c9de8e0e9d4ba8908ca31dea6d79}} 
+int {\bfseries food3Y} = random.\+Next(0, 8)
+\item 
+int \mbox{\hyperlink{class_projeto2___l_p1_1_1_grid_a287fe8d6c874a537ba1191acc155a4a0}{npcX}} = random.\+Next(0, 8)
+\begin{DoxyCompactList}\small\item\em Criação de X e Y para os npcs. Foi criado a posição X e Y aleatórios para se poder encontrar em qualquer parte do mapa. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_a559beb655a319e836e806d84e96e1c51}\label{class_projeto2___l_p1_1_1_grid_a559beb655a319e836e806d84e96e1c51}} 
+int {\bfseries npcY} = random.\+Next(0, 8)
+\item 
+int \mbox{\hyperlink{class_projeto2___l_p1_1_1_grid_aceb1cce0decd21c4032bf01968c1dbb6}{mapX}} = random.\+Next(0, 8)
+\begin{DoxyCompactList}\small\item\em Criação de X e Y para o mapa que revela todo o nível. Foi criado a posição X e Y aleatórios para se poder encontrar em qualquer parte . \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_ae744fda732d83ca38e1d3c1daa9c7f86}\label{class_projeto2___l_p1_1_1_grid_ae744fda732d83ca38e1d3c1daa9c7f86}} 
+int {\bfseries mapY} = random.\+Next(0, 8)
+\item 
+string \mbox{\hyperlink{class_projeto2___l_p1_1_1_grid_ab758ab4b626f98e3884ef6fcd7cbb429}{moved}} = \char`\"{}N\+O\+NE\char`\"{}
+\begin{DoxyCompactList}\small\item\em Criação de uma variável que indica se existe movimento, foi criada nesta class devido a class \mbox{\hyperlink{class_projeto2___l_p1_1_1_grid}{Grid}} ser a base em termos de estrutura para todo o projecto. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_a3e421ed5d1ab15fbe40168fdf2114810}\label{class_projeto2___l_p1_1_1_grid_a3e421ed5d1ab15fbe40168fdf2114810}} 
+int {\bfseries max\+Trapforthislevel} = 2
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Esta classe é a estrutura de dados central e fundamental para o jogo como um todo. Contém um array de \mbox{\hyperlink{class_projeto2___l_p1_1_1_tile_maker}{Tile\+Maker}} multidimensional 8x8 que representa a grid onde o jogador joga. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_a7f3a7e9c295766d38a08117449cf8d3c}\label{class_projeto2___l_p1_1_1_grid_a7f3a7e9c295766d38a08117449cf8d3c}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Grid@{Projeto2\+\_\+\+L\+P1\+::\+Grid}!Create\+Grid@{Create\+Grid}}
+\index{Create\+Grid@{Create\+Grid}!Projeto2\+\_\+\+L\+P1\+::\+Grid@{Projeto2\+\_\+\+L\+P1\+::\+Grid}}
+\subsubsection{\texorpdfstring{Create\+Grid()}{CreateGrid()}}
+{\footnotesize\ttfamily void Projeto2\+\_\+\+L\+P1.\+Grid.\+Create\+Grid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projeto2___l_p1_1_1_initializer}{Initializer}}}]{init }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em init} & \\
+\hline
+\end{DoxyParams}
+pecorre cada linha da nossa grid.
+
+pecorre cada coluna da nossa grid.
+
+adiciona ano nosso array multidimensional na posição X e Y um Tile\+Marker. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_a517769f1ab5634bb5cb20a3afde72083}\label{class_projeto2___l_p1_1_1_grid_a517769f1ab5634bb5cb20a3afde72083}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Grid@{Projeto2\+\_\+\+L\+P1\+::\+Grid}!array@{array}}
+\index{array@{array}!Projeto2\+\_\+\+L\+P1\+::\+Grid@{Projeto2\+\_\+\+L\+P1\+::\+Grid}}
+\subsubsection{\texorpdfstring{array}{array}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_projeto2___l_p1_1_1_tile_maker}{Tile\+Maker}} \mbox{[},\mbox{]} Projeto2\+\_\+\+L\+P1.\+Grid.\+array = new \mbox{\hyperlink{class_projeto2___l_p1_1_1_tile_maker}{Tile\+Maker}}\mbox{[}8, 8\mbox{]}}
+
+
+
+Criação de um array do tipo \mbox{\hyperlink{class_projeto2___l_p1_1_1_tile_maker}{Tile\+Maker}} 8x8 para inserir os objectos que o jogador possa interagir, tal como comida, armadilhas, etc.. 
+
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_a1fbb4462007865226251bc5c084e616e}\label{class_projeto2___l_p1_1_1_grid_a1fbb4462007865226251bc5c084e616e}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Grid@{Projeto2\+\_\+\+L\+P1\+::\+Grid}!exitX@{exitX}}
+\index{exitX@{exitX}!Projeto2\+\_\+\+L\+P1\+::\+Grid@{Projeto2\+\_\+\+L\+P1\+::\+Grid}}
+\subsubsection{\texorpdfstring{exitX}{exitX}}
+{\footnotesize\ttfamily int Projeto2\+\_\+\+L\+P1.\+Grid.\+exitX = random.\+Next(0, 8)}
+
+
+
+Criação do X e Y da saída. O X é posicionado na última coluna mas numa linha aleatória dessa coluna. 
+
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_aa058efe324b104363e8e062c670f2261}\label{class_projeto2___l_p1_1_1_grid_aa058efe324b104363e8e062c670f2261}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Grid@{Projeto2\+\_\+\+L\+P1\+::\+Grid}!food1X@{food1X}}
+\index{food1X@{food1X}!Projeto2\+\_\+\+L\+P1\+::\+Grid@{Projeto2\+\_\+\+L\+P1\+::\+Grid}}
+\subsubsection{\texorpdfstring{food1X}{food1X}}
+{\footnotesize\ttfamily int Projeto2\+\_\+\+L\+P1.\+Grid.\+food1X = random.\+Next(0, 8)}
+
+
+
+Criação de X e Y para a comida. Foi criado a posição X e Y aleatórios para se poder encontrar em qualquer parte do mapa. 
+
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_aceb1cce0decd21c4032bf01968c1dbb6}\label{class_projeto2___l_p1_1_1_grid_aceb1cce0decd21c4032bf01968c1dbb6}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Grid@{Projeto2\+\_\+\+L\+P1\+::\+Grid}!mapX@{mapX}}
+\index{mapX@{mapX}!Projeto2\+\_\+\+L\+P1\+::\+Grid@{Projeto2\+\_\+\+L\+P1\+::\+Grid}}
+\subsubsection{\texorpdfstring{mapX}{mapX}}
+{\footnotesize\ttfamily int Projeto2\+\_\+\+L\+P1.\+Grid.\+mapX = random.\+Next(0, 8)}
+
+
+
+Criação de X e Y para o mapa que revela todo o nível. Foi criado a posição X e Y aleatórios para se poder encontrar em qualquer parte . 
+
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_ab758ab4b626f98e3884ef6fcd7cbb429}\label{class_projeto2___l_p1_1_1_grid_ab758ab4b626f98e3884ef6fcd7cbb429}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Grid@{Projeto2\+\_\+\+L\+P1\+::\+Grid}!moved@{moved}}
+\index{moved@{moved}!Projeto2\+\_\+\+L\+P1\+::\+Grid@{Projeto2\+\_\+\+L\+P1\+::\+Grid}}
+\subsubsection{\texorpdfstring{moved}{moved}}
+{\footnotesize\ttfamily string Projeto2\+\_\+\+L\+P1.\+Grid.\+moved = \char`\"{}N\+O\+NE\char`\"{}}
+
+
+
+Criação de uma variável que indica se existe movimento, foi criada nesta class devido a class \mbox{\hyperlink{class_projeto2___l_p1_1_1_grid}{Grid}} ser a base em termos de estrutura para todo o projecto. 
+
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_a287fe8d6c874a537ba1191acc155a4a0}\label{class_projeto2___l_p1_1_1_grid_a287fe8d6c874a537ba1191acc155a4a0}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Grid@{Projeto2\+\_\+\+L\+P1\+::\+Grid}!npcX@{npcX}}
+\index{npcX@{npcX}!Projeto2\+\_\+\+L\+P1\+::\+Grid@{Projeto2\+\_\+\+L\+P1\+::\+Grid}}
+\subsubsection{\texorpdfstring{npcX}{npcX}}
+{\footnotesize\ttfamily int Projeto2\+\_\+\+L\+P1.\+Grid.\+npcX = random.\+Next(0, 8)}
+
+
+
+Criação de X e Y para os npcs. Foi criado a posição X e Y aleatórios para se poder encontrar em qualquer parte do mapa. 
+
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_aa0bc3b49820e0d8282128d8fb269437e}\label{class_projeto2___l_p1_1_1_grid_aa0bc3b49820e0d8282128d8fb269437e}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Grid@{Projeto2\+\_\+\+L\+P1\+::\+Grid}!playerX@{playerX}}
+\index{playerX@{playerX}!Projeto2\+\_\+\+L\+P1\+::\+Grid@{Projeto2\+\_\+\+L\+P1\+::\+Grid}}
+\subsubsection{\texorpdfstring{playerX}{playerX}}
+{\footnotesize\ttfamily int Projeto2\+\_\+\+L\+P1.\+Grid.\+playerX = random.\+Next(0, 8)}
+
+
+
+Criação do X e Y do jogador. O X é posicionado aleatoriamente entre a linha 0 e 7 do array enquanto o Y do jogador é 0, devido ao jogo iniciar com o jogador na coluna 0. 
+
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_grid_a0734840445dd0b3453df5339e4f9bc4a}\label{class_projeto2___l_p1_1_1_grid_a0734840445dd0b3453df5339e4f9bc4a}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Grid@{Projeto2\+\_\+\+L\+P1\+::\+Grid}!trap1X@{trap1X}}
+\index{trap1X@{trap1X}!Projeto2\+\_\+\+L\+P1\+::\+Grid@{Projeto2\+\_\+\+L\+P1\+::\+Grid}}
+\subsubsection{\texorpdfstring{trap1X}{trap1X}}
+{\footnotesize\ttfamily int Projeto2\+\_\+\+L\+P1.\+Grid.\+trap1X = random.\+Next(0, 8)}
+
+
+
+Criação de X e Y para as armadilhas, visto que se pode encontrar armadilhas em qualquer parte do mapa, foi efectuado uma posição X e Y de forma aleatória. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Projeto2\+\_\+\+L\+P1/Grid.\+cs\end{DoxyCompactItemize}

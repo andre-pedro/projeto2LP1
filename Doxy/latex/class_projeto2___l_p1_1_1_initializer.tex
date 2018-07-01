@@ -1,0 +1,119 @@
+\hypertarget{class_projeto2___l_p1_1_1_initializer}{}\section{Projeto2\+\_\+\+L\+P1.\+Initializer Class Reference}
+\label{class_projeto2___l_p1_1_1_initializer}\index{Projeto2\+\_\+\+L\+P1.\+Initializer@{Projeto2\+\_\+\+L\+P1.\+Initializer}}
+
+
+Esta classe permite utilizar de uma forma mais simples, os objectos criados para o jogo. Através do método que contém é possível criar e utilizar estes objectos sem ser necessário instanciar  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_projeto2___l_p1_1_1_initializer_a79569fa3984fb673f2d5751495970e64}{Init}} ()
+\begin{DoxyCompactList}\small\item\em Método que permite utilizar as instânicas anteriormente criadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_projeto2___l_p1_1_1_player}{Player}} \mbox{\hyperlink{class_projeto2___l_p1_1_1_initializer_a15256baa4576459e5d15eb305e46cb1c}{player}} = new \mbox{\hyperlink{class_projeto2___l_p1_1_1_player}{Player}}()
+\begin{DoxyCompactList}\small\item\em Inicializa uma nova instânica da class player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_projeto2___l_p1_1_1_exit}{Exit}} \mbox{\hyperlink{class_projeto2___l_p1_1_1_initializer_a659e31f7b56c02922edc81ca6edd550c}{exit}} = new \mbox{\hyperlink{class_projeto2___l_p1_1_1_exit}{Exit}}()
+\begin{DoxyCompactList}\small\item\em Inicializa uma nova instânica da class \mbox{\hyperlink{class_projeto2___l_p1_1_1_exit}{Exit}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_projeto2___l_p1_1_1_trap}{Trap}} \mbox{\hyperlink{class_projeto2___l_p1_1_1_initializer_a52528b8ea22dc356f6f3ea0a91e60d2d}{trap1}} = new \mbox{\hyperlink{class_projeto2___l_p1_1_1_trap}{Trap}}(\char`\"{}a recurso\char`\"{}, random.\+Next(0, 78))
+\begin{DoxyCompactList}\small\item\em Inicializa uma nova instânica da class Trap.\+Visto que para a criação de uma trap é necessário efectuar uma passagem de dois parâmetros, é indicado aqui qual o nome da armadilha e o máximo de dano que pode tirar ao jogador. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_initializer_ad694a409f4dfefbe8f3e86db17c15b23}\label{class_projeto2___l_p1_1_1_initializer_ad694a409f4dfefbe8f3e86db17c15b23}} 
+\mbox{\hyperlink{class_projeto2___l_p1_1_1_trap}{Trap}} {\bfseries trap2} = new \mbox{\hyperlink{class_projeto2___l_p1_1_1_trap}{Trap}}(\char`\"{}a spike\char`\"{}, random.\+Next(0, 60))
+\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_initializer_a2d8c2cd6ef718180b828b10d6e9643ff}\label{class_projeto2___l_p1_1_1_initializer_a2d8c2cd6ef718180b828b10d6e9643ff}} 
+\mbox{\hyperlink{class_projeto2___l_p1_1_1_trap}{Trap}} {\bfseries trap3} = new \mbox{\hyperlink{class_projeto2___l_p1_1_1_trap}{Trap}}(\char`\"{}a hole\char`\"{}, random.\+Next(0, 50))
+\item 
+\mbox{\hyperlink{class_projeto2___l_p1_1_1_food}{Food}} \mbox{\hyperlink{class_projeto2___l_p1_1_1_initializer_a16290d59b95ab29b69212538a9cb2300}{food1}} = new \mbox{\hyperlink{class_projeto2___l_p1_1_1_food}{Food}}(\char`\"{}an orange\char`\"{}, 8)
+\begin{DoxyCompactList}\small\item\em Inicializa uma nova instânica da class \mbox{\hyperlink{class_projeto2___l_p1_1_1_food}{Food}}. É efectuado a criação de três tipos de comida diferentes. Com a pasagem de dois parâmetros permite indicar que tipo de comida é e quanto hp o jogador irá regenerar ao utilizar cada tipo de comida. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_initializer_a2c44828e89c6adbd763eacaa96729337}\label{class_projeto2___l_p1_1_1_initializer_a2c44828e89c6adbd763eacaa96729337}} 
+\mbox{\hyperlink{class_projeto2___l_p1_1_1_food}{Food}} {\bfseries food2} = new \mbox{\hyperlink{class_projeto2___l_p1_1_1_food}{Food}}(\char`\"{}a loaf of bread\char`\"{}, 12)
+\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_initializer_aa7b3aead1c087d3ebf2df6e9a1e63175}\label{class_projeto2___l_p1_1_1_initializer_aa7b3aead1c087d3ebf2df6e9a1e63175}} 
+\mbox{\hyperlink{class_projeto2___l_p1_1_1_food}{Food}} {\bfseries food3} = new \mbox{\hyperlink{class_projeto2___l_p1_1_1_food}{Food}}(\char`\"{}a banana\char`\"{}, 10)
+\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_initializer_af48218039367457b95d0d68a9fd73aa4}\label{class_projeto2___l_p1_1_1_initializer_af48218039367457b95d0d68a9fd73aa4}} 
+\mbox{\hyperlink{class_projeto2___l_p1_1_1_n_p_c}{N\+PC}} {\bfseries npc} = new \mbox{\hyperlink{class_projeto2___l_p1_1_1_n_p_c}{N\+PC}}()
+\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_initializer_aeff550ae7b153cdd35faeedcf5e63ab6}\label{class_projeto2___l_p1_1_1_initializer_aeff550ae7b153cdd35faeedcf5e63ab6}} 
+\mbox{\hyperlink{class_projeto2___l_p1_1_1_map}{Map}} {\bfseries map} = new \mbox{\hyperlink{class_projeto2___l_p1_1_1_map}{Map}}()
+\item 
+int \mbox{\hyperlink{class_projeto2___l_p1_1_1_initializer_a4797e0983bdfd34077033ad34a865208}{level}} = 1
+\begin{DoxyCompactList}\small\item\em Variável que indica o nível em que o jogador se encontra, inicializada a 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Esta classe permite utilizar de uma forma mais simples, os objectos criados para o jogo. Através do método que contém é possível criar e utilizar estes objectos sem ser necessário instanciar 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_initializer_a79569fa3984fb673f2d5751495970e64}\label{class_projeto2___l_p1_1_1_initializer_a79569fa3984fb673f2d5751495970e64}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Initializer@{Projeto2\+\_\+\+L\+P1\+::\+Initializer}!Init@{Init}}
+\index{Init@{Init}!Projeto2\+\_\+\+L\+P1\+::\+Initializer@{Projeto2\+\_\+\+L\+P1\+::\+Initializer}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Projeto2\+\_\+\+L\+P1.\+Initializer.\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que permite utilizar as instânicas anteriormente criadas. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_initializer_a659e31f7b56c02922edc81ca6edd550c}\label{class_projeto2___l_p1_1_1_initializer_a659e31f7b56c02922edc81ca6edd550c}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Initializer@{Projeto2\+\_\+\+L\+P1\+::\+Initializer}!exit@{exit}}
+\index{exit@{exit}!Projeto2\+\_\+\+L\+P1\+::\+Initializer@{Projeto2\+\_\+\+L\+P1\+::\+Initializer}}
+\subsubsection{\texorpdfstring{exit}{exit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_projeto2___l_p1_1_1_exit}{Exit}} Projeto2\+\_\+\+L\+P1.\+Initializer.\+exit = new \mbox{\hyperlink{class_projeto2___l_p1_1_1_exit}{Exit}}()}
+
+
+
+Inicializa uma nova instânica da class \mbox{\hyperlink{class_projeto2___l_p1_1_1_exit}{Exit}}. 
+
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_initializer_a16290d59b95ab29b69212538a9cb2300}\label{class_projeto2___l_p1_1_1_initializer_a16290d59b95ab29b69212538a9cb2300}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Initializer@{Projeto2\+\_\+\+L\+P1\+::\+Initializer}!food1@{food1}}
+\index{food1@{food1}!Projeto2\+\_\+\+L\+P1\+::\+Initializer@{Projeto2\+\_\+\+L\+P1\+::\+Initializer}}
+\subsubsection{\texorpdfstring{food1}{food1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_projeto2___l_p1_1_1_food}{Food}} Projeto2\+\_\+\+L\+P1.\+Initializer.\+food1 = new \mbox{\hyperlink{class_projeto2___l_p1_1_1_food}{Food}}(\char`\"{}an orange\char`\"{}, 8)}
+
+
+
+Inicializa uma nova instânica da class \mbox{\hyperlink{class_projeto2___l_p1_1_1_food}{Food}}. É efectuado a criação de três tipos de comida diferentes. Com a pasagem de dois parâmetros permite indicar que tipo de comida é e quanto hp o jogador irá regenerar ao utilizar cada tipo de comida. 
+
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_initializer_a4797e0983bdfd34077033ad34a865208}\label{class_projeto2___l_p1_1_1_initializer_a4797e0983bdfd34077033ad34a865208}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Initializer@{Projeto2\+\_\+\+L\+P1\+::\+Initializer}!level@{level}}
+\index{level@{level}!Projeto2\+\_\+\+L\+P1\+::\+Initializer@{Projeto2\+\_\+\+L\+P1\+::\+Initializer}}
+\subsubsection{\texorpdfstring{level}{level}}
+{\footnotesize\ttfamily int Projeto2\+\_\+\+L\+P1.\+Initializer.\+level = 1}
+
+
+
+Variável que indica o nível em que o jogador se encontra, inicializada a 1. 
+
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_initializer_a15256baa4576459e5d15eb305e46cb1c}\label{class_projeto2___l_p1_1_1_initializer_a15256baa4576459e5d15eb305e46cb1c}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Initializer@{Projeto2\+\_\+\+L\+P1\+::\+Initializer}!player@{player}}
+\index{player@{player}!Projeto2\+\_\+\+L\+P1\+::\+Initializer@{Projeto2\+\_\+\+L\+P1\+::\+Initializer}}
+\subsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_projeto2___l_p1_1_1_player}{Player}} Projeto2\+\_\+\+L\+P1.\+Initializer.\+player = new \mbox{\hyperlink{class_projeto2___l_p1_1_1_player}{Player}}()}
+
+
+
+Inicializa uma nova instânica da class player. 
+
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_initializer_a52528b8ea22dc356f6f3ea0a91e60d2d}\label{class_projeto2___l_p1_1_1_initializer_a52528b8ea22dc356f6f3ea0a91e60d2d}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Initializer@{Projeto2\+\_\+\+L\+P1\+::\+Initializer}!trap1@{trap1}}
+\index{trap1@{trap1}!Projeto2\+\_\+\+L\+P1\+::\+Initializer@{Projeto2\+\_\+\+L\+P1\+::\+Initializer}}
+\subsubsection{\texorpdfstring{trap1}{trap1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_projeto2___l_p1_1_1_trap}{Trap}} Projeto2\+\_\+\+L\+P1.\+Initializer.\+trap1 = new \mbox{\hyperlink{class_projeto2___l_p1_1_1_trap}{Trap}}(\char`\"{}a recurso\char`\"{}, random.\+Next(0, 78))}
+
+
+
+Inicializa uma nova instânica da class Trap.\+Visto que para a criação de uma trap é necessário efectuar uma passagem de dois parâmetros, é indicado aqui qual o nome da armadilha e o máximo de dano que pode tirar ao jogador. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Projeto2\+\_\+\+L\+P1/Initializer.\+cs\end{DoxyCompactItemize}

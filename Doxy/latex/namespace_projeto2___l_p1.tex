@@ -1,0 +1,48 @@
+\hypertarget{namespace_projeto2___l_p1}{}\section{Projeto2\+\_\+\+L\+P1 Namespace Reference}
+\label{namespace_projeto2___l_p1}\index{Projeto2\+\_\+\+L\+P1@{Projeto2\+\_\+\+L\+P1}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_controls}{Controls}}
+\begin{DoxyCompactList}\small\item\em Classe que define os controlos bases para o jogador, o que irá permitir ao jogador mover-\/se na grid de jogo, e ao mesmo tempo informar o jogador das teclas premidas e que direção se movimentou. ~\newline
+\end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_credits}{Credits}}
+\begin{DoxyCompactList}\small\item\em Esta classe é responsavél pela a impressão na consola os creditos do jogo e utiliza um método para tal. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_exit}{Exit}}
+\begin{DoxyCompactList}\small\item\em Esta classe herda da interface \mbox{\hyperlink{interface_projeto2___l_p1_1_1_i_game_object}{I\+Game\+Object}}. É composta por três propriedades, um construcotr e um método override \mbox{\hyperlink{class_projeto2___l_p1_1_1_exit_a45f6b4cb0db046f8b31859370aff2f92}{To\+String()}};. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_food}{Food}}
+\begin{DoxyCompactList}\small\item\em Esta classe implementa da interface Igame\+Object. É composta por quatro propriedades, todas elas de com a possibilidade de escrita e leitura. Possui também um constructor e um método override \char`\"{}\+To\+String()\char`\"{}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_game_loop}{Game\+Loop}}
+\begin{DoxyCompactList}\small\item\em Classe responsável por efectuar o ciclo do jogo. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_game_over}{Game\+Over}}
+\begin{DoxyCompactList}\small\item\em Através desta classe irá ser imprimido na consola o ecrã de fim de jogo. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_grid}{Grid}}
+\begin{DoxyCompactList}\small\item\em Esta classe é a estrutura de dados central e fundamental para o jogo como um todo. Contém um array de \mbox{\hyperlink{class_projeto2___l_p1_1_1_tile_maker}{Tile\+Maker}} multidimensional 8x8 que representa a grid onde o jogador joga. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_high_scores}{High\+Scores}}
+\begin{DoxyCompactList}\small\item\em Esta classe ira imprimir ao jogador na consola os \mbox{\hyperlink{class_projeto2___l_p1_1_1_high_scores}{High\+Scores}} do jogo. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_high_scores_manager}{High\+Scores\+Manager}}
+\begin{DoxyCompactList}\small\item\em Classe responsavél por salvar o nome e respectivos pontos que o jogador consegui obter durante o jogo. Esta classe ainda seleciona o top 10 dos pontos, ou seja, permite seleciona o top 10, descartando os jogadores que obtiveram pior pontuação e substituindo por novos jogadores com uma pontuação mais elevada. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_projeto2___l_p1_1_1_i_game_object}{I\+Game\+Object}}
+\begin{DoxyCompactList}\small\item\em Interface constituida por duas propriedades auto-\/implementadas. Qualquer classe que implementar esta interface, têm a possibilidade de obter o respectivo nome e símbolo de cada objecto criado. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_initializer}{Initializer}}
+\begin{DoxyCompactList}\small\item\em Esta classe permite utilizar de uma forma mais simples, os objectos criados para o jogo. Através do método que contém é possível criar e utilizar estes objectos sem ser necessário instanciar \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_main_menu}{Main\+Menu}}
+\begin{DoxyCompactList}\small\item\em Classe que irá mostra ao jogador o Main Menu, é a primeira classe visível pela a parte do jogador. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_map}{Map}}
+\begin{DoxyCompactList}\small\item\em Classe que implementa a interface \mbox{\hyperlink{interface_projeto2___l_p1_1_1_i_game_object}{I\+Game\+Object}}, com três propriedas auto-\/ -\/implementadas, um constructor e um método override de \mbox{\hyperlink{class_projeto2___l_p1_1_1_map_a4693bc7aa33a5c2c98d99dcd5dc1f524}{To\+String()}};. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_next_level}{Next\+Level}}
+\begin{DoxyCompactList}\small\item\em Classe responsavél pela a alteração de nível. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_n_p_c}{N\+PC}}
+\begin{DoxyCompactList}\small\item\em Classe que \mbox{\hyperlink{class_projeto2___l_p1_1_1_n_p_c}{N\+PC}} que implementa a interface Igame\+Object e \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_player}{Player}}
+\begin{DoxyCompactList}\small\item\em Esta classe implementa da interface Igame\+Object. É composta por quatro propriedades, todas elas de com a possibilidade de escrita e leitura. Possui também um constructor e um método override \char`\"{}\+To\+String()\char`\"{} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_program}{Program}}
+\begin{DoxyCompactList}\small\item\em Classe aonde irá decorrer todo o projecto \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_renderer}{Renderer}}
+\begin{DoxyCompactList}\small\item\em Classe de visualização do projecto. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_surroundings}{Surroundings}}
+\begin{DoxyCompactList}\small\item\em Classe que verificar o que se encontra a volta do jogador. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_tile_maker}{Tile\+Maker}}
+\begin{DoxyCompactList}\small\item\em A Classe \mbox{\hyperlink{class_projeto2___l_p1_1_1_tile_maker}{Tile\+Maker}} implementa uma lista de objectos e possui uma propriedade booleana e um constructor. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_projeto2___l_p1_1_1_trap}{Trap}}
+\begin{DoxyCompactList}\small\item\em Esta classe herda da interface \mbox{\hyperlink{interface_projeto2___l_p1_1_1_i_game_object}{I\+Game\+Object}}. É composta por três propriedades, um constructor e um método override \mbox{\hyperlink{class_projeto2___l_p1_1_1_trap_a1abb25aa0b1f0b59026e9985a14875bf}{To\+String()}};. \end{DoxyCompactList}\end{DoxyCompactItemize}

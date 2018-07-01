@@ -1,0 +1,469 @@
+\hypertarget{class_projeto2___l_p1_1_1_controls}{}\section{Projeto2\+\_\+\+L\+P1.\+Controls Class Reference}
+\label{class_projeto2___l_p1_1_1_controls}\index{Projeto2\+\_\+\+L\+P1.\+Controls@{Projeto2\+\_\+\+L\+P1.\+Controls}}
+
+
+Classe que define os controlos bases para o jogador, o que irá permitir ao jogador mover-\/se na grid de jogo, e ao mesmo tempo informar o jogador das teclas premidas e que direção se movimentou. ~\newline
+ 
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_projeto2___l_p1_1_1_controls_a68d858cc59d19e8626992484862de1bf}{Check\+Inputs}} (\mbox{\hyperlink{class_projeto2___l_p1_1_1_initializer}{Initializer}} init, \mbox{\hyperlink{class_projeto2___l_p1_1_1_grid}{Grid}} grid)
+\begin{DoxyCompactList}\small\item\em Este método irá verificar o input do jogador e efectuar a/s opção/ões que correspondente a cada tecla. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe que define os controlos bases para o jogador, o que irá permitir ao jogador mover-\/se na grid de jogo, e ao mesmo tempo informar o jogador das teclas premidas e que direção se movimentou. ~\newline
+
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_controls_a68d858cc59d19e8626992484862de1bf}\label{class_projeto2___l_p1_1_1_controls_a68d858cc59d19e8626992484862de1bf}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Controls@{Projeto2\+\_\+\+L\+P1\+::\+Controls}!Check\+Inputs@{Check\+Inputs}}
+\index{Check\+Inputs@{Check\+Inputs}!Projeto2\+\_\+\+L\+P1\+::\+Controls@{Projeto2\+\_\+\+L\+P1\+::\+Controls}}
+\subsubsection{\texorpdfstring{Check\+Inputs()}{CheckInputs()}}
+{\footnotesize\ttfamily void Projeto2\+\_\+\+L\+P1.\+Controls.\+Check\+Inputs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projeto2___l_p1_1_1_initializer}{Initializer}}}]{init,  }\item[{\mbox{\hyperlink{class_projeto2___l_p1_1_1_grid}{Grid}}}]{grid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Este método irá verificar o input do jogador e efectuar a/s opção/ões que correspondente a cada tecla. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em init} & Parâmetro necessário para \char`\"{}desenhar\char`\"{} as movimentações do jogador.\\
+\hline
+{\em grid} & O método recebe a grid de jogo para o jogador se poder movimentar.\\
+\hline
+\end{DoxyParams}
+Booleanos que indica se jogador se encontra a jogar.
+
+Booleano que confirma se o jogador pretende sair do jogo.
+
+Enquanto o booleano playing for verdadeiro irá sempre pedir input ao utilizador do que pretende fazer. ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Variável constante que permite usar o Console.\+Read\+Key();
+
+Switch que irá altera consoante o input do utilizador. Caso o jogador prima a tecla W, irá mover-\/se para Norte. Caso o jogador prima a tecla S, irá mover-\/se para Sul. Caso o jogador prima a tecla A, irá mover-\/se para Oeste. Caso o jogador prima a tecla D, irá mover-\/se para Este. Caso o jogador prima a tecla E, irá utilizar o item. Caso o jogador prima a tecla I, irá mostrar o ecrã informativo. Caso o jogador pirma a tecla Q, irá questionar se pretende abadonar o jogo e sair caso a resposta seja afirmativa. ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ É efectuada uma verificação na grid para obter se a jogada que o jogador pretende é valida ou não ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Caso a verificação falhe, alerta ao jogador que não se pode movimentar para o local pretendido ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ É efectuada uma verificação na grid para obter se a jogada que o jogador pretende é valida ou não ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Caso a verificação falhe, alerta ao jogador que não se pode movimentar para o local pretendido ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ É efectuada uma verificação na grid para obter se a jogada que o jogador pretende é valida ou não ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Caso a verificação falhe, alerta ao jogador que não se pode movimentar para o local pretendido ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ É efectuada uma verificação na grid para obter se a jogada que o jogador pretende é valida ou não ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Caso a verificação falhe, alerta ao jogador que não se pode movimentar para o local pretendido ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Ao premir a tecla E o jogador consome comida.
+
+Irá verificar se existe algum objecto que seja comida no tile qme que o jogador se encontra ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ O jogador recebe vida que a comida fornece
+
+Após consumir a comida, esta desaparece da grid.
+
+É iniciado um turno novo.
+
+O jogador recebe vida que a comida fornece
+
+Após consumir a comida, esta desaparece da grid
+
+É iniciado um turno novo.
+
+O jogador recebe vida que a comida fornece
+
+Após consumir a comida, esta desaparece da grid
+
+É iniciado um turno novo.
+
+Ao utilizar a tecla E numa tile que tenha um objecto que seja um mapa, esta opção revela o nível todo ao jogador. ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Verificação das linhas da grid
+
+Verificação das colunas da grid
+
+Tudo o que se encontra por revelar no mapa, é revelado. ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Após a utilização do mapa, este desaparece da grid.
+
+É iniciado um turno novo.
+
+Ao premir a tecla I, irá ser mostrado a informação de todas as armadilhas que o jogo contêm (nome e dano), esta visualização é efectuada \char`\"{}por cima\char`\"{} da grid de jogo, sendo necessário recolher input do utilizador para continuar a jogar. ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ limpa a consola para poder ser mostrado o ecrã informativo ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ É mostrado a informação actual do jogador, e o nível a que se encontra. ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ Irá verificar a vida que o jogador dispões e irá alterar a cor da vida consoante a vida que o jogador têm. As cores variam entre verde,amarelo e vermelho. ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ É mostrado juntamente com a grid do jogo as legendas da grid. ~\newline
+~\newline
+~\newline
+~\newline
+ Ao premir a tecla Q, irá questionar ao jogador se pretende abandonar o jogo ~\newline
+~\newline
+~\newline
+ caso o jogador responda de forma válida que prende abadonar o jogo irá ser efecutada uma verificação se nesse instante consegui bater algum recorde de pontuação na tabela de High Scores do jogo. ~\newline
+~\newline
+ Adiciona o nome e a pontuação actual ~\newline
+ Salva o ficheiro .txt das pontuações 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Projeto2\+\_\+\+L\+P1/Controls.\+cs\end{DoxyCompactItemize}

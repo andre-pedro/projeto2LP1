@@ -1,0 +1,96 @@
+\hypertarget{class_projeto2___l_p1_1_1_trap}{}\section{Projeto2\+\_\+\+L\+P1.\+Trap Class Reference}
+\label{class_projeto2___l_p1_1_1_trap}\index{Projeto2\+\_\+\+L\+P1.\+Trap@{Projeto2\+\_\+\+L\+P1.\+Trap}}
+
+
+Esta classe herda da interface \mbox{\hyperlink{interface_projeto2___l_p1_1_1_i_game_object}{I\+Game\+Object}}. É composta por três propriedades, um constructor e um método override \mbox{\hyperlink{class_projeto2___l_p1_1_1_trap_a1abb25aa0b1f0b59026e9985a14875bf}{To\+String()}};.  
+
+
+Inheritance diagram for Projeto2\+\_\+\+L\+P1.\+Trap\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_projeto2___l_p1_1_1_trap}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_projeto2___l_p1_1_1_trap_a224953ea9e5f3050ecb5610c2609fe9d}{Trap}} (string name, int damage)
+\begin{DoxyCompactList}\small\item\em O Constructor \mbox{\hyperlink{class_projeto2___l_p1_1_1_trap}{Trap}} indica o nome da armadilha, o símbolo que foi dado através da codificação U\+T\+F-\/8 e a quantidade de dano que o jogador poderá perder quando se deparar com ela. Indica ainda através de um booleano se o Tile aonde se encontra aparece explorado revelando-\/se assim ao jogador. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_projeto2___l_p1_1_1_trap_a1abb25aa0b1f0b59026e9985a14875bf}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Através do override é possivel modificar o método To\+String para devolver o símbolo escolhido para a grid de visualização. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_projeto2___l_p1_1_1_trap_a8e8d228475e53830ada606ef606d3d5b}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nestas quatro propriedades auto-\/implementadas, é nos permitido indicar e obter o nome, o símbolo da armadilha e o dano causado ao jogador caso, este acione a armadilha. A ultima propriedade, Explored permite-\/nos revelar a vizinhaça do jogador á medida que ele explora o mapa. /// \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_trap_a5afe950d29e8c2dbb89d7484dea27ec7}\label{class_projeto2___l_p1_1_1_trap_a5afe950d29e8c2dbb89d7484dea27ec7}} 
+string {\bfseries Symbol}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_trap_a0cc174cc03bd82fb6159af05fc499b5f}\label{class_projeto2___l_p1_1_1_trap_a0cc174cc03bd82fb6159af05fc499b5f}} 
+float {\bfseries Damage}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_trap_adbfd66d1118ab4ef938fc5ce2416ab2b}\label{class_projeto2___l_p1_1_1_trap_adbfd66d1118ab4ef938fc5ce2416ab2b}} 
+bool {\bfseries Explored}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_trap_af079644604a13ccac0e69a6b6962f70e}\label{class_projeto2___l_p1_1_1_trap_af079644604a13ccac0e69a6b6962f70e}} 
+bool {\bfseries Fallen\+Into}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Esta classe herda da interface \mbox{\hyperlink{interface_projeto2___l_p1_1_1_i_game_object}{I\+Game\+Object}}. É composta por três propriedades, um constructor e um método override \mbox{\hyperlink{class_projeto2___l_p1_1_1_trap_a1abb25aa0b1f0b59026e9985a14875bf}{To\+String()}};. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_trap_a224953ea9e5f3050ecb5610c2609fe9d}\label{class_projeto2___l_p1_1_1_trap_a224953ea9e5f3050ecb5610c2609fe9d}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Trap@{Projeto2\+\_\+\+L\+P1\+::\+Trap}!Trap@{Trap}}
+\index{Trap@{Trap}!Projeto2\+\_\+\+L\+P1\+::\+Trap@{Projeto2\+\_\+\+L\+P1\+::\+Trap}}
+\subsubsection{\texorpdfstring{Trap()}{Trap()}}
+{\footnotesize\ttfamily Projeto2\+\_\+\+L\+P1.\+Trap.\+Trap (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{int}]{damage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+O Constructor \mbox{\hyperlink{class_projeto2___l_p1_1_1_trap}{Trap}} indica o nome da armadilha, o símbolo que foi dado através da codificação U\+T\+F-\/8 e a quantidade de dano que o jogador poderá perder quando se deparar com ela. Indica ainda através de um booleano se o Tile aonde se encontra aparece explorado revelando-\/se assim ao jogador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & O nome dado a armadilha na altura da criação da mesma no nosso código\\
+\hline
+{\em damage} & Dano que o jogador irá receber caso \char`\"{}se encontre\char`\"{} com uma armadilha\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_trap_a1abb25aa0b1f0b59026e9985a14875bf}\label{class_projeto2___l_p1_1_1_trap_a1abb25aa0b1f0b59026e9985a14875bf}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Trap@{Projeto2\+\_\+\+L\+P1\+::\+Trap}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!Projeto2\+\_\+\+L\+P1\+::\+Trap@{Projeto2\+\_\+\+L\+P1\+::\+Trap}}
+\subsubsection{\texorpdfstring{To\+String()}{ToString()}}
+{\footnotesize\ttfamily override string Projeto2\+\_\+\+L\+P1.\+Trap.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Através do override é possivel modificar o método To\+String para devolver o símbolo escolhido para a grid de visualização. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_projeto2___l_p1_1_1_trap_a8e8d228475e53830ada606ef606d3d5b}\label{class_projeto2___l_p1_1_1_trap_a8e8d228475e53830ada606ef606d3d5b}} 
+\index{Projeto2\+\_\+\+L\+P1\+::\+Trap@{Projeto2\+\_\+\+L\+P1\+::\+Trap}!Name@{Name}}
+\index{Name@{Name}!Projeto2\+\_\+\+L\+P1\+::\+Trap@{Projeto2\+\_\+\+L\+P1\+::\+Trap}}
+\subsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string Projeto2\+\_\+\+L\+P1.\+Trap.\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Nestas quatro propriedades auto-\/implementadas, é nos permitido indicar e obter o nome, o símbolo da armadilha e o dano causado ao jogador caso, este acione a armadilha. A ultima propriedade, Explored permite-\/nos revelar a vizinhaça do jogador á medida que ele explora o mapa. /// 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Projeto2\+\_\+\+L\+P1/Trap.\+cs\end{DoxyCompactItemize}
